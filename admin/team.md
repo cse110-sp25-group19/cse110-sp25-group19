@@ -36,16 +36,16 @@ Welcome to **Team Powell Rangers**! We’re a team of developers who value teamw
 ## 👥 Team Members
 
 ###  Aditi Verma
-- **Introduction:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- **Fun Fact:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- **Introduction:** Heyy my name is Aditi, I am currently a 3rd year Computer Engineering major in Warren! I'm still figuring out my career interests but I have dabbled in web dev before, especially frontend and design. After bachelor's, I plan on going to grad school to get a masters in computer engineering! Outside of class, I enjoy drawing, listening to music, and hitting the gym. 
+- **Fun Fact:** I was born and raised in Japan!
 - **GitHub:** [aditi-3](https://aditi-3.github.io/GitHub-Pages-project/)
 
 ---
 
 ###  Chris Park
 
-- **Introduction:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- **Fun Fact:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- **Introduction:** Junior CS major at UCSD, I love going to the beach and playing chess in my free time.
+- **Fun Fact:** My english name (chris) is actually just a random name I got from google so that people can pronounce my name more easily
 - **GitHub:** [qwer030413](https://qwer030413.github.io/CSE110Review/)
 
 ---
