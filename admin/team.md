@@ -1,6 +1,7 @@
 
 # 🚀 Team Powell Rangers
 ![Team 19 Group Picture](./IMG_3800.jpg)
+![Team Powell Rangers Logo](./DALL·E 2025-04-11 13.20.51 - A circular cartoon-style logo featuring exactly nine superhero characters in full-body futuristic suits with helmets and visors. Each superhero has a .webp)
 ---
 > *“Together, we are unstoppable. Just like the Power Rangers, our strength lies in working as one.”*  
 
