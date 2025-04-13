@@ -1,6 +1,6 @@
 
 # 🚀 Team Powell Rangers
-![Team 19 Group Picture](./IMG_3800.jpg) <br>
+![Team 19 Group Picture](./teambonding.jpg) <br>
 ![Team Powell Rangers Logo](./team19logo.webp)
 ---
 > *“Together, we are unstoppable. Just like the Power Rangers, our strength lies in working as one.”*  
