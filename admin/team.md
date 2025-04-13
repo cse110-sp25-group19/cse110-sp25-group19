@@ -73,8 +73,8 @@ year + major: 3rd year math-cs
 ---
 ### Mohammed Azab
 
-- **Introduction:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- **Fun Fact:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- **Introduction:** Hi guys! I’m a Math-CS junior at Muir. Excited to work with you all this quarter :)
+- **Fun Fact:** I’m planning on getting my private pilot license soon!
 - **GitHub:** [mazab2003](https://mazab2003.github.io/mazabCse110/##about-me)
 
 ---
