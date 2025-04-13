@@ -88,8 +88,8 @@ year + major: 3rd year math-cs
 ---
 ### Rohan Madan
 
-- **Introduction:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-- **Fun Fact:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- **Introduction:** Hey everyone, I’m Rohan, a second year computer science major. In my free time, I like going to the gym, hanging out with friends, and eating food.
+- **Fun Fact:** I love to go thrifting.
 - **GitHub:** [rohanmad](https://rohanmad.github.io/cse110lab1/)
 
 ---
