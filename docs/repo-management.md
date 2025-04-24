@@ -51,7 +51,8 @@ You can also include the keyword in the pull request description:
 
 ## Additional Notes
 - We will not be forking repositories; creating new branches for features/bug fixes should be sufficient
-- 
+- Don't merge pull requests by yourself, have someone else approve it
+- Make sure you test the code thoroughly before committing a change
 <hr>
 
 > Last Edited: Wed April 23, 2025
