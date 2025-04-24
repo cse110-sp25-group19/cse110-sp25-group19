@@ -25,11 +25,11 @@ To better organize the respository, all code files should be grouped into a `sou
 
 **Important:** Do **NOT** push directly to main. Always create branches and make pull requests.
 
-Creating a new branch (format):
-Features:
-`git checkout -b feature/feature-name`
-**OR**
-Bug-fixes:
+Creating a new branch (format): <br />
+Features: <br />
+`git checkout -b feature/feature-name`<br />
+**OR** <br />
+Bug-fixes: <br />
 `git checkout -b bugfix/short-description`
 
 If you find new bugs during development, create a GitHub issue for them first before comitting and making a pull request.
@@ -38,15 +38,15 @@ If you find new bugs during development, create a GitHub issue for them first be
 
 Git commits and pull requests should also close an issue at the same time so it is easier to track.
 
-Features:
-`git commit -m "closes #XXX; feature: ADD YOUR MESSAGE HERE"`
+Features:<br />
+`git commit -m "closes #XXX; feature: ADD YOUR MESSAGE HERE"` <br />
 
-Bug Fix:
-`git commit -m "closes #XXX; feature: ADD YOUR MESSAGE HERE"`
+Bug Fix: <br />
+`git commit -m "closes #XXX; feature: ADD YOUR MESSAGE HERE"` <br />
 
 Other keywords for resolving a GitHub issue is `fixes` and `resolves`.
 
-You can also include the keyword in the pull request description:
+You can also include the keyword in the pull request description: <br />
 `Fixes #XXX`
 
 ## Additional Notes
