@@ -42,7 +42,7 @@ Features:<br />
 `git commit -m "closes #XXX; feature: ADD YOUR MESSAGE HERE"` <br />
 
 Bug Fix: <br />
-`git commit -m "closes #XXX; feature: ADD YOUR MESSAGE HERE"` <br />
+`git commit -m "closes #XXX; bug fix: ADD YOUR MESSAGE HERE"` <br />
 
 Other keywords for resolving a GitHub issue is `fixes` and `resolves`.
 
