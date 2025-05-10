@@ -1,0 +1,36 @@
+---
+parent: Decisions
+nav_order: 101
+title: ADR Flip & Match Game
+---
+
+# ADR: Flip & Match Game
+
+## 1. Context
+We needed to pick a team project that  
+- Demonstrates both UI and game-logic skills  
+- Allows clear division of frontend/backend work  
+- Fits within our limited schedule
+
+## 2. Decision
+We choose **Flip & Match Game** because it:  
+- Combines a simple grid UI with interactive card logic  
+- Offers enough challenge
+
+## 3. Consequences
+- **Positive**:  
+  - Teaches event handling, state management, and DOM updates  
+  - Breaks cleanly into sub-tasks for each team role  
+- **Negative**:  
+  - Requires careful asset naming and layout planning  
+  - Scope creep if adding advanced features (animations, timer, leaderboards)  
+
+---
+
+### Considered Options
+- **Tic-Tac-Toe**  
+  A two-player grid game; too simple and limited in scope.  
+- **Flip & Match Game**  
+  A memory card game; balanced complexity and clear UI/game logic split.  
+- **To-Do List App**  
+  Standard CRUD app; doesn’t showcase interactive graphics or game logic.  
