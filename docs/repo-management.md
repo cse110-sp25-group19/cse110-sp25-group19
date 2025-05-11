@@ -38,16 +38,11 @@ If you find new bugs during development, create a GitHub issue for them first be
 
 Git commits and pull requests should also close an issue at the same time so it is easier to track.
 
-Features:<br />
-`git commit -m "closes #XXX; feature: ADD YOUR MESSAGE HERE"` <br />
+Update: we will be using commitlint for a standardized commit message format from now on. For commitlint formatting, refer to commitlint docs [here](https://github.com/conventional-changelog/commitlint?tab=readme-ov-file#what-is-commitlint).<br />
 
-Bug Fix: <br />
-`git commit -m "closes #XXX; bug fix: ADD YOUR MESSAGE HERE"` <br />
+If your commit/pull request resolves a GitHub issue, first type out your commit message in commitlint format, then type this at the end: <br />
 
-Other keywords for resolving a GitHub issue is `fixes` and `resolves`.
-
-You can also include the keyword in the pull request description: <br />
-`Fixes #XXX`
+> <commitlint message>; fixes #XXX
 
 ## Additional Notes
 - We will not be forking repositories; creating new branches for features/bug fixes should be sufficient
