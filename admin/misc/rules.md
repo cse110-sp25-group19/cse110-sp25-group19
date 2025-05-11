@@ -1,3 +1,4 @@
+*link:* https://github.com/cse110-sp25-group19/cse110-sp25-group19/tree/6b2ef38f5ddd6d5ed42a4d5a0a36f5bdb9451e6e/admin/misc
 # Team Charter
 
 ## 1. Objective & Purpose
