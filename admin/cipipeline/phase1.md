@@ -63,5 +63,5 @@ npm run coverage
 
 ---
 
-Diagram of the CI/CD pipeline (phase 1):
+Diagram of the CI/CD pipeline (phase 1): <br />
 ![CI/CD diagram](./phase1.drawio.png)
