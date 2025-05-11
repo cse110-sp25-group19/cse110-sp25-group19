@@ -60,3 +60,8 @@ npm run coverage
 ```
 
 - Generates a coverage report for all tests.
+
+---
+
+Diagram of the CI/CD pipeline (phase 1):
+![CI/CD diagram](./phase1.drawio.png)
