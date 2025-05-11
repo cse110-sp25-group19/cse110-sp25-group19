@@ -42,7 +42,7 @@ Update: we will be using commitlint for a standardized commit message format fro
 
 If your commit/pull request resolves a GitHub issue, first type out your commit message in commitlint format, then type this at the end: <br />
 
-> <commitlint message>; fixes #XXX
+> insert-commitlint-message-here; fixes #XXX
 
 ## Additional Notes
 - We will not be forking repositories; creating new branches for features/bug fixes should be sufficient
