@@ -7,11 +7,36 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <!-- <script src="src/index.js"></script> -->
 
+    <!-- Game Header -->
+    <header>
+        <h1>Flip Card Memory Game</h1>
+    </header>
 
+    <!-- class container for the game later on-->
+    <main class="game-container">
+        <!-- class container for seperate game information -->
+        <section class="game-info">
+            <!-- holds the game score -->
+            <div class="score">Score: <span id="score">0</span></div>
+            <!-- button to begin a new game -->
+            <button id="new-game-btn">New Game</button>
+        </section>
+
+        <!-- class container for the card grid part -->
+        <section class="card-grid">
+
+        </section>
+    </main>
+
+    <!-- end footer -->
+    <footer>
+        <p>&copy; Powell Ranger's (CSE 110 Group 19)</p>
+    </footer>
+
+    <!-- Existing script tags -->
     <script type="module" src="src/js/utils.js"></script>
     <script type="module" src="src/js/game.js"></script>
 </body>
+
 </html>
