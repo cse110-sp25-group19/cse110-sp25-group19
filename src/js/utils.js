@@ -10,7 +10,7 @@ export class Card {
     this.isMatched = false;
   }
 }
-
+ 
 /*
  * Generates a fresh deck of paired cards (16 cards by default).
  * @param {number} pairs - Number of matching pairs to include (default: 8)
