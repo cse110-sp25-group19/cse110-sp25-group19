@@ -1,12 +1,20 @@
 import { shuffleDeck } from './utils.js';
+import { generateDeck } from './utils.js';
 
 /**
  * Initializes a new game round.
  *
- * @returns {void}
+ * @returns {Card[]}
  */
 export function initGame() {
-  // TODO: build deck, call shuffleDeck, etc.
+  //Make initial deck
+  const deck = generateDeck();
+
+  //Shuffle deck
+  const shuffledDeck = shuffleDeck(deck);
+
+  //Return shuffled deck
+  return shuffledDeck;
 }
 
 /**
