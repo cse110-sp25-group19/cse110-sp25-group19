@@ -64,7 +64,7 @@ npm run coverage
 
 ### Common Errors and How to Fix:
 'eslint' is not recognized as an internal or external command
-- run `npm install --save-dev eslint`
+- run `npm install --save-dev eslint`<br />
 'prettier' is not recognized as an internal or external command
 - run `npm install --save-dev prettier`
 
