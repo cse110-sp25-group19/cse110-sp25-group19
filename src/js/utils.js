@@ -31,12 +31,12 @@ export function generateDeck(pairs = 8) {
  *
  * @param   {Array} deck  Array of Card objects
  * @returns {Array}       Same array reference, after shuffling
- */
+ */ 
 
 export function shuffleDeck(deck) {
   // TODO: Implement Fisher–Yates
-  const newDeck = deck;
-  for(let i = deck.length-1; i > 0; i++){
+  const newDeck = [...deck];
+  for(let i = newDeck.length-1; i > 0; i++){
     let j = Math.floor(Math.random() * (i+1));
     [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];
   }
