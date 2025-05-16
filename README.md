@@ -62,11 +62,19 @@ npm run coverage
 
 - Generates a coverage report for all tests.
 
+### Common Errors and How to Fix:
+'eslint' is not recognized as an internal or external command
+- run `npm install --save-dev eslint`
+'prettier' is not recognized as an internal or external command
+- run `npm install --save-dev prettier`
+
+---
+
 ## Project Folder Purpose
 CSS - contains all stylesheets   
 HTML - contains all html pages and components      
 Scripts - holds Javascript files    
-Assets - holds any media ranging from images to documantation     
+Assets - holds any media ranging from images to documentation     
 =======
 # cse110-sp25-group19
 [Team Page](admin/team.md)
