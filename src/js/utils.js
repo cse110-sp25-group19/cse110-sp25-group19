@@ -36,7 +36,7 @@ export function generateDeck(pairs = 8) {
 export function shuffleDeck(deck) {
   // TODO: Implement Fisher–Yates
   const newDeck = [...deck];
-  for(let i = newDeck.length-1; i > 0; i++){
+  for(let i = newDeck.length-1; i > 0; i--){
     let j = Math.floor(Math.random() * (i+1));
     [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];
   }
@@ -46,7 +46,7 @@ export function shuffleDeck(deck) {
 /**
  * Deck: an array of 16 shuffled Card instances.
  */
-export const Deck = shuffleDeck(generateDeck());
+// export const Deck = shuffleDeck(generateDeck());
 
 /**
  * Tracks the full state of the game, including the deck, flipped cards, score, and current round.

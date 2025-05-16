@@ -26,4 +26,13 @@ export function initGame() {
  */
 export function renderBoard(container, deck) {
   // TODO: inject placeholder elements
+  container.innerHTML = ''
+  deck.forEach((card, index) => {
+    let cardElem = document.createElement('div');
+    cardElem.dataset.id = card.id;
+    cardElem.dataset.value = card.value
+
+    container.appendChild(cardElem)
+
+  })
 }
