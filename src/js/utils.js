@@ -35,7 +35,12 @@ export function generateDeck(pairs = 8) {
 
 export function shuffleDeck(deck) {
   // TODO: Implement Fisher–Yates
-  return deck;
+  const newDeck = deck;
+  for(let i = deck.length-1; i > 0; i++){
+    let j = Math.floor(Math.random() * (i+1));
+    [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];
+  }
+  return newDeck;
 }
 
 /**
@@ -52,3 +57,5 @@ export const GameState = {
   score: 0,
   round: 1,
 };
+
+
