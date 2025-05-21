@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+# Videos
+
+status video 1: https://youtu.be/QALgL--nj_Y
+
 # Memory_Card_Game_CICD_Pipeline
 
 This is a simple JavaScript and HTML project with a basic file structure, including automated code quality checks, pre-commit hooks, and conventional commit message enforcement.
@@ -7,6 +11,8 @@ This is a simple JavaScript and HTML project with a basic file structure, includ
 
 ### Running the Project
 To run the project locally:
+
+
 
 1. Start the Development Server:
    ```bash
