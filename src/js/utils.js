@@ -10,7 +10,7 @@ export class Card {
     this.isMatched = false;
   }
 }
- 
+
 /*
  * Generates a fresh deck of paired cards (16 cards by default).
  * @param {number} pairs - Number of matching pairs to include (default: 8)
@@ -31,13 +31,13 @@ export function generateDeck(pairs = 8) {
  *
  * @param   {Array} deck  Array of Card objects
  * @returns {Array}       Same array reference, after shuffling
- */ 
+ */
 
 export function shuffleDeck(deck) {
   // TODO: Implement Fisher–Yates
   const newDeck = [...deck];
-  for(let i = newDeck.length-1; i > 0; i--){
-    let j = Math.floor(Math.random() * (i+1));
+  for (let i = newDeck.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
     [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];
   }
   return newDeck;
@@ -57,5 +57,3 @@ export const GameState = {
   score: 0,
   round: 1,
 };
-
-
