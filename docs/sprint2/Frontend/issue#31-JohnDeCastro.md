@@ -4,6 +4,7 @@ Fill out a section per team member below.
 
 ### Member: `John De Castro`
 
+<<<<<<< HEAD
 - **Role/Responsibility:** `<Front End - Issue #31`
 - **Contact:** `jpdecastro@ucsd.edu`
 
