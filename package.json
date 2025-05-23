@@ -10,6 +10,7 @@
     "format": "prettier --write ./src",
     "start": "npx serve .",
     "check": "npm run lint && npm test"
+    "docs": "jsdoc -c jsdoc.conf.json"
   },
   "repository": {
     "type": "git",
