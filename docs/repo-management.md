@@ -4,21 +4,22 @@ For future projects in this class, we will be using these guidelines on pull req
 
 ## Folder Management
 
-```plaintext  
-web-app-project/  
-├── src/ ← main source code should be here  
-│ ├── index.html  
-│ ├── styles/  
-│ │ └── main.css  
-│ ├── scripts/  
-│ │ └── app.js  
-│ └── components/  
-│ └── nav.js  
-├── assets/ ← images, fonts, etc.  
-├── README.md  
-├── package.json  
-└── .gitignore  
+```plaintext
+web-app-project/
+├── src/ ← main source code should be here
+│ ├── index.html
+│ ├── styles/
+│ │ └── main.css
+│ ├── scripts/
+│ │ └── app.js
+│ └── components/
+│ └── nav.js
+├── assets/ ← images, fonts, etc.
+├── README.md
+├── package.json
+└── .gitignore
 ```
+
 To better organize the respository, all code files should be grouped into a `source` directory, and all assets should be located in a separate folder apart from code. The diagram above is a general template for how the respository should be organized.
 
 ## Branching & GitHub Issues
@@ -45,6 +46,7 @@ If your commit/pull request resolves a GitHub issue, first type out your commit 
 > insert-commitlint-message-here; fixes #XXX
 
 ## Additional Notes
+
 - We will not be forking repositories; creating new branches for features/bug fixes should be sufficient
 - Don't merge pull requests by yourself, have someone else approve it
 - Make sure you test the code thoroughly before committing a change

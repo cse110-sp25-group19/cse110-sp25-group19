@@ -5,6 +5,7 @@ This is a simple JavaScript and HTML project with a basic file structure, includ
 ## Developer Workflow
 
 ### Running the Project
+
 To run the project locally:
 
 1. Start the Development Server:
@@ -15,12 +16,15 @@ To run the project locally:
    - Opens **`index.html`** as the entry point.
 
 ### Code Quality Checks (Before Commit)
+
 Developers should ensure their code is clean and properly formatted before committing:
 
 1. Linting the Code:
+
    ```bash
    npm run lint
    ```
+
    - Runs **ESLint** on the **`src/`** directory to catch common JavaScript errors.
 
 2. Formatting the Code:
@@ -30,21 +34,25 @@ Developers should ensure their code is clean and properly formatted before commi
    - Runs **Prettier** to automatically format code in the **`src/`** directory.
 
 ### Automated Code Quality Checks
+
 - **Pre-Commit Hook:** Runs ESLint and Prettier automatically via **lint-staged**.
 - **Commit Message Validation:** Enforces conventional commit messages via **commitlint**.
 - **Pre-Push Hook:** Runs **`npm run check`** to validate code before pushing.
 
 ### Full Code Check Before Push
+
 To run both linting and testing before pushing:
+
 ```bash
 npm run check
 ```
-- Runs both **`lint`** and **`test`** scripts to ensure code quality before pushing.
 
+- Runs both **`lint`** and **`test`** scripts to ensure code quality before pushing.
 
 - **Start:** Open index.html in a browser.
 
 ### Running Tests
+
 To run the unit tests:
 
 ```bash
