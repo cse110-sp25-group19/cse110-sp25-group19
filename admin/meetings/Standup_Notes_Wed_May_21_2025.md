@@ -11,30 +11,34 @@
 ---
 
 ## 📌 Agenda
+
 - [ ] Questions
 - [ ] What is everyone doing?
 
 ---
 
 ## ✅ Attendance
-| Name              | Role                     | Present |
-|-------------------|--------------------------|---------|
-| Menko Hornstein   | Project Lead             | [✖]  |
-| Krystal Kwan      | Technical Lead           | [✔]  |
-| John De Castro    | UI/UX Design (Team A)    | [✔]  |
-| Aditi Verma       | Frontend Dev (Team A)    | [✔]  |
-| Derek Wu          | State Mgmt (Team B)      | [✔]  |
-| Chris Park        | JS Dev – Deck (Team B)   | [✖]  |
-| Nathan Nguyen     | Multi-Draw Logic (Team C)| [✔]  |
-| Rohan Madan       | Persistence (Team C)     | [✔]  |
-| Mohammed Azab     | QA (Team D)              | [✖]  |
-| Sarkis Bagdasaryan| Docs (Team D)            | [✖]  |
-| Lavin             | Video/Presentation (D)   | [✔]  |
+
+| Name               | Role                      | Present |
+| ------------------ | ------------------------- | ------- |
+| Menko Hornstein    | Project Lead              | [✖]    |
+| Krystal Kwan       | Technical Lead            | [✔]    |
+| John De Castro     | UI/UX Design (Team A)     | [✔]    |
+| Aditi Verma        | Frontend Dev (Team A)     | [✔]    |
+| Derek Wu           | State Mgmt (Team B)       | [✔]    |
+| Chris Park         | JS Dev – Deck (Team B)    | [✖]    |
+| Nathan Nguyen      | Multi-Draw Logic (Team C) | [✔]    |
+| Rohan Madan        | Persistence (Team C)      | [✔]    |
+| Mohammed Azab      | QA (Team D)               | [✖]    |
+| Sarkis Bagdasaryan | Docs (Team D)             | [✖]    |
+| Lavin              | Video/Presentation (D)    | [✔]    |
 
 ---
+
 ## 👥 Teams (Assigned Issues)
 
 ### Frontend:
+
 - John:
   - Task: start and endscreen
   - Problems: none
@@ -43,7 +47,7 @@
   - Task: create Score Display and reset
   - Problems: none
   - Next steps: working on issue sometime today, in afternoon, update in slack
-- Aditi: 
+- Aditi:
   - Task: create grid
   - Problems: waiting for cards
   - Next steps: will work on issue after
@@ -53,6 +57,7 @@
   - Next steps: design cards, placeholders
 
 ### Backend:
+
 - Sarkis: (unavailable)
   - Task: n/a
   - Problems: n/a
@@ -74,10 +79,10 @@
   - Problems: n/a
   - Next steps: n/a
 
-
 ---
 
 ## 💬 Notes / Decisions
+
 - CI/CD pipeline needs to be automated
 - Work on tasks for Friday standup
 - Rotating roles isn't viable, but if a team member wants to work on something in the other team they can take an issue from that side if interested
@@ -85,6 +90,7 @@
 ---
 
 ## 📅 Next Meeting
+
 **Date:** [05/23/2025]  
 **Time:** [3pm]  
 **Location:** [Zoom]  
