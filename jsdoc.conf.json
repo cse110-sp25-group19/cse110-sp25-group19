@@ -1,0 +1,9 @@
+{
+  "source": {
+    "include": ["source"],
+    "exclude": ["node_modules"]
+  },
+  "opts": {
+    "destination": "./temp_docs"
+  }
+}
