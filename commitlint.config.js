@@ -16,18 +16,18 @@ export default {
         'ci',
         'chore',
         'revert',
-        'config'
-      ]
+        'config',
+      ],
     ],
     'scope-enum': [
       2,
       'always',
-      ['core', 'docs', 'test', 'build', 'config', 'deps', 'scripts']
+      ['core', 'docs', 'test', 'build', 'config', 'deps', 'scripts'],
     ],
     'subject-case': [
       2,
       'never',
-      ['sentence-case', 'start-case', 'pascal-case', 'upper-case']
+      ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
     ],
     'header-max-length': [2, 'always', 72],
     'body-max-line-length': [2, 'always', 100],
@@ -35,6 +35,6 @@ export default {
     'scope-empty': [1, 'never'],
     'subject-empty': [2, 'never'],
     'body-empty': [1, 'never'],
-    'footer-empty': [1, 'never']
-  }
+    'footer-empty': [1, 'never'],
+  },
 };

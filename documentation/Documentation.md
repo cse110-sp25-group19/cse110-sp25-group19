@@ -7,6 +7,7 @@
 
    1. [Frontend Team](#frontend-team)
    2. [Backend Team](#backend-team)
+
 3. [Architecture Overview](#architecture-overview)
 4. [Sprint Planning](#sprint-planning)
 5. [Development Workflow & Processes](#development-workflow--processes)
@@ -19,16 +20,16 @@
 
 ## 1. Project Overview
 
-**Project Name:** *<Your Project Name>*
+**Project Name:** _<Your Project Name>_
 **Description:**
 
 > A brief summary of the project’s goals, scope, and high-level functionality.
 
 **Objectives:**
 
-* Objective 1
-* Objective 2
-* Objective 3
+- Objective 1
+- Objective 2
+- Objective 3
 
 **Key Milestones:**
 
@@ -70,9 +71,10 @@
    ![Architecture Diagram](path/to/diagram.png)
 2. **Technology Stack**
 
-   * **Frontend:** e.g., React, Tailwind CSS, Jest
-   * **Backend:** e.g., Node.js, Express, PostgreSQL
-   * **DevOps:** e.g., Docker, GitHub Actions
+   - **Frontend:** e.g., React, Tailwind CSS, Jest
+   - **Backend:** e.g., Node.js, Express, PostgreSQL
+   - **DevOps:** e.g., Docker, GitHub Actions
+
 3. **Data Flow**
 
    > Describe how data moves through the system, from user interaction to persistence.
@@ -93,7 +95,7 @@ We plan **5 Sprints** of equal length (e.g., 2 weeks each). Below is the templat
 | Sprint 4 | YYYY-MM-DD → YYYY-MM-DD | • Goal G<br>• Goal H              | • UX polish<br>• Security audit    | Team Lead 4  |
 | Sprint 5 | YYYY-MM-DD → YYYY-MM-DD | • Final adjustments<br>• Bugfixes | • Release candidate<br>• Docs      | Project Lead |
 
-*Repeat detailed template for each sprint.*
+_Repeat detailed template for each sprint._
 
 ---
 
@@ -101,56 +103,61 @@ We plan **5 Sprints** of equal length (e.g., 2 weeks each). Below is the templat
 
 1. **Branching Strategy:**
 
-   * `main` for production
-   * `develop` for integrative work
-   * Feature branches: `feature/<ticket-id>`
+   - `main` for production
+   - `develop` for integrative work
+   - Feature branches: `feature/<ticket-id>`
+
 2. **Code Reviews:**
 
-   * Minimum one reviewer
-   * Use pull requests with clear description and linked issue
+   - Minimum one reviewer
+   - Use pull requests with clear description and linked issue
+
 3. **Testing:**
 
-   * Unit tests (coverage ≥ 80%)
-   * Integration tests
-   * End-to-end tests
+   - Unit tests (coverage ≥ 80%)
+   - Integration tests
+   - End-to-end tests
+
 4. **Deployment:**
 
-   * Staging environment on merge to `develop`
-   * Production on merge to `main`
+   - Staging environment on merge to `develop`
+   - Production on merge to `main`
+
 5. **Issue Tracking:**
 
-   * Jira/GitHub Issues format:
+   - Jira/GitHub Issues format:
 
-     * Title: \[Team] Short description
-     * Labels: `frontend`/`backend`, `bug`/`feature`, `sprint-#`
+     - Title: \[Team] Short description
+     - Labels: `frontend`/`backend`, `bug`/`feature`, `sprint-#`
 
 ---
 
 ## 6. Contributing Guidelines
 
-* Fork the repo & create a feature branch.
-* Adhere to coding standards (link linter/formatter config).
-* Write clear commit messages:
+- Fork the repo & create a feature branch.
+- Adhere to coding standards (link linter/formatter config).
+- Write clear commit messages:
 
   ```
   [TEAM] #123: Brief summary of change
   ```
-* Update documentation for any API changes.
-* Ensure all tests pass before requesting review.
+
+- Update documentation for any API changes.
+- Ensure all tests pass before requesting review.
 
 ---
 
 ## 7. Communication & Reporting
 
-* **Daily Stand-ups:** 15 min via Zoom at HH\:MM.
-* **Sprint Planning & Review:** Zoom meeting at start/end of each sprint.
-* **Retrospective:** Document insights below under each sprint.
-* **Chat Channels:**
+- **Daily Stand-ups:** 15 min via Zoom at HH\:MM.
+- **Sprint Planning & Review:** Zoom meeting at start/end of each sprint.
+- **Retrospective:** Document insights below under each sprint.
+- **Chat Channels:**
 
-  * \#project-general (announcements)
-  * \#frontend (dev chat)
-  * \#backend (dev chat)
-  * \#qa (testing & bugs)
+  - \#project-general (announcements)
+  - \#frontend (dev chat)
+  - \#backend (dev chat)
+  - \#qa (testing & bugs)
 
 ---
 
@@ -162,8 +169,8 @@ Each member maintains their personal documentation under their section using the
 
 #### Member: <Name>
 
-* **Role/Responsibility:**
-* **Personal Docs Link:** [Link to detailed doc](#)
+- **Role/Responsibility:**
+- **Personal Docs Link:** [Link to detailed doc](#)
 
 ##### 1. Overview
 
@@ -178,27 +185,27 @@ Each member maintains their personal documentation under their section using the
 
 ##### 3. Design Decisions
 
-* **Decision:** Short title of decision.
+- **Decision:** Short title of decision.
   **Context:** Why this was chosen.
   **Alternatives:** Other options considered.
 
 ##### 4. Issues & Blockers
 
-* **Issue:** Description of any impediments.
+- **Issue:** Description of any impediments.
   **Resolution/Request:** What help or actions are needed.
 
 ##### 5. Next Steps
 
-* Bullet list of planned work and goals for next sprint.
+- Bullet list of planned work and goals for next sprint.
 
-*Repeat for each team member.*
+_Repeat for each team member._
 
 ---
 
 ## 9. Appendix
 
-* [API Reference](docs/api.md)
-* [UI Style Guide](docs/style-guide.md)
-* [Database Schema](docs/db-schema.png)
-* [Release Notes](CHANGELOG.md)
-* *Any additional artifacts or links*
+- [API Reference](docs/api.md)
+- [UI Style Guide](docs/style-guide.md)
+- [Database Schema](docs/db-schema.png)
+- [Release Notes](CHANGELOG.md)
+- _Any additional artifacts or links_

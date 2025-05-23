@@ -1,12 +1,12 @@
 /* CSS reset */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 /* Variables */
-:root{
+:root {
   /* Typography */
   --font-family: Arial, sans-serif;
   --font-size-base: 16px;
@@ -42,7 +42,7 @@ h1 {
 
 /* Start Screen */
 
-#start-screen{
+#start-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,30 +52,30 @@ h1 {
   gap: 1.5rem;
 }
 
-#start-screen h1{
+#start-screen h1 {
   font-size: 3.5rem;
   color: var(--primary);
 }
 
-#start-screen button:hover{
+#start-screen button:hover {
   background-color: var(--accent);
 }
 
-.game-container{
+.game-container {
   display: none;
 }
 
 /* End Screen Modal / Pop Up*/
 
-.hidden{
+.hidden {
   display: none;
 }
 
-#end-screen:not(.hidden){
+#end-screen:not(.hidden) {
   display: flex;
 }
 
-#end-screen{
+#end-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -87,7 +87,7 @@ h1 {
   z-index: 1000;
 }
 
-#end-screen .modal{
+#end-screen .modal {
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
@@ -96,19 +96,19 @@ h1 {
   min-width: 300px;
 }
 
-#end-screen h2{
+#end-screen h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--primary);
 }
 
-#end-screen p{
+#end-screen p {
   font-size: 1.23rem;
   margin-bottom: 1.5rem;
   color: var(--text);
 }
 
-#end-screen button{
+#end-screen button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   background-color: var(--primary);
@@ -119,6 +119,6 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-#end-screen button:hover{
+#end-screen button:hover {
   background-color: var(--accent);
 }
