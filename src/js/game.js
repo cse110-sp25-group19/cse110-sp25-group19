@@ -1,6 +1,6 @@
 import { shuffleDeck } from './utils.js';
 import { generateDeck } from './utils.js';
-
+import { GameState } from './utils.js';
 /**
  * Initializes a new game round.
  *
@@ -12,11 +12,15 @@ export function initGame() {
 
   //Shuffle deck
   const shuffledDeck = shuffleDeck(deck);
-
+  GameState.deck = deck;
+  GameState.flippedCards = [];
+  GameState.score = 0;
+  GameState.round = 1
   //Return shuffled deck
   return shuffledDeck;
 }
-
+console.log("Deck after initGame():", initGame());
+console.log("GameState:", GameState);
 /**
  * Renders the card grid into the supplied container.
  *
