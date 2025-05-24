@@ -29,13 +29,13 @@ Developers should ensure their code is clean and properly formatted before commi
    npm run lint
    ```
 
-   - Runs **ESLint** on the **`src/`** directory to catch common JavaScript errors.
+   - Runs **ESLint** on the repo to catch common JavaScript errors.
 
 2. Formatting the Code:
    ```bash
    npm run format
    ```
-   - Runs **Prettier** to automatically format code in the **`src/`** directory.
+   - Runs **Prettier** to automatically format code in the directory. 
 
 ### Automated Code Quality Checks
 
