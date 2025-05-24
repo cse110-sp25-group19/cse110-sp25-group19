@@ -84,3 +84,26 @@ export function showEndScreen(winner, score) {
 playAgainBtn.addEventListener('click', () => {
   location.reload(); //just refreshes page for now. needs actual logic to reset game board
 });
+
+
+
+
+/**
+ * Flips a card and updates GameState.
+ * Ignores if already flipped, matched, or 2 cards are face-up.
+ *
+ * @param {number} index - Index of the card in the deck
+ * @returns {{ deck: Card[], flippedCards: Card[] }}
+ */
+export function flipCard(index) {
+  const card = GameState.deck[index];
+
+  if (card.isFlipped || card.isMatched || GameState.flippedCards.length >= 2) {
+    return { deck: GameState.deck, flippedCards: GameState.flippedCards };
+  }
+
+  card.isFlipped = true;
+  GameState.flippedCards.push(card);
+
+  return { deck: GameState.deck, flippedCards: GameState.flippedCards };
+}
