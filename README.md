@@ -65,14 +65,6 @@ npm test
 
 - Runs all tests in the **`tests/`** directory using **Jest**.
 
-To run the tests with code coverage:
-
-```bash
-npm run coverage
-```
-
-- Generates a coverage report for all tests.
-
 ### Common Errors and How to Fix:
 
 'eslint' is not recognized as an internal or external command
