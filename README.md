@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Videos
 
 status video 1: https://youtu.be/QALgL--nj_Y
