@@ -1,2 +1,1 @@
-npx prettier --check .
 npx lint-staged
