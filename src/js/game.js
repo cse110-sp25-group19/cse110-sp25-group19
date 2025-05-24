@@ -1,5 +1,6 @@
 import { shuffleDeck } from './utils.js';
 import { generateDeck } from './utils.js';
+import { GameState } from './utils.js';
 
 /**
  * Initializes a new game round.
@@ -35,4 +36,25 @@ export function renderBoard(container, deck) {
     container.appendChild(cardElem)
 
   })
+}
+
+
+/**
+ * Flips a card and updates GameState.
+ * Ignores if already flipped, matched, or 2 cards are face-up.
+ *
+ * @param {number} index - Index of the card in the deck
+ * @returns {{ deck: Card[], flippedCards: Card[] }}
+ */
+export function flipCard(index) {
+  const card = GameState.deck[index];
+
+  if (card.isFlipped || card.isMatched || GameState.flippedCards.length >= 2) {
+    return { deck: GameState.deck, flippedCards: GameState.flippedCards };
+  }
+
+  card.isFlipped = true;
+  GameState.flippedCards.push(card);
+
+  return { deck: GameState.deck, flippedCards: GameState.flippedCards };
 }
