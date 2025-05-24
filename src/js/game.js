@@ -33,9 +33,23 @@ export function renderBoard(container, deck) {
   container.innerHTML = '';
   deck.forEach((card, index) => {
     let cardElem = document.createElement('div');
+    if (card.isFlipped || card.isMatched) {
+      cardElem.classList.add('card', 'faceup');
+      cardElem.textContent = card.value;
+    } else {
+      cardElem.classList.add('card', 'facedown');
+      cardElem.textContent = '';
+    }
     cardElem.dataset.id = card.id;
     cardElem.dataset.value = card.value;
 
+    // Add card flip mechanics
+    cardElem.addEventListener('click', () => {
+      flipCard(index);
+      cardElem.classList.remove('facedown');
+      cardElem.classList.add('faceup');
+      cardElem.textContent = card.value;
+    });
     container.appendChild(cardElem);
   });
 }
@@ -45,14 +59,18 @@ export function renderBoard(container, deck) {
 const startScreen = document.getElementById('start-screen');
 const gameContainer = document.querySelector('.game-container');
 const startBtn = document.getElementById('start-btn');
+const cardGrid = document.querySelector('.card-grid');
 
 /**
  * Handles start button click:
  * Hides start screen and shows the game container.
+ * Initializes the game by calling initGame() and renders the board.
  */
 startBtn.addEventListener('click', () => {
   startScreen.style.display = 'none';
   gameContainer.style.display = 'block';
+  const deck = initGame();
+  renderBoard(cardGrid, deck);
 });
 
 //End Screen Logic
