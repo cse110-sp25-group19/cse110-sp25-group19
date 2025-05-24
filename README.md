@@ -75,6 +75,12 @@ npm test
 
 - run `npm install --save-dev prettier`
 
+### Pull Request Errors:
+
+CI Pipeline / Lint & Prettier Check [FAILED]
+- run `npx prettier --check .` locally on your computer to check for files that are not correctly formatted
+- either manually fix formatting issues, or automatically fix by running `npx prettier --write .`
+
 ---
 
 ## Project Folder Purpose
