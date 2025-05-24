@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Videos
 
 status video 1: https://youtu.be/QALgL--nj_Y
@@ -31,13 +29,13 @@ Developers should ensure their code is clean and properly formatted before commi
    npm run lint
    ```
 
-   - Runs **ESLint** on the **`src/`** directory to catch common JavaScript errors.
+   - Runs **ESLint** on the repo to catch common JavaScript errors.
 
 2. Formatting the Code:
    ```bash
    npm run format
    ```
-   - Runs **Prettier** to automatically format code in the **`src/`** directory.
+   - Runs **Prettier** to automatically format code in the directory.
 
 ### Automated Code Quality Checks
 
@@ -67,14 +65,6 @@ npm test
 
 - Runs all tests in the **`tests/`** directory using **Jest**.
 
-To run the tests with code coverage:
-
-```bash
-npm run coverage
-```
-
-- Generates a coverage report for all tests.
-
 ### Common Errors and How to Fix:
 
 'eslint' is not recognized as an internal or external command
@@ -84,6 +74,13 @@ npm run coverage
 'prettier' is not recognized as an internal or external command
 
 - run `npm install --save-dev prettier`
+
+### Pull Request Errors:
+
+CI Pipeline / Lint & Prettier Check [FAILED]
+
+- run `npx prettier --check .` locally on your computer to check for files that are not correctly formatted
+- either manually fix formatting issues, or automatically fix by running `npx prettier --write .`
 
 ---
 
