@@ -35,7 +35,7 @@ Developers should ensure their code is clean and properly formatted before commi
    ```bash
    npm run format
    ```
-   - Runs **Prettier** to automatically format code in the directory. 
+   - Runs **Prettier** to automatically format code in the directory.
 
 ### Automated Code Quality Checks
 
@@ -78,6 +78,7 @@ npm test
 ### Pull Request Errors:
 
 CI Pipeline / Lint & Prettier Check [FAILED]
+
 - run `npx prettier --check .` locally on your computer to check for files that are not correctly formatted
 - either manually fix formatting issues, or automatically fix by running `npx prettier --write .`
 
