@@ -7,7 +7,7 @@
     "test": "jest",
     "prepare": "husky init",
     "lint": "eslint ./src",
-    "format": "prettier --write ./src",
+    "format": "prettier --write ./",
     "start": "npx serve .",
     "check": "npm run lint && npm test",
     "docs": "jsdoc -c jsdoc.conf.json"
