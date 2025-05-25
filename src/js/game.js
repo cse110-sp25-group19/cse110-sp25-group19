@@ -85,9 +85,6 @@ playAgainBtn.addEventListener('click', () => {
   location.reload(); //just refreshes page for now. needs actual logic to reset game board
 });
 
-
-
-
 /**
  * Flips a card and updates GameState.
  * Ignores if already flipped, matched, or 2 cards are face-up.
