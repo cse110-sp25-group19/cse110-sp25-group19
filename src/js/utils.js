@@ -63,13 +63,13 @@ export const GameState = {
  *
  * @returns {bool}       True if cards match, False if cards are mismatched.
  */
-export function matchCheck(){
-  if(GameState.flippedCards.length !== 2) return;
+export function matchCheck() {
+  if (GameState.flippedCards.length !== 2) return;
   let match = false;
 
-  const[card1, card2] = GameState.flippedCards;
+  const [card1, card2] = GameState.flippedCards;
   if (card1.value == card2.value) match = true;
-  else{
+  else {
     setTimeout(() => {
       card1.isFlipped = false;
       card2.isFlipped = false;
