@@ -59,6 +59,26 @@ export const GameState = {
 };
 
 /**
+ * Adds points to the player's score.
+ *
+ * @param   {number} [points=1]  How many points to add
+ * @returns {number}             New total score
+ */
+ export function addScore(points = 1) {
+  GameState.score += points;
+  return GameState.score;
+}
+
+/**
+ * Retrieves the current score.
+ *
+ * @returns {number}  Current score value
+ */
+ export function getScore() {
+  return GameState.score;
+}
+
+/**
  * Checks if the cards in flippedCards array matches.
  *
  * @returns {bool}       True if cards match, False if cards are mismatched.
@@ -68,8 +88,10 @@ export function matchCheck() {
   let match = false;
 
   const [card1, card2] = GameState.flippedCards;
-  if (card1.value == card2.value) match = true;
-  else {
+  if (card1.value == card2.value) { 
+    match = true;
+    addScore();
+  } else {
     setTimeout(() => {
       card1.isFlipped = false;
       card2.isFlipped = false;
