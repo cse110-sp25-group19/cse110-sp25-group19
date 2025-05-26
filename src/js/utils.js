@@ -64,7 +64,7 @@ export const GameState = {
  * @param   {number} [points=1]  How many points to add
  * @returns {number}             New total score
  */
- export function addScore(points = 1) {
+export function addScore(points = 1) {
   GameState.score += points;
   return GameState.score;
 }
@@ -74,7 +74,7 @@ export const GameState = {
  *
  * @returns {number}  Current score value
  */
- export function getScore() {
+export function getScore() {
   return GameState.score;
 }
 
@@ -88,7 +88,7 @@ export function matchCheck() {
   let match = false;
 
   const [card1, card2] = GameState.flippedCards;
-  if (card1.value == card2.value) { 
+  if (card1.value == card2.value) {
     match = true;
     addScore();
   } else {
