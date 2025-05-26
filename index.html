@@ -1,21 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sample JS HTML Project</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <h1>Hello World</h1>
-    <!-- <script src="src/index.js"></script> -->
-    <div id="game-controls">
-    <div id="score-container">Score: <span id="score">0</span></div>
-    <button id="reset-btn">Reset</button>
-    </div>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- Start Screen -->
+    <section id="start-screen">
+      <h1>FLIP & MATCH</h1>
+      <button id="start-btn">Start Game</button>
+      <button id="rules-btn">Rules</button>
+    </section>
 
+    <!-- Game Header -->
+    <header>
+      <h1>Flip Card Memory Game</h1>
+    </header>
 
+    <!-- Game UI (Score + Button) -->
+    <main class="game-container">
+      <section class="game-info">
+        <div class="score">Score: <span id="score">0</span></div>
+        <button id="reset-btn">Reset</button>
+      </section>
+
+      <!-- Card Grid -->
+      <section class="card-grid"></section>
+    </main>
+
+    <!-- End Screen Modal / Pop Up -->
+    <section id="end-screen" class="hidden">
+      <div class="modal">
+        <h2 id="winner-msg">PLAYER X WON!</h2>
+        <p id="final-score">Final Score: 0</p>
+        <button id="play-again-btn">Play Again</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; Powell Ranger's (CSE 110 Group 19)</p>
+    </footer>
+
+    <!-- JS Scripts -->
     <script type="module" src="src/js/utils.js"></script>
     <script type="module" src="src/js/game.js"></script>
-</body>
+  </body>
 </html>
