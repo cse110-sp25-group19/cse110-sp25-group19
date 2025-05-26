@@ -93,14 +93,14 @@ export function showEndScreen(winner, score) {
   endScreen.classList.remove('hidden'); //make endscreen visible
 }
 
-/**
- * Handles "Play Again" button click:
- * Reloads the page (temporary until proper game reset is implemented).
- *
- * TODO: Replace location.reload() with actual resetGame() logic.
- */
+export function resetGame() {
+  endScreen.classList.add('hidden');
+  const newDeck = initGame();
+  renderBoard(cardGrid, newDeck);
+}
+
 playAgainBtn.addEventListener('click', () => {
-  location.reload(); //just refreshes page for now. needs actual logic to reset game board
+  resetGame();
 });
 
 /**
