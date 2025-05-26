@@ -71,5 +71,19 @@ npm run coverage
 
 ---
 
+### Pipeline checkpoint 2 additional notes:
+
+- added automated tests via GitHub Actions
+
+  - Linter/prettier test
+  - Unit tests
+  - Documentation
+
+- Additional Notes:
+  - pull requests (last step) are manual
+  - pre-commit hook used so developers do not accidentally commit buggy/incorrectly formatted code
+
+---
+
 Diagram of the CI/CD pipeline (phase 1): <br />
 ![CI/CD diagram](./phase1.drawio.png)
