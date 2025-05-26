@@ -39,3 +39,25 @@ h1 {
   font-size: 3rem;
   color: var(--primary);
 }
+
+#game-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+#score-container {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#reset-btn {
+  padding: 8px 16px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
