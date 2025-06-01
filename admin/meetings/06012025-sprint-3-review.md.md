@@ -5,7 +5,7 @@
 **Team Number:** 19
 **Date:** [06/01/2025]  
 **Location:** Zoom  
-**Time:** [4pm - ]  
+**Time:** [4pm - 4:15]  
 **Note Taker:** [Menko Hornstein]
 
 ---
@@ -13,8 +13,8 @@
 ## 📌 Agenda
 
 - [x] Show & Tell: Completed work this sprint
-- [ ] Feedback/questions
-- [ ] (Demo/screenshare)
+- [x] Feedback/questions
+- [x] (Demo/screenshare)
 
 ---
 
@@ -57,9 +57,7 @@
 
 ## 💬 Notes / Decisions
 
--
-
----
+- ***
 
 ## 📅 Next Meeting
 
