@@ -61,7 +61,7 @@
 
 ## 📅 Next Meeting
 
-**Date:** [Date]  
-**Time:** [Time]  
-**Location:** []  
-**Goals:** []
+**Date:** [06/01/2025]  
+**Time:** [3:30pm]  
+**Location:** [Zoom]  
+**Goals:** [Retrospective]
