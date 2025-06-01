@@ -56,6 +56,7 @@ export const GameState = {
   flippedCards: [],
   score: 0,
   round: 1,
+  combo: 0,
 };
 
 /**
