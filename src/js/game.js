@@ -69,6 +69,11 @@ const cardGrid = document.querySelector('.card-grid');
 startBtn.addEventListener('click', () => {
   startScreen.style.display = 'none';
   gameContainer.style.display = 'block';
+
+  GameState.combo = 0;
+  GameState.score = 0;
+  updateScoreAndComboUI();
+
   const deck = initGame();
   renderBoard(cardGrid, deck);
 });
@@ -96,12 +101,24 @@ export function showEndScreen(winner, score) {
 export function resetGame() {
   endScreen.classList.add('hidden');
   const newDeck = initGame();
+
+  GameState.combo = 0;
+  GameState.score = 0;
+  updateScoreAndComboUI();
+
   renderBoard(cardGrid, newDeck);
 }
 
 playAgainBtn.addEventListener('click', () => {
   resetGame();
 });
+
+function updateScoreAndComboUI() {
+  const scoreElem = document.getElementById('score');
+  const comboElem = document.getElementById('combo-count');
+  if (scoreElem) scoreElem.textContent = GameState.score;
+  if (comboElem) comboElem.textContent = GameState.combo;
+}
 
 /**
  * Flips a card and updates GameState.
@@ -119,6 +136,34 @@ export function flipCard(index) {
 
   card.isFlipped = true;
   GameState.flippedCards.push(card);
+
+  if (GameState.flippedCards.length === 2) {
+    const [firstCard, secondCard] = GameState.flippedCards;
+
+    if (firstCard.value === secondCard.value) {
+      firstCard.isMatched = true;
+      secondCard.isMatched = true;
+      GameState.score += 1;
+      GameState.combo += 1;
+      GameState.flippedCards = [];
+
+      updateScoreAndComboUI();
+    } else {
+      GameState.combo = 0;
+      updateScoreAndComboUI();
+
+      setTimeout(() => {
+        firstCard.isFlipped = false;
+        secondCard.isFlipped = false;
+        GameState.flippedCards = [];
+        const cardGrid = document.querySelector('.card-grid');
+        if (cardGrid) renderBoard(cardGrid, GameState.deck);
+      }, 1000);
+    }
+  } else {
+    const comboElem = document.getElementById('combo-count');
+    if (comboElem) comboElem.textContent = GameState.combo;
+  }
 
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
 }
