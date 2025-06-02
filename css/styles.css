@@ -62,7 +62,6 @@ h1 {
 }
 
 /* Start Screen */
-
 #start-screen {
   display: flex;
   flex-direction: column;
@@ -82,8 +81,7 @@ h1 {
   display: none;
 }
 
-/* End Screen Modal / Pop Up*/
-
+/* End Screen Modal / Pop Up */
 .hidden {
   display: none;
 }
@@ -98,7 +96,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /*semi-transparent overlay*/
+  background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -137,20 +135,22 @@ h1 {
 }
 
 /* Card Grid */
-
-/* Grid layout for cards */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 80px);
-  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
   justify-content: center;
   margin-top: 20px;
+  max-width: 600px;
+  justify-items: center;
 }
 
+/* Card Flip Animation */
 .card {
-  width: 80px;
-  height: 120px;
+  width: 100px;
+  height: 140px;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .card-inner {
@@ -159,46 +159,39 @@ h1 {
   position: relative;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  transform: rotateY(0deg);
 }
 
+.card.flipped .card-inner,
 .card.is-flipped .card-inner {
   transform: rotateY(180deg);
 }
 
-.card-front {
-  background: #fff;
-  color: #222;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  transform: rotateY(180deg);
-  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  background-color: white;
+  color: #222;
+  font-size: 2rem;
 }
 
 .card-back {
-  background: #444;
+  background-color: #4a90e2;
+  transform: rotateY(180deg);
   color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(0deg);
-  z-index: 1;
 }
 
-/* button styles */
-
+/* Buttons */
 button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -211,6 +204,7 @@ button {
     background-color 0.3s ease,
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  margin: 5px;
 }
 
 button:hover {
@@ -224,11 +218,6 @@ button:focus {
   outline-offset: 2px;
 }
 
-#start-screen button {
-  position: relative;
-  z-index: 10;
-}
-
 #reset-btn:hover,
 #new-game-btn:hover {
   background-color: var(--accent);
@@ -240,4 +229,16 @@ button:focus {
 #new-game-btn:focus {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#score,
+#timer {
+  font-size: 18px;
+  margin: 10px;
 }
