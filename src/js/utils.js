@@ -99,6 +99,6 @@ export function matchCheck() {
     }, 1000);
   }
 
-  flippedCards = [];
+  GameState.flippedCards = [];
   return match;
 }
