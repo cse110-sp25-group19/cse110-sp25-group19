@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sample JS HTML Project</title>
-    <!-- <base href="/cse110-sp25-group19/" /> -->
+    <base href="/cse110-sp25-group19/" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
@@ -24,10 +24,11 @@
     <main class="game-container">
       <!-- class container for seperate game information -->
       <section class="game-info">
-        <!-- holds the game score -->
-        <div class="score">Score: <span id="score">0</span></div>
-        <!-- button to begin a new game -->
-        <button id="new-game-btn">New Game</button>
+        <div id="game-controls">
+          <div id="score-container">Score: <span id="score">0</span></div>
+          <button id="new-game-btn">New Game</button>
+          <button id="reset-btn">Reset</button>
+        </div>
       </section>
 
       <!-- class container for the card grid part -->

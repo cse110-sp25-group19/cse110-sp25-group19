@@ -40,6 +40,27 @@ h1 {
   color: var(--primary);
 }
 
+#game-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+#score-container {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#reset-btn {
+  padding: 8px 16px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* Start Screen */
 
 #start-screen {
@@ -206,4 +227,17 @@ button:focus {
 #start-screen button {
   position: relative;
   z-index: 10;
+}
+
+#reset-btn:hover,
+#new-game-btn:hover {
+  background-color: var(--accent);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#reset-btn:focus,
+#new-game-btn:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
 }
