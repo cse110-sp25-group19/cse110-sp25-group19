@@ -168,7 +168,7 @@ export function flipCard(index) {
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
 }
 
-//  Score + Reset Button Logic 
+//  Score + Reset Button Logic
 
 let score = 0;
 
@@ -177,7 +177,7 @@ let score = 0;
  */
 function updateScore() {
   score += 1;
-  const scoreEl = document.getElementById("score");
+  const scoreEl = document.getElementById('score');
   if (scoreEl) scoreEl.textContent = score;
 }
 
@@ -186,7 +186,7 @@ function updateScore() {
  */
 function resetScore() {
   score = 0;
-  const scoreEl = document.getElementById("score");
+  const scoreEl = document.getElementById('score');
   if (scoreEl) scoreEl.textContent = score;
 
   // reset the game board too, if needed
@@ -194,9 +194,9 @@ function resetScore() {
 }
 
 // Wait until DOM is ready to attach event listeners
-document.addEventListener("DOMContentLoaded", () => {
-  const resetBtn = document.getElementById("reset-btn");
-  if (resetBtn) resetBtn.addEventListener("click", resetScore);
+document.addEventListener('DOMContentLoaded', () => {
+  const resetBtn = document.getElementById('reset-btn');
+  if (resetBtn) resetBtn.addEventListener('click', resetScore);
 });
 
 // Export this so it can be used when cards match
