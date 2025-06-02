@@ -16,6 +16,7 @@ export function initGame() {
   GameState.flippedCards = [];
   GameState.score = 0;
   GameState.round = 1;
+  GameState.timeLeft = 60;
   //Return shuffled deck
   return shuffledDeck;
 }
@@ -95,6 +96,7 @@ startBtn.addEventListener('click', () => {
 
   const deck = initGame();
   renderBoard(cardGrid, deck);
+  startTimer();
 });
 
 //End Screen Logic
@@ -126,6 +128,7 @@ export function resetGame() {
   updateScoreAndComboUI();
 
   renderBoard(cardGrid, newDeck);
+  resetTimer();
 }
 
 playAgainBtn.addEventListener('click', () => {
@@ -222,6 +225,71 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetBtn = document.getElementById('reset-btn');
   if (resetBtn) resetBtn.addEventListener('click', resetScore);
 });
+
+//Countdown Timer :
+let timerInterval = null;
+
+/**
+ * Starts the countdown timer for the game.
+ * Initializes `GameState.timeLeft` to 60 seconds,
+ * updates the UI, and begins ticking every second.
+ * When the timer reaches 0, the interval is cleared
+ * and the game-over screen is displayed via `handleTimeOut()`.
+ *
+ * @returns {void}
+ */
+function startTimer() {
+  clearInterval(timerInterval); // Stop any existing timer
+  GameState.timeLeft = 60;
+  updateTimerUI();
+
+  timerInterval = setInterval(() => {
+    GameState.timeLeft--;
+    updateTimerUI();
+
+    // Check if time has run out
+    if (GameState.timeLeft <= 0) {
+      clearInterval(timerInterval);
+      handleTimeOut();
+    }
+  }, 1000);
+}
+
+/**
+ * Resets the countdown timer to the default value (60 seconds)
+ * and updates the UI. Any running timer is cleared.
+ *
+ * @returns {void}
+ */
+function resetTimer() {
+  clearInterval(timerInterval); // Stop the timer
+  GameState.timeLeft = 60;
+  updateTimerUI();
+}
+
+/**
+ * Updates the timer display in the UI to reflect
+ * the current value of `GameState.timeLeft`.
+ *
+ * @returns {void}
+ */
+function updateTimerUI() {
+  const timerEl = document.getElementById('timer');
+  if (timerEl) timerEl.textContent = GameState.timeLeft;
+}
+
+/**
+ * Handles logic when the timer reaches 0.
+ * Displays the end screen with a "TIME'S UP!" message
+ * and shows the player's final score.
+ *
+ * @returns {void}
+ */
+function handleTimeOut() {
+  endScreen.classList.remove('hidden');
+  winnerMsg.textContent = `TIME'S UP!`;
+  finalScoreText.textContent = `Your Score: ${GameState.score}`;
+}
 
 // Export this so it can be used when cards match
 export { updateScore };
