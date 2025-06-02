@@ -132,6 +132,11 @@ playAgainBtn.addEventListener('click', () => {
   resetGame();
 });
 
+const resetBtn = document.getElementById('reset-btn');
+if (resetBtn) {
+  resetBtn.addEventListener('click', resetGame);
+}
+
 function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
   const comboElem = document.getElementById('combo-count');
