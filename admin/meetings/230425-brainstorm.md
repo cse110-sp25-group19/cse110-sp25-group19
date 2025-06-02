@@ -41,7 +41,7 @@
 
 - ideas : Memory based game, credit card, card game (with a specific theme), casino app, collecters app, flashcard
 - make poll deadline tonight
-- 
+-
 
 ---
 

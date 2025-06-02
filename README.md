@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # Memory_Card_Game_CICD_Pipeline
 
 This is a simple JavaScript and HTML project with a basic file structure, including automated code quality checks, pre-commit hooks, and conventional commit message enforcement.
@@ -25,6 +26,7 @@ Developers should ensure their code is clean and properly formatted before commi
    ```bash
    npm run lint
    ```
+
    - Runs **ESLint** on the **`src/`** directory to catch common JavaScript errors.
 
 2. Formatting the Code:
@@ -81,10 +83,11 @@ CI Pipeline / Lint & Prettier Check [FAILED]
 ---
 
 ## Project Folder Purpose
-CSS - contains all stylesheets   
-HTML - contains all html pages and components      
-Scripts - holds Javascript files    
-Assets - holds any media ranging from images to documantation     
+
+CSS - contains all stylesheets  
+HTML - contains all html pages and components  
+Scripts - holds Javascript files  
+Assets - holds any media ranging from images to documantation  
 =======
 
 # cse110-sp25-group19

@@ -1,12 +1,12 @@
 /* CSS reset */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 /* Variables */
-:root{
+:root {
   /* Typography */
   --font-family: Arial, sans-serif;
   --font-size-base: 16px;
@@ -60,4 +60,3 @@ h1 {
   border-radius: 8px;
   cursor: pointer;
 }
-
