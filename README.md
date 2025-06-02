@@ -1,6 +1,4 @@
-# Videos
-
-status video 1: https://youtu.be/QALgL--nj_Y
+<<<<<<< HEAD
 
 # Memory_Card_Game_CICD_Pipeline
 
@@ -29,7 +27,7 @@ Developers should ensure their code is clean and properly formatted before commi
    npm run lint
    ```
 
-   - Runs **ESLint** on the repo to catch common JavaScript errors.
+   - Runs **ESLint** on the **`src/`** directory to catch common JavaScript errors.
 
 2. Formatting the Code:
    ```bash
@@ -89,7 +87,7 @@ CI Pipeline / Lint & Prettier Check [FAILED]
 CSS - contains all stylesheets  
 HTML - contains all html pages and components  
 Scripts - holds Javascript files  
-Assets - holds any media ranging from images to documentation  
+Assets - holds any media ranging from images to documantation  
 =======
 
 # cse110-sp25-group19
