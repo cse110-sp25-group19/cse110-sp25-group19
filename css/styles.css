@@ -68,46 +68,21 @@ h1 {
 }
 
 #end-screen:not(.hidden) {
+#game-controls {
   display: flex;
-}
-
-#end-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /*semi-transparent overlay*/
+  gap: 16px;
   align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  margin-top: 16px;
 }
 
-#end-screen .modal {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  min-width: 300px;
+#score-container {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-#end-screen h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-
-#end-screen p {
-  font-size: 1.23rem;
-  margin-bottom: 1.5rem;
-  color: var(--text);
-}
-
-#end-screen button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background-color: var(--primary);
+#reset-btn {
+  padding: 8px 16px;
+  background-color: #ff6666;
   color: white;
   border: none;
   border-radius: 8px;
