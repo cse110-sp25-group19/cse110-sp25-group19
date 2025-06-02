@@ -202,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (resetBtn) resetBtn.addEventListener('click', resetScore);
 });
 
-
 //Countdown Timer :
 let timerInterval = null;
 
@@ -267,7 +266,6 @@ function handleTimeOut() {
   winnerMsg.textContent = `TIME'S UP!`;
   finalScoreText.textContent = `Your Score: ${GameState.score}`;
 }
-
 
 // Export this so it can be used when cards match
 export { updateScore };
