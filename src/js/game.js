@@ -12,7 +12,7 @@ export function initGame() {
 
   //Shuffle deck
   const shuffledDeck = shuffleDeck(deck);
-  GameState.deck = deck;
+  GameState.deck = shuffledDeck;
   GameState.flippedCards = [];
   GameState.score = 0;
   GameState.round = 1;
@@ -32,24 +32,43 @@ console.log('GameState:', GameState);
 export function renderBoard(container, deck) {
   // TODO: inject placeholder elements
   container.innerHTML = '';
+
   deck.forEach((card, index) => {
     let cardElem = document.createElement('div');
+    cardElem.classList.add('card');
+
     if (card.isFlipped || card.isMatched) {
-      cardElem.classList.add('card', 'faceup');
-      cardElem.textContent = card.value;
-    } else {
-      cardElem.classList.add('card', 'facedown');
-      cardElem.textContent = '';
+      cardElem.classList.add('is-flipped');
     }
+
     cardElem.dataset.id = card.id;
     cardElem.dataset.value = card.value;
 
+    const inner = document.createElement('div');
+    inner.classList.add('card-inner');
+
+    const front = document.createElement('div');
+    front.classList.add('card-front');
+    front.textContent = card.value;
+
+    const back = document.createElement('div');
+    back.classList.add('card-back');
+    back.textContent = '';
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    cardElem.appendChild(inner);
+
     // Add card flip mechanics
     cardElem.addEventListener('click', () => {
-      flipCard(index);
-      cardElem.classList.remove('facedown');
-      cardElem.classList.add('faceup');
-      cardElem.textContent = card.value;
+      const { deck: updatedDeck } = flipCard(index);
+      const currentCard = updatedDeck[index];
+
+      if (currentCard.isFlipped || currentCard.isMatched) {
+        cardElem.classList.add('is-flipped');
+      } else {
+        cardElem.classList.remove('is-flipped');
+      }
     });
     container.appendChild(cardElem);
   });
@@ -115,6 +134,11 @@ export function resetGame() {
 playAgainBtn.addEventListener('click', () => {
   resetGame();
 });
+
+const resetBtn = document.getElementById('reset-btn');
+if (resetBtn) {
+  resetBtn.addEventListener('click', resetGame);
+}
 
 function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
