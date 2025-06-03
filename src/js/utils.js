@@ -49,7 +49,7 @@ export function shuffleDeck(deck) {
 // export const Deck = shuffleDeck(generateDeck());
 
 /**
- * Tracks the full state of the game, including the deck, flipped cards, score, and current round.
+ * Tracks the full state of the game, including the deck, flipped cards, score, time, and current round.
  */
 export const GameState = {
   deck: generateDeck(),
@@ -57,6 +57,7 @@ export const GameState = {
   score: 0,
   round: 1,
   combo: 0,
+  timeLeft: 60,
 };
 
 /**

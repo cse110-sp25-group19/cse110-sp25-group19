@@ -12,10 +12,11 @@ export function initGame() {
 
   //Shuffle deck
   const shuffledDeck = shuffleDeck(deck);
-  GameState.deck = deck;
+  GameState.deck = shuffledDeck;
   GameState.flippedCards = [];
   GameState.score = 0;
   GameState.round = 1;
+  GameState.timeLeft = 60;
   //Return shuffled deck
   return shuffledDeck;
 }
@@ -31,24 +32,43 @@ console.log('GameState:', GameState);
 export function renderBoard(container, deck) {
   // TODO: inject placeholder elements
   container.innerHTML = '';
+
   deck.forEach((card, index) => {
     let cardElem = document.createElement('div');
+    cardElem.classList.add('card');
+
     if (card.isFlipped || card.isMatched) {
-      cardElem.classList.add('card', 'faceup');
-      cardElem.textContent = card.value;
-    } else {
-      cardElem.classList.add('card', 'facedown');
-      cardElem.textContent = '';
+      cardElem.classList.add('is-flipped');
     }
+
     cardElem.dataset.id = card.id;
     cardElem.dataset.value = card.value;
 
+    const inner = document.createElement('div');
+    inner.classList.add('card-inner');
+
+    const front = document.createElement('div');
+    front.classList.add('card-front');
+    front.textContent = card.value;
+
+    const back = document.createElement('div');
+    back.classList.add('card-back');
+    back.textContent = '';
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    cardElem.appendChild(inner);
+
     // Add card flip mechanics
     cardElem.addEventListener('click', () => {
-      flipCard(index);
-      cardElem.classList.remove('facedown');
-      cardElem.classList.add('faceup');
-      cardElem.textContent = card.value;
+      const { deck: updatedDeck } = flipCard(index);
+      const currentCard = updatedDeck[index];
+
+      if (currentCard.isFlipped || currentCard.isMatched) {
+        cardElem.classList.add('is-flipped');
+      } else {
+        cardElem.classList.remove('is-flipped');
+      }
     });
     container.appendChild(cardElem);
   });
@@ -76,6 +96,7 @@ startBtn.addEventListener('click', () => {
 
   const deck = initGame();
   renderBoard(cardGrid, deck);
+  startTimer();
 });
 
 //End Screen Logic
@@ -107,11 +128,17 @@ export function resetGame() {
   updateScoreAndComboUI();
 
   renderBoard(cardGrid, newDeck);
+  resetTimer();
 }
 
 playAgainBtn.addEventListener('click', () => {
   resetGame();
 });
+
+const resetBtn = document.getElementById('reset-btn');
+if (resetBtn) {
+  resetBtn.addEventListener('click', resetGame);
+}
 
 function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
@@ -167,3 +194,102 @@ export function flipCard(index) {
 
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
 }
+
+//  Score + Reset Button Logic
+
+let score = 0;
+
+/**
+ * Increases score and updates the UI
+ */
+function updateScore() {
+  score += 1;
+  const scoreEl = document.getElementById('score');
+  if (scoreEl) scoreEl.textContent = score;
+}
+
+/**
+ * Resets the score and updates the UI
+ */
+function resetScore() {
+  score = 0;
+  const scoreEl = document.getElementById('score');
+  if (scoreEl) scoreEl.textContent = score;
+
+  // reset the game board too, if needed
+  initGame();
+}
+
+// Wait until DOM is ready to attach event listeners
+document.addEventListener('DOMContentLoaded', () => {
+  const resetBtn = document.getElementById('reset-btn');
+  if (resetBtn) resetBtn.addEventListener('click', resetScore);
+});
+
+//Countdown Timer :
+let timerInterval = null;
+
+/**
+ * Starts the countdown timer for the game.
+ * Initializes `GameState.timeLeft` to 60 seconds,
+ * updates the UI, and begins ticking every second.
+ * When the timer reaches 0, the interval is cleared
+ * and the game-over screen is displayed via `handleTimeOut()`.
+ *
+ * @returns {void}
+ */
+function startTimer() {
+  clearInterval(timerInterval); // Stop any existing timer
+  GameState.timeLeft = 60;
+  updateTimerUI();
+
+  timerInterval = setInterval(() => {
+    GameState.timeLeft--;
+    updateTimerUI();
+
+    // Check if time has run out
+    if (GameState.timeLeft <= 0) {
+      clearInterval(timerInterval);
+      handleTimeOut();
+    }
+  }, 1000);
+}
+
+/**
+ * Resets the countdown timer to the default value (60 seconds)
+ * and updates the UI. Any running timer is cleared.
+ *
+ * @returns {void}
+ */
+function resetTimer() {
+  clearInterval(timerInterval); // Stop the timer
+  GameState.timeLeft = 60;
+  updateTimerUI();
+}
+
+/**
+ * Updates the timer display in the UI to reflect
+ * the current value of `GameState.timeLeft`.
+ *
+ * @returns {void}
+ */
+function updateTimerUI() {
+  const timerEl = document.getElementById('timer');
+  if (timerEl) timerEl.textContent = GameState.timeLeft;
+}
+
+/**
+ * Handles logic when the timer reaches 0.
+ * Displays the end screen with a "TIME'S UP!" message
+ * and shows the player's final score.
+ *
+ * @returns {void}
+ */
+function handleTimeOut() {
+  endScreen.classList.remove('hidden');
+  winnerMsg.textContent = `TIME'S UP!`;
+  finalScoreText.textContent = `Your Score: ${GameState.score}`;
+}
+
+// Export this so it can be used when cards match
+export { updateScore };
