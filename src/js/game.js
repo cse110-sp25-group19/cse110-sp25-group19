@@ -1,12 +1,15 @@
-import { shuffleDeck } from './utils.js';
-import { generateDeck } from './utils.js';
-import { GameState } from './utils.js';
+const {
+  Card,
+  generateDeck,
+  shuffleDeck,
+  GameState,
+} = require('../js/utils');
 /**
  * Initializes a new game round.
  *
  * @returns {Card[]}
  */
-export function initGame() {
+function initGame() {
   //Make initial deck
   const deck = generateDeck();
 
@@ -29,7 +32,7 @@ console.log('GameState:', GameState);
  * @param   {Array}       deck      Card array created by initGame()
  * @returns {void}
  */
-export function renderBoard(container, deck) {
+function renderBoard(container, deck) {
   // TODO: inject placeholder elements
   container.innerHTML = '';
 
@@ -74,37 +77,41 @@ export function renderBoard(container, deck) {
   });
 }
 
-// Start Screen Logic
-
-const startScreen = document.getElementById('start-screen');
-const gameContainer = document.querySelector('.game-container');
-const startBtn = document.getElementById('start-btn');
-const cardGrid = document.querySelector('.card-grid');
-
+function setupStartScreen(){
+  // Start Screen Logic
+  const startScreen = document.getElementById('start-screen');
+  const gameContainer = document.querySelector('.game-container');
+  const startBtn = document.getElementById('start-btn');
+  const cardGrid = document.querySelector('.card-grid');
 /**
  * Handles start button click:
  * Hides start screen and shows the game container.
  * Initializes the game by calling initGame() and renders the board.
  */
-startBtn.addEventListener('click', () => {
-  startScreen.style.display = 'none';
-  gameContainer.style.display = 'block';
+  startBtn.addEventListener('click', () => {
+    startScreen.style.display = 'none';
+    gameContainer.style.display = 'block';
 
-  GameState.combo = 0;
-  GameState.score = 0;
-  updateScoreAndComboUI();
+    GameState.combo = 0;
+    GameState.score = 0;
+    updateScoreAndComboUI();
 
-  const deck = initGame();
-  renderBoard(cardGrid, deck);
-  startTimer();
-});
+    const deck = initGame();
+    renderBoard(cardGrid, deck);
+    startTimer();
+  });
 
 //End Screen Logic
 
-const endScreen = document.getElementById('end-screen');
-const winnerMsg = document.getElementById('winner-msg');
-const finalScoreText = document.getElementById('final-score');
-const playAgainBtn = document.getElementById('play-again-btn');
+  const endScreen = document.getElementById('end-screen');
+  const winnerMsg = document.getElementById('winner-msg');
+  const finalScoreText = document.getElementById('final-score');
+  const playAgainBtn = document.getElementById('play-again-btn');
+}
+
+if (typeof document !== 'undefined') {
+  setupStartScreen();
+}
 
 /**
  * Displays the end screen modal with the winner and final scores.
@@ -113,13 +120,13 @@ const playAgainBtn = document.getElementById('play-again-btn');
  * @param {{player1: number, player2: number}} score - An object containing both players' scores
  * @returns {void}
  */
-export function showEndScreen(winner, score) {
+function showEndScreen(winner, score) {
   winnerMsg.textContent = `PLAYER ${winner} WON!`;
   finalScoreText.textContent = `Final Score: ${score.player1} - ${score.player2}`;
   endScreen.classList.remove('hidden'); //make endscreen visible
 }
 
-export function resetGame() {
+function resetGame() {
   endScreen.classList.add('hidden');
   const newDeck = initGame();
 
@@ -131,13 +138,15 @@ export function resetGame() {
   resetTimer();
 }
 
-playAgainBtn.addEventListener('click', () => {
-  resetGame();
-});
+if (typeof document !== 'undefined') {
+  playAgainBtn.addEventListener('click', () => {
+    resetGame();
+  });
 
-const resetBtn = document.getElementById('reset-btn');
-if (resetBtn) {
-  resetBtn.addEventListener('click', resetGame);
+  const resetBtn = document.getElementById('reset-btn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', resetGame);
+  }
 }
 
 function updateScoreAndComboUI() {
@@ -154,7 +163,7 @@ function updateScoreAndComboUI() {
  * @param {number} index - Index of the card in the deck
  * @returns {{ deck: Card[], flippedCards: Card[] }}
  */
-export function flipCard(index) {
+function flipCard(index) {
   const card = GameState.deck[index];
 
   if (card.isFlipped || card.isMatched || GameState.flippedCards.length >= 2) {
@@ -221,10 +230,12 @@ function resetScore() {
 }
 
 // Wait until DOM is ready to attach event listeners
-document.addEventListener('DOMContentLoaded', () => {
-  const resetBtn = document.getElementById('reset-btn');
-  if (resetBtn) resetBtn.addEventListener('click', resetScore);
-});
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
+    const resetBtn = document.getElementById('reset-btn');
+    if (resetBtn) resetBtn.addEventListener('click', resetScore);
+  });
+}
 
 //Countdown Timer :
 let timerInterval = null;
@@ -292,4 +303,12 @@ function handleTimeOut() {
 }
 
 // Export this so it can be used when cards match
-export { updateScore };
+//export { updateScore };
+
+module.exports = {initGame,
+  renderBoard, 
+  showEndScreen, 
+  resetGame, 
+  flipCard, 
+  updateScore
+};

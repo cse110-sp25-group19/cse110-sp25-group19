@@ -2,7 +2,7 @@
  * @param {number|string} id - Unique identifier for the card
  * @param {*} value - Value used to determine matching pairs
  */
-export class Card {
+class Card {
   constructor(id, value) {
     this.id = id;
     this.value = value;
@@ -16,7 +16,7 @@ export class Card {
  * @param {number} pairs - Number of matching pairs to include (default: 8)
  * @returns {Card[]} Array of Card instances
  */
-export function generateDeck(pairs = 8) {
+function generateDeck(pairs = 8) {
   const deck = [];
   let idCounter = 0;
   for (let value = 1; value <= pairs; value++) {
@@ -33,7 +33,7 @@ export function generateDeck(pairs = 8) {
  * @returns {Array}       Same array reference, after shuffling
  */
 
-export function shuffleDeck(deck) {
+function shuffleDeck(deck) {
   // TODO: Implement Fisher–Yates
   const newDeck = [...deck];
   for (let i = newDeck.length - 1; i > 0; i--) {
@@ -51,7 +51,7 @@ export function shuffleDeck(deck) {
 /**
  * Tracks the full state of the game, including the deck, flipped cards, score, time, and current round.
  */
-export const GameState = {
+const GameState = {
   deck: generateDeck(),
   flippedCards: [],
   score: 0,
@@ -66,7 +66,7 @@ export const GameState = {
  * @param   {number} [points=1]  How many points to add
  * @returns {number}             New total score
  */
-export function addScore(points = 1) {
+function addScore(points = 1) {
   GameState.score += points;
   return GameState.score;
 }
@@ -76,7 +76,7 @@ export function addScore(points = 1) {
  *
  * @returns {number}  Current score value
  */
-export function getScore() {
+function getScore() {
   return GameState.score;
 }
 
@@ -85,7 +85,7 @@ export function getScore() {
  *
  * @returns {bool}       True if cards match, False if cards are mismatched.
  */
-export function matchCheck() {
+function matchCheck() {
   if (GameState.flippedCards.length !== 2) return;
   let match = false;
 
@@ -103,3 +103,13 @@ export function matchCheck() {
   GameState.flippedCards = [];
   return match;
 }
+
+module.exports = {
+  Card, 
+  generateDeck, 
+  shuffleDeck, 
+  GameState, 
+  addScore, 
+  getScore, 
+  matchCheck
+};
