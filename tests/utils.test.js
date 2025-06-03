@@ -8,6 +8,15 @@ const {
   GameState,
 } = require('../src/js/utils');
 
+beforeEach(() => {
+  // Reset GameState before each test
+  GameState.deck = [];
+  GameState.flippedCards = [];
+  GameState.score = 0;
+  GameState.round = 1;
+  GameState.combo = 0;
+});
+
 test('generateDeck(4) returns 8 cards with exactly 4 matching pairs', () => {
   const deck = generateDeck(4);
   expect(deck.length).toBe(8);
@@ -51,7 +60,6 @@ test('addScore() increments by 1, and addScore(5) increments by 5', () => {
 });
 
 test('matchCheck() returns true for matching cards and clears flippedCards', () => {
-  GameState.score = 0;
   const cardA = new Card(1, 'X');
   const cardB = new Card(2, 'X');
   GameState.flippedCards = [cardA, cardB];

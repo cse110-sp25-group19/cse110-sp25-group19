@@ -77,12 +77,14 @@ function renderBoard(container, deck) {
   });
 }
 
-function setupStartScreen(){
-  // Start Screen Logic
+function setupStartScreen() {
+// Start Screen Logic
   const startScreen = document.getElementById('start-screen');
   const gameContainer = document.querySelector('.game-container');
   const startBtn = document.getElementById('start-btn');
   const cardGrid = document.querySelector('.card-grid');
+
+  if (!startScreen || !gameContainer || !startBtn || !cardGrid) return;
 /**
  * Handles start button click:
  * Hides start screen and shows the game container.
@@ -100,18 +102,14 @@ function setupStartScreen(){
     renderBoard(cardGrid, deck);
     startTimer();
   });
+}
 
 //End Screen Logic
 
-  const endScreen = document.getElementById('end-screen');
-  const winnerMsg = document.getElementById('winner-msg');
-  const finalScoreText = document.getElementById('final-score');
-  const playAgainBtn = document.getElementById('play-again-btn');
-}
-
-if (typeof document !== 'undefined') {
-  setupStartScreen();
-}
+const endScreen = document.getElementById('end-screen');
+const winnerMsg = document.getElementById('winner-msg');
+const finalScoreText = document.getElementById('final-score');
+const playAgainBtn = document.getElementById('play-again-btn');
 
 /**
  * Displays the end screen modal with the winner and final scores.
@@ -138,15 +136,15 @@ function resetGame() {
   resetTimer();
 }
 
-if (typeof document !== 'undefined') {
+if (playAgainBtn) {
   playAgainBtn.addEventListener('click', () => {
     resetGame();
   });
+}
 
-  const resetBtn = document.getElementById('reset-btn');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', resetGame);
-  }
+const resetBtn = document.getElementById('reset-btn');
+if (resetBtn) {
+   resetBtn.addEventListener('click', resetGame);
 }
 
 function updateScoreAndComboUI() {
@@ -230,12 +228,11 @@ function resetScore() {
 }
 
 // Wait until DOM is ready to attach event listeners
-if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', () => {
-    const resetBtn = document.getElementById('reset-btn');
-    if (resetBtn) resetBtn.addEventListener('click', resetScore);
-  });
-}
+document.addEventListener('DOMContentLoaded', () => {
+  setupStartScreen();
+  const resetBtn = document.getElementById('reset-btn');
+  if (resetBtn) resetBtn.addEventListener('click', resetScore);
+});
 
 //Countdown Timer :
 let timerInterval = null;
