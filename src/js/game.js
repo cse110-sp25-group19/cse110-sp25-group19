@@ -1,9 +1,4 @@
-const {
-  Card,
-  generateDeck,
-  shuffleDeck,
-  GameState,
-} = require('../js/utils');
+const { Card, generateDeck, shuffleDeck, GameState } = require('../js/utils');
 /**
  * Initializes a new game round.
  *
@@ -78,18 +73,18 @@ function renderBoard(container, deck) {
 }
 
 function setupStartScreen() {
-// Start Screen Logic
+  // Start Screen Logic
   const startScreen = document.getElementById('start-screen');
   const gameContainer = document.querySelector('.game-container');
   const startBtn = document.getElementById('start-btn');
   const cardGrid = document.querySelector('.card-grid');
 
   if (!startScreen || !gameContainer || !startBtn || !cardGrid) return;
-/**
- * Handles start button click:
- * Hides start screen and shows the game container.
- * Initializes the game by calling initGame() and renders the board.
- */
+  /**
+   * Handles start button click:
+   * Hides start screen and shows the game container.
+   * Initializes the game by calling initGame() and renders the board.
+   */
   startBtn.addEventListener('click', () => {
     startScreen.style.display = 'none';
     gameContainer.style.display = 'block';
@@ -144,7 +139,7 @@ if (playAgainBtn) {
 
 const resetBtn = document.getElementById('reset-btn');
 if (resetBtn) {
-   resetBtn.addEventListener('click', resetGame);
+  resetBtn.addEventListener('click', resetGame);
 }
 
 function updateScoreAndComboUI() {
@@ -302,10 +297,11 @@ function handleTimeOut() {
 // Export this so it can be used when cards match
 //export { updateScore };
 
-module.exports = {initGame,
-  renderBoard, 
-  showEndScreen, 
-  resetGame, 
-  flipCard, 
-  updateScore
+module.exports = {
+  initGame,
+  renderBoard,
+  showEndScreen,
+  resetGame,
+  flipCard,
+  updateScore,
 };

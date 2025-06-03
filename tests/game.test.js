@@ -1,5 +1,5 @@
 const { initGame, flipCard } = require('../src/js/game');
-const { Card,  GameState } = require('../src/js/utils');
+const { Card, GameState } = require('../src/js/utils');
 
 beforeEach(() => {
   // Reset GameState before each test

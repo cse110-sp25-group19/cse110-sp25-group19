@@ -105,11 +105,11 @@ function matchCheck() {
 }
 
 module.exports = {
-  Card, 
-  generateDeck, 
-  shuffleDeck, 
-  GameState, 
-  addScore, 
-  getScore, 
-  matchCheck
+  Card,
+  generateDeck,
+  shuffleDeck,
+  GameState,
+  addScore,
+  getScore,
+  matchCheck,
 };
