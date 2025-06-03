@@ -29,6 +29,8 @@ console.log('GameState:', GameState);
  * @returns {void}
  */
 function renderBoard(container, deck) {
+  if (!container) return; // to prevent a failing test when the container is null
+
   container.innerHTML = '';
 
   deck.forEach((card, index) => {
@@ -71,7 +73,9 @@ function setupStartScreen() {
   const startScreen = document.getElementById('start-screen');
   const gameContainer = document.querySelector('.game-container');
   const startBtn = document.getElementById('start-btn');
-  const cardGrid = document.getElementById('card-grid') || document.querySelector('.card-grid');
+  const cardGrid =
+    document.getElementById('card-grid') ||
+    document.querySelector('.card-grid');
 
   if (!startScreen || !gameContainer || !startBtn || !cardGrid) return;
 
@@ -109,7 +113,9 @@ function resetGame() {
   GameState.score = 0;
   updateScoreAndComboUI();
 
-  const cardGrid = document.getElementById('card-grid') || document.querySelector('.card-grid');
+  const cardGrid =
+    document.getElementById('card-grid') ||
+    document.querySelector('.card-grid');
   renderBoard(cardGrid, newDeck);
   resetTimer();
 }
@@ -157,7 +163,9 @@ function flipCard(index) {
         secondCard.isFlipped = false;
         GameState.flippedCards = [];
 
-        const cardGrid = document.getElementById('card-grid') || document.querySelector('.card-grid');
+        const cardGrid =
+          document.getElementById('card-grid') ||
+          document.querySelector('.card-grid');
         renderBoard(cardGrid, GameState.deck);
       }, 1000);
     }
@@ -206,6 +214,7 @@ function handleTimeOut() {
   finalScoreText.textContent = `Your Score: ${GameState.score}`;
 }
 
+// Module Exports (CommonJS)
 module.exports = {
   initGame,
   renderBoard,
