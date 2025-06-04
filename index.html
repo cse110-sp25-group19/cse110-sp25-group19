@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic page setup -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample JS HTML Project</title>
+
+    <!-- TITLE + BASE + STYLES -->
+    <title>Flip Card Game</title>
     <base href="/cse110-sp25-group19/" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
@@ -20,22 +23,33 @@
       <h1>Flip Card Memory Game</h1>
     </header>
 
-    <!-- class container for the game later on-->
-    <main class="game-container">
-      <!-- class container for seperate game information -->
+    <!-- Game Controls -->
+    <section id="game-controls">
+      <!-- Score display -->
+      <span id="score-container">Score: <span id="score">0</span></span>
+      <button id="new-game-btn">New Game</button>
+      <button id="reset-btn">Reset</button>
+    </section>
+
+    <!-- Game Container -->
+    <main id="game-container" class="game-container">
       <section class="game-info">
-        <div id="game-controls">
-          <div id="score-container">Score: <span id="score">0</span></div>
-          <button id="new-game-btn">New Game</button>
-          <button id="reset-btn">Reset</button>
-        </div>
+        <!-- optional game info section -->
       </section>
 
-      <!-- class container for the card grid part -->
-      <section class="card-grid"></section>
+      <!-- Card Grid -->
+      <section id="card-grid" class="card-grid">
+        <!-- Example static card (can be removed if dynamically generated) -->
+        <article class="card" tabindex="0">
+          <div class="card-inner">
+            <div class="card-front" aria-hidden="true">?</div>
+            <div class="card-back">💠</div>
+          </div>
+        </article>
+      </section>
     </main>
 
-    <!-- End Screen Modal / Pop Up -->
+    <!-- End Screen Modal -->
     <section id="end-screen" class="hidden">
       <div class="modal">
         <h2 id="winner-msg">PLAYER X WON!</h2>
@@ -44,12 +58,12 @@
       </div>
     </section>
 
-    <!-- end footer -->
+    <!-- Footer -->
     <footer>
       <p>&copy; Powell Ranger's (CSE 110 Group 19)</p>
     </footer>
 
-    <!-- Existing script tags -->
+    <!-- JavaScript Modules -->
     <script type="module" src="src/js/utils.js"></script>
     <script type="module" src="src/js/game.js"></script>
   </body>
