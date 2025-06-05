@@ -1,4 +1,4 @@
-const { Card, generateDeck, shuffleDeck, GameState } = require('../js/utils');
+import { Card, generateDeck, shuffleDeck, GameState, addScore, getScore, matchCheck, triggerComboEffect } from './utils.js';
 /**
  * Initializes a new game round.
  *
@@ -142,6 +142,9 @@ if (resetBtn) {
   resetBtn.addEventListener('click', resetGame);
 }
 
+/**
+ * Updates the score and combo count in the display.
+ */
 function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
   const comboElem = document.getElementById('combo-count');
@@ -174,6 +177,7 @@ function flipCard(index) {
       secondCard.isMatched = true;
       GameState.score += 1;
       GameState.combo += 1;
+      triggerComboEffect(GameState.combo);
       GameState.flippedCards = [];
 
       updateScoreAndComboUI();
@@ -297,7 +301,7 @@ function handleTimeOut() {
 // Export this so it can be used when cards match
 //export { updateScore };
 
-module.exports = {
+export {
   initGame,
   renderBoard,
   showEndScreen,
