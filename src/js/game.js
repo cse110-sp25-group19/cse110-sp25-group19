@@ -1,5 +1,12 @@
-//const { Card, generateDeck, shuffleDeck, GameState } = require('../js/utils');
-import { Card, generateDeck, shuffleDeck, GameState, addScore, getScore, matchCheck } from './utils.js';
+import {
+  Card,
+  generateDeck,
+  shuffleDeck,
+  GameState,
+  addScore,
+  getScore,
+  matchCheck,
+} from './utils.js';
 /**
  * Initializes a new game round.
  *

@@ -1,6 +1,4 @@
 import { jest } from '@jest/globals';
-//const { initGame, flipCard } = require('../src/js/game');
-//const { Card, GameState } = require('../src/js/utils');
 import { initGame, flipCard } from '../src/js/game.js';
 import { Card, GameState } from '../src/js/utils.js';
 
