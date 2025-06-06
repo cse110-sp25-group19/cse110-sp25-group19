@@ -67,6 +67,7 @@ function renderBoard(container, deck) {
     // Add card flip mechanics
     cardElem.addEventListener('click', () => {
       flipCard(index, cardElem);
+      allMatched();
     });
     container.appendChild(cardElem);
   });
@@ -111,7 +112,6 @@ const playAgainBtn = document.getElementById('play-again-btn');
  * Displays the end screen modal with the winner and final scores.
  *
  * @param {number} winner - The winning player's number (e.g., 1 or 2)
- * @param {{player1: number, player2: number}} score - An object containing both players' scores
  * @returns {void}
  */
 function showEndScreen() {
@@ -165,6 +165,7 @@ function updateScoreAndComboUI() {
  * Ignores if already flipped, matched, or 2 cards are face-up.
  *
  * @param {number} index - Index of the card in the deck
+ * @param {HTMLElement} cardElem - The DOM element representing the card
  * @returns {{ deck: Card[], flippedCards: Card[] }}
  */
 function flipCard(index, cardElem) {
@@ -194,11 +195,6 @@ function flipCard(index, cardElem) {
       GameState.flippedCards = [];
 
       updateScoreAndComboUI();
-      const allMatched = GameState.deck.every((c) => c.isMatched);
-      if (allMatched) {
-        clearInterval(timerInterval);
-        showEndScreen(1, { player1: GameState.score, player2: 0 });
-      }
     } else {
       GameState.combo = 0;
       updateScoreAndComboUI();
@@ -223,7 +219,16 @@ function flipCard(index, cardElem) {
 
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
 }
-
+/*
+ * function to check if all cards are matched and the game is over.
+ */
+function allMatched() {
+  const allMatched = GameState.deck.every((c) => c.isMatched);
+  if (allMatched) {
+    clearInterval(timerInterval);
+    showEndScreen();
+  }
+}
 //  Score + Reset Button Logic
 
 let score = 0;
