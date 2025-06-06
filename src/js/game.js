@@ -1,4 +1,9 @@
-import { generateDeck, shuffleDeck, GameState } from './utils.js';
+import {
+  generateDeck,
+  shuffleDeck,
+  GameState,
+  triggerComboEffect,
+} from './utils.js';
 /**
  * Initializes a new game round.
  *
@@ -142,6 +147,9 @@ if (resetBtn) {
   resetBtn.addEventListener('click', resetGame);
 }
 
+/**
+ * Updates the score and combo count in the display.
+ */
 function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
   const comboElem = document.getElementById('combo-count');
@@ -174,6 +182,7 @@ function flipCard(index) {
       secondCard.isMatched = true;
       GameState.score += 1;
       GameState.combo += 1;
+      triggerComboEffect(GameState.combo);
       GameState.flippedCards = [];
 
       updateScoreAndComboUI();
