@@ -104,7 +104,7 @@ function matchCheck() {
   return match;
 }
 
-module.exports = {
+export {
   Card,
   generateDeck,
   shuffleDeck,
