@@ -1,4 +1,9 @@
-import { generateDeck, shuffleDeck, GameState } from './utils.js';
+import {
+  generateDeck,
+  shuffleDeck,
+  GameState,
+  triggerComboEffect,
+} from './utils.js';
 /**
  * Initializes a new game round.
  *

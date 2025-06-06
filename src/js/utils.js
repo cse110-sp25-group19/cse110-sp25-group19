@@ -104,10 +104,10 @@ function matchCheck() {
   return match;
 }
 
-/** 
+/**
  * Based on the combo count, function triggers a visual effect.
- * @param {*} combo 
- * @returns 
+ * @param {*} combo
+ * @returns
  */
 
 export function triggerComboEffect(combo) {
@@ -123,8 +123,7 @@ export function triggerComboEffect(combo) {
     // setTimeout(() => {
     //   gameContainer.classList.remove(`combo-${combo}`);
     // }, 1000);
-  }
-  else if (combo > 4) {
+  } else if (combo > 4) {
     gameContainer.classList.add('combo-5');
     // setTimeout(() => {
     //   gameContainer.classList.remove('combo-5');

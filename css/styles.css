@@ -247,77 +247,107 @@ button:focus {
 
 /* combo effects */
 
-.combo-2, .combo-3, .combo-4, .combo-5 {
-  padding: 24px; 
+.combo-2,
+.combo-3,
+.combo-4,
+.combo-5 {
+  padding: 24px;
 }
 
 .combo-2 {
   animation: combo2 3s;
   background: linear-gradient(
     90deg,
-    rgba(76,255,140,0.7) 0%,
+    rgba(76, 255, 140, 0.7) 0%,
     rgba(173, 254, 203, 0.95) 20%,
     rgba(173, 254, 203, 0.95) 80%,
-    rgba(76,255,140,0.7) 100%
+    rgba(76, 255, 140, 0.7) 100%
   ) !important;
 }
 .combo-3 {
   animation: combo3 3s;
   background: linear-gradient(
     90deg,
-    rgba(0,200,255,0.7) 0%,
-    rgba(200,255,255,0.95) 20%,
-    rgba(200,255,255,0.95) 80%,
-    rgba(0,200,255,0.7) 100%
+    rgba(0, 200, 255, 0.7) 0%,
+    rgba(200, 255, 255, 0.95) 20%,
+    rgba(200, 255, 255, 0.95) 80%,
+    rgba(0, 200, 255, 0.7) 100%
   ) !important;
 }
 .combo-4 {
   animation: combo4 3s;
   background: linear-gradient(
     90deg,
-    rgba(255,105,234,0.7) 0%,
-    rgba(255,220,255,0.95) 20%,
-    rgba(255,220,255,0.95) 80%,
-    rgba(255,105,234,0.7) 100%
+    rgba(255, 105, 234, 0.7) 0%,
+    rgba(255, 220, 255, 0.95) 20%,
+    rgba(255, 220, 255, 0.95) 80%,
+    rgba(255, 105, 234, 0.7) 100%
   ) !important;
 }
 .combo-5 {
   animation: combo5 3s;
   background: linear-gradient(
     90deg,
-    rgba(255,102,102,0.7) 0%,
-    rgba(255,220,220,0.95) 20%,
-    rgba(255,220,220,0.95) 80%,
-    rgba(255,102,102,0.7) 100%
+    rgba(255, 102, 102, 0.7) 0%,
+    rgba(255, 220, 220, 0.95) 20%,
+    rgba(255, 220, 220, 0.95) 80%,
+    rgba(255, 102, 102, 0.7) 100%
   ) !important;
 }
 
 @keyframes combo2 {
-  0% { box-shadow: 0 0 0px #4caf50; }
-  50% { box-shadow: 0 0 150px #4caf50; }
-  100% { box-shadow: 0 0 0px #4caf50; }
+  0% {
+    box-shadow: 0 0 0px #4caf50;
+  }
+  50% {
+    box-shadow: 0 0 150px #4caf50;
+  }
+  100% {
+    box-shadow: 0 0 0px #4caf50;
+  }
 }
 @keyframes combo3 {
-  0% { box-shadow: 0 0 0px #00c8ff; }
-  50% { box-shadow: 0 0 150px #00c8ff; }
-  100% { box-shadow: 0 0 0px #00c8ff; }
+  0% {
+    box-shadow: 0 0 0px #00c8ff;
+  }
+  50% {
+    box-shadow: 0 0 150px #00c8ff;
+  }
+  100% {
+    box-shadow: 0 0 0px #00c8ff;
+  }
 }
 
 @keyframes combo4 {
-  0% { box-shadow: 0 0 0px #ff00ea; }
-  50% { box-shadow: 0 0 150px #ff00ea; }
-  100% { box-shadow: 0 0 0px #ff00ea; }
+  0% {
+    box-shadow: 0 0 0px #ff00ea;
+  }
+  50% {
+    box-shadow: 0 0 150px #ff00ea;
+  }
+  100% {
+    box-shadow: 0 0 0px #ff00ea;
+  }
 }
 @keyframes combo5 {
-  0% { box-shadow: 0 0 0px #ff0000; }
-  50% { box-shadow: 0 0 150px #ff0000; }
-  100% { box-shadow: 0 0 0px #ff0000; }
+  0% {
+    box-shadow: 0 0 0px #ff0000;
+  }
+  50% {
+    box-shadow: 0 0 150px #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 0px #ff0000;
+  }
 }
 
 .combo-sparks {
   pointer-events: none;
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -327,21 +357,41 @@ button:focus {
 }
 
 @keyframes shake {
-  0% { transform: translate(0, 0); }
-  10% { transform: translate(-8px, 2px); }
-  20% { transform: translate(7px, -2px); }
-  30% { transform: translate(-6px, 3px); }
-  40% { transform: translate(6px, -3px); }
-  50% { transform: translate(-4px, 2px); }
-  60% { transform: translate(4px, -2px); }
-  70% { transform: translate(-2px, 1px); }
-  80% { transform: translate(2px, -1px); }
-  90% { transform: translate(-1px, 0); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-8px, 2px);
+  }
+  20% {
+    transform: translate(7px, -2px);
+  }
+  30% {
+    transform: translate(-6px, 3px);
+  }
+  40% {
+    transform: translate(6px, -3px);
+  }
+  50% {
+    transform: translate(-4px, 2px);
+  }
+  60% {
+    transform: translate(4px, -2px);
+  }
+  70% {
+    transform: translate(-2px, 1px);
+  }
+  80% {
+    transform: translate(2px, -1px);
+  }
+  90% {
+    transform: translate(-1px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .shake {
   animation: shake 0.4s;
 }
-
-
