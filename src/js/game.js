@@ -1,4 +1,4 @@
-import { Card, generateDeck, shuffleDeck, GameState, addScore, getScore, matchCheck, triggerComboEffect } from './utils.js';
+import { generateDeck, shuffleDeck, GameState } from './utils.js';
 /**
  * Initializes a new game round.
  *
@@ -186,11 +186,22 @@ function flipCard(index) {
       updateScoreAndComboUI();
 
       setTimeout(() => {
+        // Update memory state
         firstCard.isFlipped = false;
         secondCard.isFlipped = false;
+
+        // Get the card DOM elements by their data-id
+        const firstElem = document.querySelector(`[data-id="${firstCard.id}"]`);
+        const secondElem = document.querySelector(
+          `[data-id="${secondCard.id}"]`,
+        );
+
+        // flip them back by removing the class instead of re-rendering
+        if (firstElem) firstElem.classList.remove('is-flipped');
+        if (secondElem) secondElem.classList.remove('is-flipped');
+
+        // Reset flipped cards list
         GameState.flippedCards = [];
-        const cardGrid = document.querySelector('.card-grid');
-        if (cardGrid) renderBoard(cardGrid, GameState.deck);
       }, 1000);
     }
   } else {

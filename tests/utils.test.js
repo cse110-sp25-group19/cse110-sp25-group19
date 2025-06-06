@@ -1,4 +1,5 @@
-const {
+import { jest } from '@jest/globals';
+import {
   Card,
   generateDeck,
   shuffleDeck,
@@ -6,7 +7,7 @@ const {
   getScore,
   matchCheck,
   GameState,
-} = require('../src/js/utils');
+} from '../src/js/utils.js';
 
 beforeEach(() => {
   // Reset GameState before each test
