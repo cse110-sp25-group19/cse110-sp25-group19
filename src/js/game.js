@@ -1,4 +1,4 @@
-const {
+import {
   Card,
   generateDeck,
   shuffleDeck,
@@ -6,8 +6,7 @@ const {
   addScore,
   getScore,
   matchCheck,
-} = require('./utils.js');
-
+} from './utils.js';
 /**
  * Initializes a new game round.
  *
@@ -306,7 +305,7 @@ function handleTimeOut() {
 // Export this so it can be used when cards match
 //export { updateScore };
 
-module.exports = {
+export {
   initGame,
   renderBoard,
   showEndScreen,
