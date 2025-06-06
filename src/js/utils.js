@@ -104,6 +104,40 @@ function matchCheck() {
   return match;
 }
 
+/**
+ * Based on the combo count, function triggers a visual effect.
+ * @param {*} combo
+ * @returns
+ */
+
+export function triggerComboEffect(combo) {
+  const gameContainer = document.querySelector('.game-container');
+  if (!gameContainer) {
+    return;
+  }
+
+  gameContainer.classList.remove('combo-2', 'combo-3', 'combo-4', 'combo-5');
+
+  if (combo <= 4 && combo >= 2) {
+    gameContainer.classList.add(`combo-${combo}`);
+    // setTimeout(() => {
+    //   gameContainer.classList.remove(`combo-${combo}`);
+    // }, 1000);
+  } else if (combo > 4) {
+    gameContainer.classList.add('combo-5');
+    // setTimeout(() => {
+    //   gameContainer.classList.remove('combo-5');
+    // }, 1000);
+  }
+
+  if (combo >= 2) {
+    gameContainer.classList.add('shake');
+    setTimeout(() => {
+      gameContainer.classList.remove('shake');
+    }, 400);
+  }
+}
+
 export {
   Card,
   generateDeck,
