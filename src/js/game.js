@@ -115,13 +115,8 @@ const playAgainBtn = document.getElementById('play-again-btn');
  * @returns {void}
  */
 function showEndScreen() {
-<<<<<<< HEAD
-  winnerMsg.textContent = `CONGRATULATIONS, YOU WON!`;
-  finalScoreText.textContent = `FINAL SCORE: ${GameState.score}`;
-=======
   winnerMsg.textContent = `YOU WON!`;
   finalScoreText.textContent = `Final Score: ${GameState.score}`;
->>>>>>> a0dc6c96ccf2da73d00b96bc81d37a0fc791bf3c
   endScreen.classList.remove('hidden'); //make endscreen visible
 }
 
@@ -136,15 +131,8 @@ function resetGame() {
   GameState.round = 1;
   GameState.timeLeft = 60;
 
-<<<<<<< HEAD
-  const cardGrid = document.querySelector('.card-grid');
-  if (cardGrid) {
-    renderBoard(cardGrid, newDeck);
-  }
-=======
   updateScoreAndComboUI();
   renderBoard(cardGrid, newDeck);
->>>>>>> a0dc6c96ccf2da73d00b96bc81d37a0fc791bf3c
   resetTimer();
   startTimer();
 }
@@ -263,17 +251,12 @@ function updateScore() {
 // Wait until DOM is ready to attach event listeners
 document.addEventListener('DOMContentLoaded', () => {
   setupStartScreen();
-<<<<<<< HEAD
   const resetBtn = document.getElementById('reset-btn');
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       resetGame();
     });
   }
-=======
-  //deleted reset score, from eventlistener in resetbtn
-  //you are not supposed to add multiple event listeners to the same element
->>>>>>> a0dc6c96ccf2da73d00b96bc81d37a0fc791bf3c
 });
 
 //Countdown Timer :
