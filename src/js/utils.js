@@ -25,15 +25,15 @@ function generateDeck() {
     'red-ranger',
     'yellow-ranger',
     'white-ranger',
-    'purple-ranger'
+    'purple-ranger',
   ];
   const deck = [];
   let idCounter = 0;
 
-  rangerTypes.forEach(ranger => {
+  rangerTypes.forEach((ranger) => {
     deck.push(new Card(idCounter++, ranger));
     deck.push(new Card(idCounter++, ranger));
-  })
+  });
   return deck;
 }
 

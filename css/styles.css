@@ -328,38 +328,46 @@ button:focus {
 
 .combo-2 {
   animation: combo2 3s;
-  background: linear-gradient(90deg,
-      rgba(76, 255, 140, 0.7) 0%,
-      rgba(173, 254, 203, 0.95) 20%,
-      rgba(173, 254, 203, 0.95) 80%,
-      rgba(76, 255, 140, 0.7) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(76, 255, 140, 0.7) 0%,
+    rgba(173, 254, 203, 0.95) 20%,
+    rgba(173, 254, 203, 0.95) 80%,
+    rgba(76, 255, 140, 0.7) 100%
+  ) !important;
 }
 
 .combo-3 {
   animation: combo3 3s;
-  background: linear-gradient(90deg,
-      rgba(0, 200, 255, 0.7) 0%,
-      rgba(200, 255, 255, 0.95) 20%,
-      rgba(200, 255, 255, 0.95) 80%,
-      rgba(0, 200, 255, 0.7) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 200, 255, 0.7) 0%,
+    rgba(200, 255, 255, 0.95) 20%,
+    rgba(200, 255, 255, 0.95) 80%,
+    rgba(0, 200, 255, 0.7) 100%
+  ) !important;
 }
 
 .combo-4 {
   animation: combo4 3s;
-  background: linear-gradient(90deg,
-      rgba(255, 105, 234, 0.7) 0%,
-      rgba(255, 220, 255, 0.95) 20%,
-      rgba(255, 220, 255, 0.95) 80%,
-      rgba(255, 105, 234, 0.7) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 105, 234, 0.7) 0%,
+    rgba(255, 220, 255, 0.95) 20%,
+    rgba(255, 220, 255, 0.95) 80%,
+    rgba(255, 105, 234, 0.7) 100%
+  ) !important;
 }
 
 .combo-5 {
   animation: combo5 3s;
-  background: linear-gradient(90deg,
-      rgba(255, 102, 102, 0.7) 0%,
-      rgba(255, 220, 220, 0.95) 20%,
-      rgba(255, 220, 220, 0.95) 80%,
-      rgba(255, 102, 102, 0.7) 100%) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 102, 102, 0.7) 0%,
+    rgba(255, 220, 220, 0.95) 20%,
+    rgba(255, 220, 220, 0.95) 80%,
+    rgba(255, 102, 102, 0.7) 100%
+  ) !important;
 }
 
 @keyframes combo2 {
