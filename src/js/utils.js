@@ -25,7 +25,7 @@ function generateDeck(pairs = 8) {
     'red-ranger',
     'yellow-ranger',
     'white-ranger',
-    'purple-ranger'
+    'purple-ranger',
   ];
   const deck = [];
   let idCounter = 0;
