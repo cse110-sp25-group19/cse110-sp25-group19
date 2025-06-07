@@ -6,12 +6,12 @@ import {
 } from './utils.js';
 /**
  * Initializes a new game round.
- *
+ * @params {number} [difficulty=8] - The number of pairs to generate, the more pairs, the harder the game.
  * @returns {Card[]}
  */
-function initGame() {
+function initGame(difficulty = 8) {
   //Make initial deck
-  const deck = generateDeck();
+  const deck = generateDeck(difficulty);
 
   //Shuffle deck
   const shuffledDeck = shuffleDeck(deck);
@@ -23,8 +23,6 @@ function initGame() {
   //Return shuffled deck
   return shuffledDeck;
 }
-console.log('Deck after initGame():', initGame());
-console.log('GameState:', GameState);
 /**
  * Renders the card grid into the supplied container.
  *
@@ -79,8 +77,10 @@ function setupStartScreen() {
   const gameContainer = document.querySelector('.game-container');
   const startBtn = document.getElementById('start-btn');
   const cardGrid = document.querySelector('.card-grid');
-
+  //add the dificulty selector here after done with frontend
+  // ex: difficulty = document.getElementById('difficulty');
   if (!startScreen || !gameContainer || !startBtn || !cardGrid) return;
+
   /**
    * Handles start button click:
    * Hides start screen and shows the game container.
