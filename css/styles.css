@@ -176,15 +176,15 @@ h1 {
 /* Grid layout for cards */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 80px);
+  grid-template-columns: repeat(4, 100px);
   grid-gap: 12px;
   justify-content: center;
   margin-top: 20px;
 }
 
 .card {
-  width: 80px;
-  height: 120px;
+  width: 100px;
+  height: 140px;
   perspective: 1000px;
 }
 
@@ -215,6 +215,42 @@ h1 {
   backface-visibility: hidden;
   transform: rotateY(180deg);
   z-index: 2;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-front-black-ranger {
+  background-image: url(/assets/designs/week2/card_front_black_ranger.webp);
+}
+
+.card-front-blue-ranger {
+  background-image: url(/assets/designs/week2/card_front_blue_ranger.webp);
+}
+
+.card-front-green-ranger {
+  background-image: url(/assets/designs/week2/card_front_green_ranger.webp);
+}
+
+.card-front-pink-ranger {
+  background-image: url(/assets/designs/week2/card_front_pink_ranger.webp);
+}
+
+.card-front-red-ranger {
+  background-image: url(/assets/designs/week2/card_front_red_ranger.webp);
+}
+
+.card-front-yellow-ranger {
+  background-image: url(/assets/designs/week2/card_front_yellow_ranger.webp);
+}
+
+.card-front-white-ranger {
+  background-image: url(/assets/designs/week2/card_front_white_ranger.webp);
+}
+
+.card-front-purple-ranger {
+  background-image: url(/assets/designs/week2/card_front_purple_ranger.webp);
 }
 
 .card-back {
@@ -230,6 +266,9 @@ h1 {
   backface-visibility: hidden;
   transform: rotateY(0deg);
   z-index: 1;
+  background-image: url(/assets/designs/week2/card_back.webp);
+  background-size: contain;
+  background-position: center;
 }
 
 /* button styles */
