@@ -53,12 +53,10 @@ function renderBoard(container, deck) {
     inner.classList.add('card-inner');
 
     const front = document.createElement('div');
-    front.classList.add('card-front');
-    front.textContent = card.value;
+    front.classList.add('card-front', `card-front-${card.value}`);
 
     const back = document.createElement('div');
     back.classList.add('card-back');
-    back.textContent = '';
 
     inner.appendChild(front);
     inner.appendChild(back);
