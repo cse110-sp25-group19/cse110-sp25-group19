@@ -30,10 +30,11 @@ function generateDeck(pairs = 8) {
   const deck = [];
   let idCounter = 0;
 
-  rangerTypes.forEach(ranger => {
+
+  for (let value = 1; value <= pairs; value++) {
     deck.push(new Card(idCounter++, ranger));
     deck.push(new Card(idCounter++, ranger));
-  })
+  }
   return deck;
 }
 
