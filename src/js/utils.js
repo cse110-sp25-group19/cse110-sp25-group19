@@ -16,7 +16,7 @@ class Card {
  * @param {number} pairs - Number of matching pairs to include (default: 8)
  * @returns {Card[]} Array of Card instances
  */
-function generateDeck(pairs = 8) {
+function generateDeck() {
   const rangerTypes = [
     'black-ranger',
     'blue-ranger',
