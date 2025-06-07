@@ -115,9 +115,10 @@ const playAgainBtn = document.getElementById('play-again-btn');
  * @returns {void}
  */
 function showEndScreen() {
-  winnerMsg.textContent = `YOU WON!`;
-  finalScoreText.textContent = `Final Score: ${GameState.score}`;
-  endScreen.classList.remove('hidden'); //make endscreen visible
+  if (winnerMsg) winnerMsg.textContent = `YOU WON!`;
+  if (finalScoreText)
+    finalScoreText.textContent = `Final Score: ${GameState.score}`;
+  if (endScreen) endScreen.classList.remove('hidden');
 }
 
 function resetGame() {
@@ -157,7 +158,8 @@ function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
   const comboElem = document.getElementById('combo-count');
   if (scoreElem) scoreElem.textContent = GameState.score;
-  if (comboElem) comboElem.textContent = GameState.combo;
+  if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;
+  triggerComboEffect(GameState.combo);
 }
 
 /**
@@ -195,6 +197,11 @@ function flipCard(index, cardElem) {
       GameState.flippedCards = [];
 
       updateScoreAndComboUI();
+      const isAllMatched = GameState.deck.every((card) => card.isMatched);
+      if (isAllMatched) {
+        clearInterval(timerInterval);
+        showEndScreen();
+      }
     } else {
       GameState.combo = 0;
       updateScoreAndComboUI();
@@ -214,7 +221,7 @@ function flipCard(index, cardElem) {
     }
   } else {
     const comboElem = document.getElementById('combo-count');
-    if (comboElem) comboElem.textContent = GameState.combo;
+    if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;
   }
 
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
@@ -245,8 +252,12 @@ function updateScore() {
 // Wait until DOM is ready to attach event listeners
 document.addEventListener('DOMContentLoaded', () => {
   setupStartScreen();
-  //deleted reset score, from eventlistener in resetbtn
-  //you are not supposed to add multiple event listeners to the same element
+  const resetBtn = document.getElementById('reset-btn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      resetGame();
+    });
+  }
 });
 
 //Countdown Timer :
@@ -297,8 +308,8 @@ function resetTimer() {
  * @returns {void}
  */
 function updateTimerUI() {
-  const timerEl = document.getElementById('timer');
-  if (timerEl) timerEl.textContent = GameState.timeLeft;
+  const timerEl = document.getElementById('timer-container');
+  if (timerEl) timerEl.textContent = `Time: ${GameState.timeLeft}s`;
 }
 
 /**
