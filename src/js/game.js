@@ -6,12 +6,12 @@ import {
 } from './utils.js';
 /**
  * Initializes a new game round.
- *
+ * @params {number} [difficulty=8] - The number of pairs to generate, the more pairs, the harder the game.
  * @returns {Card[]}
  */
-function initGame() {
+function initGame(difficulty = 8) {
   //Make initial deck
-  const deck = generateDeck();
+  const deck = generateDeck(difficulty);
 
   //Shuffle deck
   const shuffledDeck = shuffleDeck(deck);
@@ -23,8 +23,6 @@ function initGame() {
   //Return shuffled deck
   return shuffledDeck;
 }
-console.log('Deck after initGame():', initGame());
-console.log('GameState:', GameState);
 /**
  * Renders the card grid into the supplied container.
  *
@@ -53,12 +51,10 @@ function renderBoard(container, deck) {
     inner.classList.add('card-inner');
 
     const front = document.createElement('div');
-    front.classList.add('card-front');
-    front.textContent = card.value;
+    front.classList.add('card-front', `card-front-${card.value}`);
 
     const back = document.createElement('div');
     back.classList.add('card-back');
-    back.textContent = '';
 
     inner.appendChild(front);
     inner.appendChild(back);
@@ -80,8 +76,18 @@ function setupStartScreen() {
   const gameContainer = document.querySelector('.game-container');
   const startBtn = document.getElementById('start-btn');
   const cardGrid = document.querySelector('.card-grid');
+  //add the dificulty selector here after done with frontend
+  // ex: difficulty = document.getElementById('difficulty');
+  const difficultySelect = document.getElementById('difficulty-select');
+  if (
+    !startScreen ||
+    !gameContainer ||
+    !startBtn ||
+    !cardGrid ||
+    !difficultySelect
+  )
+    return;
 
-  if (!startScreen || !gameContainer || !startBtn || !cardGrid) return;
   /**
    * Handles start button click:
    * Hides start screen and shows the game container.
@@ -90,12 +96,12 @@ function setupStartScreen() {
   startBtn.addEventListener('click', () => {
     startScreen.style.display = 'none';
     gameContainer.style.display = 'block';
-
+    let selectedDifficulty = parseInt(difficultySelect.value) || 8;
     GameState.combo = 0;
     GameState.score = 0;
     updateScoreAndComboUI();
 
-    const deck = initGame();
+    const deck = initGame(selectedDifficulty);
     renderBoard(cardGrid, deck);
 
     startTimer();
@@ -109,7 +115,6 @@ function setupStartScreen() {
 const endScreen = document.getElementById('end-screen');
 const winnerMsg = document.getElementById('winner-msg');
 const finalScoreText = document.getElementById('final-score');
-const playAgainBtn = document.getElementById('play-again-btn');
 
 /**
  * Displays the end screen modal with the winner and final scores and high scores.
@@ -133,7 +138,9 @@ function showEndScreen() {
 function resetGame() {
   const cardGrid = document.querySelector('.card-grid');
   endScreen.classList.add('hidden');
-  const newDeck = initGame();
+  const difficultySelect = document.getElementById('difficulty-select');
+  let selectedDifficulty = parseInt(difficultySelect.value) || 8;
+  const newDeck = initGame(selectedDifficulty);
 
   GameState.combo = 0;
   GameState.score = 0;
@@ -148,18 +155,18 @@ function resetGame() {
   updateHighScoreUI();
 }
 
-if (playAgainBtn) {
-  playAgainBtn.addEventListener('click', () => {
-    resetGame();
-  });
-}
+// if (playAgainBtn) {
+//   playAgainBtn.addEventListener('click', () => {
+//     resetGame();
+//   });
+// }
 
-const resetBtn = document.getElementById('reset-btn');
-if (resetBtn) {
-  resetBtn.addEventListener('click', () => {
-    resetGame();
-  });
-}
+// const resetBtn = document.getElementById('reset-btn');
+// if (resetBtn) {
+//   resetBtn.addEventListener('click', () => {
+//     resetGame();
+//   });
+// }
 
 /**
  * Updates the score, combo count, and high score in the display.
@@ -269,9 +276,28 @@ function updateScore() {
 document.addEventListener('DOMContentLoaded', () => {
   setupStartScreen();
   const resetBtn = document.getElementById('reset-btn');
+  const homeBtn = document.getElementById('home-btn');
+  const playAgainBtn = document.getElementById('play-again-btn');
+  if (playAgainBtn) {
+    playAgainBtn.addEventListener('click', () => {
+      resetGame();
+    });
+  }
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       resetGame();
+    });
+  }
+  if (homeBtn) {
+    homeBtn.addEventListener('click', () => {
+      const gameContainer = document.querySelector('.game-container');
+      const startScreen = document.getElementById('start-screen');
+      const cardGrid = document.querySelector('.card-grid');
+      if (gameContainer) gameContainer.style.display = 'none';
+      if (startScreen) startScreen.style.display = 'flex';
+      if (cardGrid) cardGrid.innerHTML = '';
+
+      resetTimer();
     });
   }
 });
