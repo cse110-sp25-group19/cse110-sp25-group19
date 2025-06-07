@@ -42,6 +42,8 @@ function renderBoard(container, deck) {
 
     if (card.isFlipped || card.isMatched) {
       cardElem.classList.add('is-flipped');
+    } else {
+      cardElem.classList.remove('is-flipped');
     }
 
     cardElem.dataset.id = card.id;
@@ -64,14 +66,8 @@ function renderBoard(container, deck) {
 
     // Add card flip mechanics
     cardElem.addEventListener('click', () => {
-      const { deck: updatedDeck } = flipCard(index);
-      const currentCard = updatedDeck[index];
-
-      if (currentCard.isFlipped || currentCard.isMatched) {
-        cardElem.classList.add('is-flipped');
-      } else {
-        cardElem.classList.remove('is-flipped');
-      }
+      flipCard(index, cardElem);
+      allMatched();
     });
     container.appendChild(cardElem);
   });
@@ -100,6 +96,7 @@ function setupStartScreen() {
 
     const deck = initGame();
     renderBoard(cardGrid, deck);
+
     startTimer();
   });
 }
@@ -115,27 +112,39 @@ const playAgainBtn = document.getElementById('play-again-btn');
  * Displays the end screen modal with the winner and final scores.
  *
  * @param {number} winner - The winning player's number (e.g., 1 or 2)
- * @param {{player1: number, player2: number}} score - An object containing both players' scores
  * @returns {void}
  */
 function showEndScreen() {
+<<<<<<< HEAD
   winnerMsg.textContent = `CONGRATULATIONS, YOU WON!`;
   finalScoreText.textContent = `FINAL SCORE: ${GameState.score}`;
+=======
+  winnerMsg.textContent = `YOU WON!`;
+  finalScoreText.textContent = `Final Score: ${GameState.score}`;
+>>>>>>> a0dc6c96ccf2da73d00b96bc81d37a0fc791bf3c
   endScreen.classList.remove('hidden'); //make endscreen visible
 }
 
 function resetGame() {
+  const cardGrid = document.querySelector('.card-grid');
   endScreen.classList.add('hidden');
   const newDeck = initGame();
 
   GameState.combo = 0;
   GameState.score = 0;
-  updateScoreAndComboUI();
+  GameState.flippedCards = [];
+  GameState.round = 1;
+  GameState.timeLeft = 60;
 
+<<<<<<< HEAD
   const cardGrid = document.querySelector('.card-grid');
   if (cardGrid) {
     renderBoard(cardGrid, newDeck);
   }
+=======
+  updateScoreAndComboUI();
+  renderBoard(cardGrid, newDeck);
+>>>>>>> a0dc6c96ccf2da73d00b96bc81d37a0fc791bf3c
   resetTimer();
   startTimer();
 }
@@ -148,7 +157,9 @@ if (playAgainBtn) {
 
 const resetBtn = document.getElementById('reset-btn');
 if (resetBtn) {
-  resetBtn.addEventListener('click', resetGame);
+  resetBtn.addEventListener('click', () => {
+    resetGame();
+  });
 }
 
 /**
@@ -167,9 +178,10 @@ function updateScoreAndComboUI() {
  * Ignores if already flipped, matched, or 2 cards are face-up.
  *
  * @param {number} index - Index of the card in the deck
+ * @param {HTMLElement} cardElem - The DOM element representing the card
  * @returns {{ deck: Card[], flippedCards: Card[] }}
  */
-function flipCard(index) {
+function flipCard(index, cardElem) {
   const card = GameState.deck[index];
 
   if (card.isFlipped || card.isMatched || GameState.flippedCards.length >= 2) {
@@ -177,10 +189,15 @@ function flipCard(index) {
   }
 
   card.isFlipped = true;
-  GameState.flippedCards.push(card);
+  cardElem.classList.add('is-flipped');
+  GameState.flippedCards.push({ cardData: card, domElement: cardElem });
 
   if (GameState.flippedCards.length === 2) {
-    const [firstCard, secondCard] = GameState.flippedCards;
+    // get the things we just pused ^^
+    const [
+      { cardData: firstCard, domElement: firstElem },
+      { cardData: secondCard, domElement: secondElem },
+    ] = GameState.flippedCards;
 
     if (firstCard.value === secondCard.value) {
       firstCard.isMatched = true;
@@ -205,12 +222,6 @@ function flipCard(index) {
         firstCard.isFlipped = false;
         secondCard.isFlipped = false;
 
-        // Get the card DOM elements by their data-id
-        const firstElem = document.querySelector(`[data-id="${firstCard.id}"]`);
-        const secondElem = document.querySelector(
-          `[data-id="${secondCard.id}"]`,
-        );
-
         // flip them back by removing the class instead of re-rendering
         if (firstElem) firstElem.classList.remove('is-flipped');
         if (secondElem) secondElem.classList.remove('is-flipped');
@@ -226,7 +237,16 @@ function flipCard(index) {
 
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
 }
-
+/*
+ * function to check if all cards are matched and the game is over.
+ */
+function allMatched() {
+  const allMatched = GameState.deck.every((c) => c.isMatched);
+  if (allMatched) {
+    clearInterval(timerInterval);
+    showEndScreen();
+  }
+}
 //  Score + Reset Button Logic
 
 let score = 0;
@@ -243,12 +263,17 @@ function updateScore() {
 // Wait until DOM is ready to attach event listeners
 document.addEventListener('DOMContentLoaded', () => {
   setupStartScreen();
+<<<<<<< HEAD
   const resetBtn = document.getElementById('reset-btn');
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       resetGame();
     });
   }
+=======
+  //deleted reset score, from eventlistener in resetbtn
+  //you are not supposed to add multiple event listeners to the same element
+>>>>>>> a0dc6c96ccf2da73d00b96bc81d37a0fc791bf3c
 });
 
 //Countdown Timer :

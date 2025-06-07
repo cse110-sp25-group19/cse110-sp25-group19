@@ -35,8 +35,8 @@ test('flipCard(index) flips a single card and adds it to flippedCards', () => {
   const c1 = new Card(1, 'X');
   const c2 = new Card(2, 'Y');
   GameState.deck = [c1, c2];
-
-  const result = flipCard(0);
+  const cardElem1 = document.createElement('div');
+  const result = flipCard(0, cardElem1);
   expect(result.flippedCards).toHaveLength(1);
   expect(GameState.deck[0].isFlipped).toBe(true);
 });
@@ -48,13 +48,14 @@ test('flipCard on two non-matching cards resets combo and flips them back after 
   const c2 = new Card(2, 'B');
   GameState.deck = [c1, c2];
   GameState.combo = 1;
-
+  const cardElem1 = document.createElement('div');
+  const cardElem2 = document.createElement('div');
   // Flip first card
-  flipCard(0);
+  flipCard(0, cardElem1);
   expect(GameState.flippedCards).toHaveLength(1);
 
   // Flip second card (non-matching)
-  const result = flipCard(1);
+  const result = flipCard(1, cardElem2);
 
   // After flipping second card
   expect(result.flippedCards.length).toBe(2);
@@ -80,10 +81,11 @@ test('flipCard on two matching cards increments score & combo and marks them as 
   GameState.deck = [cA1, cA2];
   GameState.score = 0;
   GameState.combo = 0;
-
+  const cardElem1 = document.createElement('div');
+  const cardElem2 = document.createElement('div');
   // Flip both matching cards
-  flipCard(0);
-  flipCard(1);
+  flipCard(0, cardElem1);
+  flipCard(1, cardElem2);
 
   expect(GameState.score).toBe(1);
   expect(GameState.combo).toBe(1);
