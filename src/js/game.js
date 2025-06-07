@@ -115,9 +115,15 @@ const playAgainBtn = document.getElementById('play-again-btn');
  * @returns {void}
  */
 function showEndScreen() {
-  winnerMsg.textContent = `YOU WON!`;
-  finalScoreText.textContent = `Final Score: ${GameState.score}`;
-  endScreen.classList.remove('hidden'); //make endscreen visible
+  const winnerMsg = document.getElementById('winner-msg');
+  if (winnerMsg) winnerMsg.textContent = `YOU WON!`;
+
+  const finalScoreText = document.getElementById('final-score');
+  if (finalScoreText)
+    finalScoreText.textContent = `Final Score: ${GameState.score}`;
+
+  const endScreen = document.getElementById('end-screen');
+  if (endScreen) endScreen.classList.remove('hidden');
 }
 
 function resetGame() {
