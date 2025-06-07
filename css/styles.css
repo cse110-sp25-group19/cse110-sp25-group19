@@ -159,15 +159,15 @@ h1 {
 /* Grid layout for cards */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 80px);
+  grid-template-columns: repeat(4, 100px);
   grid-gap: 12px;
   justify-content: center;
   margin-top: 20px;
 }
 
 .card {
-  width: 80px;
-  height: 120px;
+  width: 100px;
+  height: 140px;
   perspective: 1000px;
 }
 
@@ -198,6 +198,42 @@ h1 {
   backface-visibility: hidden;
   transform: rotateY(180deg);
   z-index: 2;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-front-black-ranger {
+  background-image: url(/assets/designs/week2/card_front_black_ranger.webp);
+}
+
+.card-front-blue-ranger {
+  background-image: url(/assets/designs/week2/card_front_blue_ranger.webp);
+}
+
+.card-front-green-ranger {
+  background-image: url(/assets/designs/week2/card_front_green_ranger.webp);
+}
+
+.card-front-pink-ranger {
+  background-image: url(/assets/designs/week2/card_front_pink_ranger.webp);
+}
+
+.card-front-red-ranger {
+  background-image: url(/assets/designs/week2/card_front_red_ranger.webp);
+}
+
+.card-front-yellow-ranger {
+  background-image: url(/assets/designs/week2/card_front_yellow_ranger.webp);
+}
+
+.card-front-white-ranger {
+  background-image: url(/assets/designs/week2/card_front_white_ranger.webp);
+}
+
+.card-front-purple-ranger {
+  background-image: url(/assets/designs/week2/card_front_purple_ranger.webp);
 }
 
 .card-back {
@@ -213,6 +249,9 @@ h1 {
   backface-visibility: hidden;
   transform: rotateY(0deg);
   z-index: 1;
+  background-image: url(/assets/designs/week2/card_back.webp);
+  background-size: contain;
+  background-position: center;
 }
 
 /* button styles */
@@ -289,46 +328,38 @@ button:focus {
 
 .combo-2 {
   animation: combo2 3s;
-  background: linear-gradient(
-    90deg,
-    rgba(76, 255, 140, 0.7) 0%,
-    rgba(173, 254, 203, 0.95) 20%,
-    rgba(173, 254, 203, 0.95) 80%,
-    rgba(76, 255, 140, 0.7) 100%
-  ) !important;
+  background: linear-gradient(90deg,
+      rgba(76, 255, 140, 0.7) 0%,
+      rgba(173, 254, 203, 0.95) 20%,
+      rgba(173, 254, 203, 0.95) 80%,
+      rgba(76, 255, 140, 0.7) 100%) !important;
 }
 
 .combo-3 {
   animation: combo3 3s;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 200, 255, 0.7) 0%,
-    rgba(200, 255, 255, 0.95) 20%,
-    rgba(200, 255, 255, 0.95) 80%,
-    rgba(0, 200, 255, 0.7) 100%
-  ) !important;
+  background: linear-gradient(90deg,
+      rgba(0, 200, 255, 0.7) 0%,
+      rgba(200, 255, 255, 0.95) 20%,
+      rgba(200, 255, 255, 0.95) 80%,
+      rgba(0, 200, 255, 0.7) 100%) !important;
 }
 
 .combo-4 {
   animation: combo4 3s;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 105, 234, 0.7) 0%,
-    rgba(255, 220, 255, 0.95) 20%,
-    rgba(255, 220, 255, 0.95) 80%,
-    rgba(255, 105, 234, 0.7) 100%
-  ) !important;
+  background: linear-gradient(90deg,
+      rgba(255, 105, 234, 0.7) 0%,
+      rgba(255, 220, 255, 0.95) 20%,
+      rgba(255, 220, 255, 0.95) 80%,
+      rgba(255, 105, 234, 0.7) 100%) !important;
 }
 
 .combo-5 {
   animation: combo5 3s;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 102, 102, 0.7) 0%,
-    rgba(255, 220, 220, 0.95) 20%,
-    rgba(255, 220, 220, 0.95) 80%,
-    rgba(255, 102, 102, 0.7) 100%
-  ) !important;
+  background: linear-gradient(90deg,
+      rgba(255, 102, 102, 0.7) 0%,
+      rgba(255, 220, 220, 0.95) 20%,
+      rgba(255, 220, 220, 0.95) 80%,
+      rgba(255, 102, 102, 0.7) 100%) !important;
 }
 
 @keyframes combo2 {
