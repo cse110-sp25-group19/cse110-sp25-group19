@@ -118,9 +118,9 @@ const playAgainBtn = document.getElementById('play-again-btn');
  * @param {{player1: number, player2: number}} score - An object containing both players' scores
  * @returns {void}
  */
-function showEndScreen(winner, score) {
-  winnerMsg.textContent = `PLAYER ${winner} WON!`;
-  finalScoreText.textContent = `Final Score: ${score.player1} - ${score.player2}`;
+function showEndScreen() {
+  winnerMsg.textContent = `CONGRATULATIONS, YOU WON!`;
+  finalScoreText.textContent = `FINAL SCORE: ${GameState.score}`;
   endScreen.classList.remove('hidden'); //make endscreen visible
 }
 
@@ -132,8 +132,12 @@ function resetGame() {
   GameState.score = 0;
   updateScoreAndComboUI();
 
-  renderBoard(cardGrid, newDeck);
+  const cardGrid = document.querySelector('.card-grid');
+  if (cardGrid) {
+    renderBoard(cardGrid, newDeck);
+  }
   resetTimer();
+  startTimer();
 }
 
 if (playAgainBtn) {
@@ -154,7 +158,8 @@ function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
   const comboElem = document.getElementById('combo-count');
   if (scoreElem) scoreElem.textContent = GameState.score;
-  if (comboElem) comboElem.textContent = GameState.combo;
+  if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;
+  triggerComboEffect(GameState.combo);
 }
 
 /**
@@ -186,6 +191,11 @@ function flipCard(index) {
       GameState.flippedCards = [];
 
       updateScoreAndComboUI();
+      const isAllMatched = GameState.deck.every((card) => card.isMatched);
+      if (isAllMatched) {
+        clearInterval(timerInterval);
+        showEndScreen();
+      }
     } else {
       GameState.combo = 0;
       updateScoreAndComboUI();
@@ -211,7 +221,7 @@ function flipCard(index) {
     }
   } else {
     const comboElem = document.getElementById('combo-count');
-    if (comboElem) comboElem.textContent = GameState.combo;
+    if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;
   }
 
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
@@ -230,23 +240,15 @@ function updateScore() {
   if (scoreEl) scoreEl.textContent = score;
 }
 
-/**
- * Resets the score and updates the UI
- */
-function resetScore() {
-  score = 0;
-  const scoreEl = document.getElementById('score');
-  if (scoreEl) scoreEl.textContent = score;
-
-  // reset the game board too, if needed
-  initGame();
-}
-
 // Wait until DOM is ready to attach event listeners
 document.addEventListener('DOMContentLoaded', () => {
   setupStartScreen();
   const resetBtn = document.getElementById('reset-btn');
-  if (resetBtn) resetBtn.addEventListener('click', resetScore);
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      resetGame();
+    });
+  }
 });
 
 //Countdown Timer :
@@ -297,8 +299,8 @@ function resetTimer() {
  * @returns {void}
  */
 function updateTimerUI() {
-  const timerEl = document.getElementById('timer');
-  if (timerEl) timerEl.textContent = GameState.timeLeft;
+  const timerEl = document.getElementById('timer-container');
+  if (timerEl) timerEl.textContent = `Time: ${GameState.timeLeft}s`;
 }
 
 /**
