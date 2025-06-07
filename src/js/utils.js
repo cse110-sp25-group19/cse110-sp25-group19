@@ -16,7 +16,7 @@ class Card {
  * @param {number} pairs - Number of matching pairs to include (default: 8)
  * @returns {Card[]} Array of Card instances
  */
-function generateDeck() {
+function generateDeck(pairs = 8) {
   const rangerTypes = [
     'black-ranger',
     'blue-ranger',
@@ -25,15 +25,15 @@ function generateDeck() {
     'red-ranger',
     'yellow-ranger',
     'white-ranger',
-    'purple-ranger',
+    'purple-ranger'
   ];
   const deck = [];
   let idCounter = 0;
 
-  rangerTypes.forEach((ranger) => {
+  rangerTypes.forEach(ranger => {
     deck.push(new Card(idCounter++, ranger));
     deck.push(new Card(idCounter++, ranger));
-  });
+  })
   return deck;
 }
 
