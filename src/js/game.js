@@ -200,7 +200,7 @@ function flipCard(index, cardElem) {
       // Card match effect
       setTimeout(() => {
         matchEffect(firstCard, secondCard);
-      }, 300); 
+      }, 300);
 
       GameState.flippedCards = [];
       updateScoreAndComboUI();
@@ -244,8 +244,12 @@ function flipCard(index, cardElem) {
  * @returns {void}
  */
 function matchEffect(card1, card2) {
-  const card1Element = document.querySelector(`[data-id="${card1.id}"] .card-front`);
-  const card2Element = document.querySelector(`[data-id="${card2.id}"] .card-front`);
+  const card1Element = document.querySelector(
+    `[data-id="${card1.id}"] .card-front`,
+  );
+  const card2Element = document.querySelector(
+    `[data-id="${card2.id}"] .card-front`,
+  );
 
   if (card1Element && card2Element) {
     card1Element.classList.add('card-flash');
