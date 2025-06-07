@@ -29,8 +29,6 @@ function generateDeck(pairs = 8) {
   ];
   const deck = [];
   let idCounter = 0;
-
-
   for (let value = 1; value <= pairs; value++) {
     const ranger = rangerTypes[value];
     deck.push(new Card(idCounter++, ranger));
