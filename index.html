@@ -30,6 +30,9 @@
       <section class="game-info">
         <div id="game-controls">
           <div id="score-container">Score: <span id="score">0</span></div>
+          <div id="highscore-container">
+            High Score: <span id="highscore">0</span>
+          </div>
           <div id="timer-container">Time Left: <span id="timer">60s</span></div>
           <div id="combo-count">Combo: <span id="combo">0</span></div>
           <button id="reset-btn">Reset Game</button>
@@ -44,6 +47,7 @@
     <section id="end-screen" class="hidden">
       <div class="modal">
         <h2 id="winner-msg">PLAYER X WON!</h2>
+        <p id="highscore-end">High Score: 0</p>
         <p id="final-score">Final Score: 0</p>
         <button id="play-again-btn">Play Again</button>
       </div>
