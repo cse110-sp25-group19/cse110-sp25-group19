@@ -278,6 +278,42 @@ button:focus {
   font-size: 1.2rem;
 }
 
+/* Difficulty Button */
+difficulty-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#difficulty-select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  margin-top: 5px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  appearance: none;
+  text-align: center;
+}
+
+#difficulty-select:hover {
+  background-color: var(--accent)
+}
+
+#difficulty-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary)
+}
+
+difficulty-selector label {
+  font-weight: bold;
+  color: #333;
+}
+
 /* combo effects */
 
 .combo-2,
