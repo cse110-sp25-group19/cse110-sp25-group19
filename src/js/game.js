@@ -79,7 +79,15 @@ function setupStartScreen() {
   const cardGrid = document.querySelector('.card-grid');
   //add the dificulty selector here after done with frontend
   // ex: difficulty = document.getElementById('difficulty');
-  if (!startScreen || !gameContainer || !startBtn || !cardGrid) return;
+  const difficultySelect = document.getElementById('difficulty-select');
+  if (
+    !startScreen ||
+    !gameContainer ||
+    !startBtn ||
+    !cardGrid ||
+    !difficultySelect
+  )
+    return;
 
   /**
    * Handles start button click:
@@ -89,12 +97,12 @@ function setupStartScreen() {
   startBtn.addEventListener('click', () => {
     startScreen.style.display = 'none';
     gameContainer.style.display = 'block';
-
+    let selectedDifficulty = parseInt(difficultySelect.value) || 8;
     GameState.combo = 0;
     GameState.score = 0;
     updateScoreAndComboUI();
 
-    const deck = initGame();
+    const deck = initGame(selectedDifficulty);
     renderBoard(cardGrid, deck);
 
     startTimer();
@@ -106,7 +114,6 @@ function setupStartScreen() {
 const endScreen = document.getElementById('end-screen');
 const winnerMsg = document.getElementById('winner-msg');
 const finalScoreText = document.getElementById('final-score');
-const playAgainBtn = document.getElementById('play-again-btn');
 
 /**
  * Displays the end screen modal with the winner and final scores.
@@ -124,7 +131,9 @@ function showEndScreen() {
 function resetGame() {
   const cardGrid = document.querySelector('.card-grid');
   endScreen.classList.add('hidden');
-  const newDeck = initGame();
+  const difficultySelect = document.getElementById('difficulty-select');
+  let selectedDifficulty = parseInt(difficultySelect.value) || 8;
+  const newDeck = initGame(selectedDifficulty);
 
   GameState.combo = 0;
   GameState.score = 0;
@@ -138,18 +147,18 @@ function resetGame() {
   startTimer();
 }
 
-if (playAgainBtn) {
-  playAgainBtn.addEventListener('click', () => {
-    resetGame();
-  });
-}
+// if (playAgainBtn) {
+//   playAgainBtn.addEventListener('click', () => {
+//     resetGame();
+//   });
+// }
 
-const resetBtn = document.getElementById('reset-btn');
-if (resetBtn) {
-  resetBtn.addEventListener('click', () => {
-    resetGame();
-  });
-}
+// const resetBtn = document.getElementById('reset-btn');
+// if (resetBtn) {
+//   resetBtn.addEventListener('click', () => {
+//     resetGame();
+//   });
+// }
 
 /**
  * Updates the score and combo count in the display.
@@ -253,9 +262,28 @@ function updateScore() {
 document.addEventListener('DOMContentLoaded', () => {
   setupStartScreen();
   const resetBtn = document.getElementById('reset-btn');
+  const homeBtn = document.getElementById('home-btn');
+  const playAgainBtn = document.getElementById('play-again-btn');
+  if (playAgainBtn) {
+    playAgainBtn.addEventListener('click', () => {
+      resetGame();
+    });
+  }
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       resetGame();
+    });
+  }
+  if (homeBtn) {
+    homeBtn.addEventListener('click', () => {
+      const gameContainer = document.querySelector('.game-container');
+      const startScreen = document.getElementById('start-screen');
+      const cardGrid = document.querySelector('.card-grid');
+      if (gameContainer) gameContainer.style.display = 'none';
+      if (startScreen) startScreen.style.display = 'flex';
+      if (cardGrid) cardGrid.innerHTML = '';
+
+      resetTimer();
     });
   }
 });

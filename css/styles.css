@@ -169,6 +169,7 @@ h1 {
   width: 80px;
   height: 120px;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .card-inner {
@@ -253,7 +254,17 @@ button:focus {
   left: 20px;
   z-index: 1000;
 }
-
+#home-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 200px;
+  padding: 8px 16px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 #new-game-btn {
   position: fixed;
   bottom: 20px;
@@ -262,14 +273,14 @@ button:focus {
 }
 
 #reset-btn:hover,
-#new-game-btn:hover {
+#home-btn:hover {
   background-color: var(--accent);
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 #reset-btn:focus,
-#new-game-btn:focus {
+#home-btn:focus {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
@@ -279,7 +290,7 @@ button:focus {
 }
 
 /* Difficulty Button */
-difficulty-selector {
+#difficulty-selector {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,12 +312,12 @@ difficulty-selector {
 }
 
 #difficulty-select:hover {
-  background-color: var(--accent)
+  background-color: var(--accent);
 }
 
 #difficulty-select:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--primary)
+  box-shadow: 0 0 0 2px var(--primary);
 }
 
 difficulty-selector label {
