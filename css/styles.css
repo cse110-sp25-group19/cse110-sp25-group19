@@ -20,6 +20,23 @@
   --muted: #888888;
 }
 
+#highscore-container {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+
+  background-color: white;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 0 8px;
+
+  white-space: nowrap;
+  min-width: 0;
+}
+
 body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
