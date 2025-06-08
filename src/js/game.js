@@ -211,10 +211,18 @@ function flipCard(index, cardElem) {
       secondCard.isMatched = true;
       GameState.score += 1;
       GameState.combo += 1;
-      triggerComboEffect(GameState.combo);
-      GameState.flippedCards = [];
 
+      //Card combo effect
+      triggerComboEffect(GameState.combo);
+
+      // Card match effect
+      setTimeout(() => {
+        matchEffect(firstCard, secondCard);
+      }, 300);
+
+      GameState.flippedCards = [];
       updateScoreAndComboUI();
+
       const isAllMatched = GameState.deck.every((card) => card.isMatched);
       if (isAllMatched) {
         clearInterval(timerInterval);
@@ -243,6 +251,33 @@ function flipCard(index, cardElem) {
   }
 
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
+}
+
+/**
+ * Triggers a visual flash effect on both matched cards.
+ * Adds the 'card-flash' class to the .card-front of each matched card
+ *
+ * @param {Object} card1 - The first matched card object
+ * @param {Object} card2 - The second matched card object
+ * @returns {void}
+ */
+function matchEffect(card1, card2) {
+  const card1Element = document.querySelector(
+    `[data-id="${card1.id}"] .card-front`,
+  );
+  const card2Element = document.querySelector(
+    `[data-id="${card2.id}"] .card-front`,
+  );
+
+  if (card1Element && card2Element) {
+    card1Element.classList.add('card-flash');
+    card2Element.classList.add('card-flash');
+
+    setTimeout(() => {
+      card1Element.classList.remove('card-flash');
+      card2Element.classList.remove('card-flash');
+    }, 1000);
+  }
 }
 /*
  * function to check if all cards are matched and the game is over, and update high score if needed.
