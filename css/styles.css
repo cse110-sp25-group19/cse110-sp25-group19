@@ -285,7 +285,7 @@ h1 {
   backface-visibility: hidden;
   transform: rotateY(0deg);
   z-index: 1;
-  background-image: url(/assets/designs/week2/card_back.webp);
+  background-image: url('../assets/designs/week2/card_back.webp');
   background-size: contain;
   background-position: center;
 }
