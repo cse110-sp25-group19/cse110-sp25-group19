@@ -599,5 +599,5 @@ difficulty-selector label {
 .hs-val {
   color: var(--accent);
   text-align: right;
-  font-family: monospace; /* <-- add this line */
+  font-family: monospace;
 }
