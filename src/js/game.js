@@ -126,7 +126,7 @@ const finalScoreText = document.getElementById('final-score');
  */
 function showEndScreen() {
   if (winnerMsg) winnerMsg.textContent = `YOU WON!`;
-  finalScoreText.textContent = `Time left: ${GameState.timeLeft}s`;
+  if (finalScoreText) finalScoreText.textContent = `Time left: ${GameState.timeLeft}s`;
   if (endScreen) endScreen.classList.remove('hidden');
 
   const highScoreElEnd = document.getElementById('highscore-end-val');
@@ -458,9 +458,9 @@ function handleTimeOut() {
   const hsEnd = document.getElementById('highscore-end-val');
   if (hsEnd) hsEnd.textContent = getHighScore(GameState.difficulty) ?? 0;
 
-  endScreen.classList.remove('hidden');
-  winnerMsg.textContent = `TIME'S UP!`;
-  finalScoreText.textContent = `Your Score: ${GameState.score}`;
+  if (endScreen) endScreen.classList.remove('hidden');
+  if (winnerMsg) winnerMsg.textContent = `TIME'S UP!`;
+  if (finalScoreText) finalScoreText.textContent = `Your Score: ${GameState.score}`;
 }
 
 /**
