@@ -159,19 +159,6 @@ function resetGame() {
   updateHighScoreUI();
 }
 
-// if (playAgainBtn) {
-//   playAgainBtn.addEventListener('click', () => {
-//     resetGame();
-//   });
-// }
-
-// const resetBtn = document.getElementById('reset-btn');
-// if (resetBtn) {
-//   resetBtn.addEventListener('click', () => {
-//     resetGame();
-//   });
-// }
-
 /**
  * Updates the score, combo count, and high score in the display.
  */
@@ -483,9 +470,6 @@ function updateHighScoreUI() {
   const best = getHighScore(GameState.difficulty) ?? 0;
   el.textContent = best;
 }
-
-// Export this so it can be used when cards match
-//export { updateScore };
 
 export {
   initGame,
