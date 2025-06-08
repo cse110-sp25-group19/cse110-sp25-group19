@@ -565,7 +565,7 @@ difficulty-selector label {
   border: 2px solid var(--primary);
   border-radius: 16px;
   padding: 1.2rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
   width: 200px;
   max-width: 300px;
@@ -575,7 +575,7 @@ difficulty-selector label {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
   color: var(--primary);
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .hs-list {
@@ -590,7 +590,7 @@ difficulty-selector label {
   justify-content: space-between;
   align-items: center;
   padding: 0.35rem 0.75rem;
-  border-radius: 999px;      /* pill shape */
+  border-radius: 999px; /* pill shape */
   font-weight: 600;
   font-size: 0.95rem;
   border: 1px solid var(--muted);
@@ -601,4 +601,3 @@ difficulty-selector label {
   text-align: right;
   font-family: monospace; /* <-- add this line */
 }
-

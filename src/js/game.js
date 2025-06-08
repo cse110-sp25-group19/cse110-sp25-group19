@@ -20,7 +20,7 @@ function initGame(difficulty = 8) {
   GameState.score = 0;
   GameState.round = 1;
   GameState.timeLeft = 60;
-  GameState.difficulty = difficulty; 
+  GameState.difficulty = difficulty;
 
   //Return shuffled deck
   return shuffledDeck;
@@ -226,7 +226,7 @@ function flipCard(index, cardElem) {
       GameState.flippedCards = [];
       updateScoreAndComboUI();
 
-      const allMatched = GameState.deck.every(c => c.isMatched);
+      const allMatched = GameState.deck.every((c) => c.isMatched);
       if (allMatched) {
         clearInterval(timerInterval);
         checkAndUpdateHighScore(GameState.difficulty);
@@ -238,7 +238,7 @@ function flipCard(index, cardElem) {
       updateScoreAndComboUI();
 
       setTimeout(() => {
-        firstCard.isFlipped  = false;
+        firstCard.isFlipped = false;
         secondCard.isFlipped = false;
         firstElem.classList.remove('is-flipped');
         secondElem.classList.remove('is-flipped');
@@ -289,8 +289,6 @@ function allMatched() {
     checkAndUpdateHighScore(GameState.difficulty);
     showEndScreen();
   }
-
-  
 }
 
 function checkAndUpdateHighScore(diff) {
@@ -399,10 +397,13 @@ function updateTimerUI() {
 /** Map Difficulty → Storage‑Key */
 function keyFor(diff) {
   switch (diff) {
-    case 4: return 'matchHighScore_easy';
-    case 6: return 'matchHighScore_medium';
+    case 4:
+      return 'matchHighScore_easy';
+    case 6:
+      return 'matchHighScore_medium';
     case 8: // fall-through
-    default: return 'matchHighScore_hard';
+    default:
+      return 'matchHighScore_hard';
   }
 }
 
@@ -423,9 +424,9 @@ function maybeSetHighScore(diff, timeLeft) {
 function renderStartScreenHighScores() {
   if (document.getElementById('start-screen').style.display === 'none') return;
   const map = [
-    { diff: 4, el: 'hs-easy'   },
+    { diff: 4, el: 'hs-easy' },
     { diff: 6, el: 'hs-medium' },
-    { diff: 8, el: 'hs-hard'   },
+    { diff: 8, el: 'hs-hard' },
   ];
   map.forEach(({ diff, el }) => {
     const span = document.getElementById(el);
@@ -436,7 +437,6 @@ function renderStartScreenHighScores() {
 }
 
 document.addEventListener('DOMContentLoaded', renderStartScreenHighScores);
-
 
 /**
  * Handles logic when the timer reaches 0.
