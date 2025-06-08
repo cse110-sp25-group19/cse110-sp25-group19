@@ -6,12 +6,12 @@ import {
 } from './utils.js';
 /**
  * Initializes a new game round.
- *
+ * @params {number} [difficulty=8] - The number of pairs to generate, the more pairs, the harder the game.
  * @returns {Card[]}
  */
-function initGame() {
+function initGame(difficulty = 8) {
   //Make initial deck
-  const deck = generateDeck();
+  const deck = generateDeck(difficulty);
 
   //Shuffle deck
   const shuffledDeck = shuffleDeck(deck);
@@ -23,8 +23,6 @@ function initGame() {
   //Return shuffled deck
   return shuffledDeck;
 }
-console.log('Deck after initGame():', initGame());
-console.log('GameState:', GameState);
 /**
  * Renders the card grid into the supplied container.
  *
@@ -53,12 +51,10 @@ function renderBoard(container, deck) {
     inner.classList.add('card-inner');
 
     const front = document.createElement('div');
-    front.classList.add('card-front');
-    front.textContent = card.value;
+    front.classList.add('card-front', `card-front-${card.value}`);
 
     const back = document.createElement('div');
     back.classList.add('card-back');
-    back.textContent = '';
 
     inner.appendChild(front);
     inner.appendChild(back);
@@ -71,6 +67,7 @@ function renderBoard(container, deck) {
     });
     container.appendChild(cardElem);
   });
+  updateHighScoreUI();
 }
 
 function setupStartScreen() {
@@ -79,8 +76,18 @@ function setupStartScreen() {
   const gameContainer = document.querySelector('.game-container');
   const startBtn = document.getElementById('start-btn');
   const cardGrid = document.querySelector('.card-grid');
+  //add the dificulty selector here after done with frontend
+  // ex: difficulty = document.getElementById('difficulty');
+  const difficultySelect = document.getElementById('difficulty-select');
+  if (
+    !startScreen ||
+    !gameContainer ||
+    !startBtn ||
+    !cardGrid ||
+    !difficultySelect
+  )
+    return;
 
-  if (!startScreen || !gameContainer || !startBtn || !cardGrid) return;
   /**
    * Handles start button click:
    * Hides start screen and shows the game container.
@@ -89,16 +96,18 @@ function setupStartScreen() {
   startBtn.addEventListener('click', () => {
     startScreen.style.display = 'none';
     gameContainer.style.display = 'block';
-
+    let selectedDifficulty = parseInt(difficultySelect.value) || 8;
     GameState.combo = 0;
     GameState.score = 0;
     updateScoreAndComboUI();
 
-    const deck = initGame();
+    const deck = initGame(selectedDifficulty);
     renderBoard(cardGrid, deck);
 
     startTimer();
   });
+
+  updateHighScoreUI();
 }
 
 //End Screen Logic
@@ -106,10 +115,9 @@ function setupStartScreen() {
 const endScreen = document.getElementById('end-screen');
 const winnerMsg = document.getElementById('winner-msg');
 const finalScoreText = document.getElementById('final-score');
-const playAgainBtn = document.getElementById('play-again-btn');
 
 /**
- * Displays the end screen modal with the winner and final scores.
+ * Displays the end screen modal with the winner and final scores and high scores.
  *
  * @param {number} winner - The winning player's number (e.g., 1 or 2)
  * @returns {void}
@@ -119,12 +127,20 @@ function showEndScreen() {
   if (finalScoreText)
     finalScoreText.textContent = `Final Score: ${GameState.score}`;
   if (endScreen) endScreen.classList.remove('hidden');
+
+  const highScoreElEnd = document.getElementById('highscore-end-val');
+  if (highScoreElEnd) {
+    const highScore2 = parseInt(localStorage.getItem('matchHighScore'));
+    highScoreElEnd.textContent = highScore2;
+  }
 }
 
 function resetGame() {
   const cardGrid = document.querySelector('.card-grid');
   endScreen.classList.add('hidden');
-  const newDeck = initGame();
+  const difficultySelect = document.getElementById('difficulty-select');
+  let selectedDifficulty = parseInt(difficultySelect.value) || 8;
+  const newDeck = initGame(selectedDifficulty);
 
   GameState.combo = 0;
   GameState.score = 0;
@@ -136,23 +152,24 @@ function resetGame() {
   renderBoard(cardGrid, newDeck);
   resetTimer();
   startTimer();
+  updateHighScoreUI();
 }
 
-if (playAgainBtn) {
-  playAgainBtn.addEventListener('click', () => {
-    resetGame();
-  });
-}
+// if (playAgainBtn) {
+//   playAgainBtn.addEventListener('click', () => {
+//     resetGame();
+//   });
+// }
 
-const resetBtn = document.getElementById('reset-btn');
-if (resetBtn) {
-  resetBtn.addEventListener('click', () => {
-    resetGame();
-  });
-}
+// const resetBtn = document.getElementById('reset-btn');
+// if (resetBtn) {
+//   resetBtn.addEventListener('click', () => {
+//     resetGame();
+//   });
+// }
 
 /**
- * Updates the score and combo count in the display.
+ * Updates the score, combo count, and high score in the display.
  */
 function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
@@ -160,6 +177,7 @@ function updateScoreAndComboUI() {
   if (scoreElem) scoreElem.textContent = GameState.score;
   if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;
   triggerComboEffect(GameState.combo);
+  updateHighScoreUI();
 }
 
 /**
@@ -262,10 +280,15 @@ function matchEffect(card1, card2) {
   }
 }
 /*
- * function to check if all cards are matched and the game is over.
+ * function to check if all cards are matched and the game is over, and update high score if needed.
  */
 function allMatched() {
   const allMatched = GameState.deck.every((c) => c.isMatched);
+  let highScoreStorage = parseInt(localStorage.getItem('matchHighScore')) || 0;
+  if (GameState.score > highScoreStorage) {
+    localStorage.setItem('matchHighScore', GameState.score);
+    updateHighScoreUI();
+  }
   if (allMatched) {
     clearInterval(timerInterval);
     showEndScreen();
@@ -288,9 +311,28 @@ function updateScore() {
 document.addEventListener('DOMContentLoaded', () => {
   setupStartScreen();
   const resetBtn = document.getElementById('reset-btn');
+  const homeBtn = document.getElementById('home-btn');
+  const playAgainBtn = document.getElementById('play-again-btn');
+  if (playAgainBtn) {
+    playAgainBtn.addEventListener('click', () => {
+      resetGame();
+    });
+  }
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       resetGame();
+    });
+  }
+  if (homeBtn) {
+    homeBtn.addEventListener('click', () => {
+      const gameContainer = document.querySelector('.game-container');
+      const startScreen = document.getElementById('start-screen');
+      const cardGrid = document.querySelector('.card-grid');
+      if (gameContainer) gameContainer.style.display = 'none';
+      if (startScreen) startScreen.style.display = 'flex';
+      if (cardGrid) cardGrid.innerHTML = '';
+
+      resetTimer();
     });
   }
 });
@@ -350,14 +392,39 @@ function updateTimerUI() {
 /**
  * Handles logic when the timer reaches 0.
  * Displays the end screen with a "TIME'S UP!" message
- * and shows the player's final score.
+ * and shows the player's final score and high score.
  *
  * @returns {void}
  */
 function handleTimeOut() {
+  let highScoreStorage = parseInt(localStorage.getItem('matchHighScore')) || 0;
+  if (GameState.score > highScoreStorage) {
+    localStorage.setItem('matchHighScore', GameState.score);
+  }
+  const highScoreElEnd = document.getElementById('highscore-end-val');
+  if (highScoreElEnd) {
+    const highScore2 = parseInt(localStorage.getItem('matchHighScore'));
+    highScoreElEnd.textContent = highScore2;
+  }
+
   endScreen.classList.remove('hidden');
   winnerMsg.textContent = `TIME'S UP!`;
   finalScoreText.textContent = `Your Score: ${GameState.score}`;
+}
+
+/**
+ * Updates the high score display in the UI.
+ * Retrieves the "matchHighScore" value from localStorage,
+ * safely defaults to 0 if the value is null or invalid.
+ *
+ * @returns {void}
+ */
+function updateHighScoreUI() {
+  const highScoreEl = document.getElementById('highscore');
+  if (highScoreEl) {
+    const highScore = parseInt(localStorage.getItem('matchHighScore')) || 0;
+    highScoreEl.textContent = highScore;
+  }
 }
 
 // Export this so it can be used when cards match

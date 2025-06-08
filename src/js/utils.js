@@ -17,11 +17,22 @@ class Card {
  * @returns {Card[]} Array of Card instances
  */
 function generateDeck(pairs = 8) {
+  const rangerTypes = [
+    'black-ranger',
+    'blue-ranger',
+    'green-ranger',
+    'pink-ranger',
+    'red-ranger',
+    'yellow-ranger',
+    'white-ranger',
+    'purple-ranger',
+  ];
   const deck = [];
   let idCounter = 0;
-  for (let value = 1; value <= pairs; value++) {
-    deck.push(new Card(idCounter++, value));
-    deck.push(new Card(idCounter++, value));
+  for (let value = 0; value < pairs; value++) {
+    const ranger = rangerTypes[value];
+    deck.push(new Card(idCounter++, ranger));
+    deck.push(new Card(idCounter++, ranger));
   }
   return deck;
 }
