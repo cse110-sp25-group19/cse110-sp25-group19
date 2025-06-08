@@ -131,7 +131,7 @@ function showEndScreen() {
 
   const highScoreElEnd = document.getElementById('highscore-end-val');
   if (highScoreElEnd) {
-    const highScore2 = parseInt(localStorage.getItem('matchHighScore'));
+    const highScore2 = getHighScore(GameState.difficulty);
     highScoreElEnd.textContent = highScore2;
   }
   const hsEnd = document.getElementById('highscore-end-val');
@@ -422,7 +422,8 @@ function maybeSetHighScore(diff, timeLeft) {
 }
 
 function renderStartScreenHighScores() {
-  if (document.getElementById('start-screen').style.display === 'none') return;
+  const startScreen = document.getElementById('start-screen');
+  if (!startScreen || startScreen.style.display === 'none') return;
   const map = [
     { diff: 4, el: 'hs-easy' },
     { diff: 6, el: 'hs-medium' },
@@ -449,7 +450,7 @@ function handleTimeOut() {
   checkAndUpdateHighScore(GameState.difficulty);
   const highScoreElEnd = document.getElementById('highscore-end-val');
   if (highScoreElEnd) {
-    const highScore2 = parseInt(localStorage.getItem('matchHighScore'));
+    const highScore2 = getHighScore(GameState.difficulty);
     highScoreElEnd.textContent = highScore2;
   }
 
@@ -472,7 +473,7 @@ function handleTimeOut() {
 function updateHighScoreUI() {
   const highScoreEl = document.getElementById('highscore');
   if (highScoreEl) {
-    const highScore = parseInt(localStorage.getItem('matchHighScore')) || 0;
+    const highScore = getHighScore(GameState.difficulty) || 0;
     highScoreEl.textContent = highScore;
   }
   const el = document.getElementById('highscore');
