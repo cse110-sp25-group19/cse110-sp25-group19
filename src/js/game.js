@@ -67,6 +67,7 @@ function renderBoard(container, deck) {
     });
     container.appendChild(cardElem);
   });
+  updateHighScoreUI();
 }
 
 function setupStartScreen() {
@@ -105,6 +106,8 @@ function setupStartScreen() {
 
     startTimer();
   });
+
+  updateHighScoreUI();
 }
 
 //End Screen Logic
@@ -114,7 +117,7 @@ const winnerMsg = document.getElementById('winner-msg');
 const finalScoreText = document.getElementById('final-score');
 
 /**
- * Displays the end screen modal with the winner and final scores.
+ * Displays the end screen modal with the winner and final scores and high scores.
  *
  * @param {number} winner - The winning player's number (e.g., 1 or 2)
  * @returns {void}
@@ -124,6 +127,12 @@ function showEndScreen() {
   if (finalScoreText)
     finalScoreText.textContent = `Final Score: ${GameState.score}`;
   if (endScreen) endScreen.classList.remove('hidden');
+
+  const highScoreElEnd = document.getElementById('highscore-end-val');
+  if (highScoreElEnd) {
+    const highScore2 = parseInt(localStorage.getItem('matchHighScore'));
+    highScoreElEnd.textContent = highScore2;
+  }
 }
 
 function resetGame() {
@@ -143,6 +152,7 @@ function resetGame() {
   renderBoard(cardGrid, newDeck);
   resetTimer();
   startTimer();
+  updateHighScoreUI();
 }
 
 // if (playAgainBtn) {
@@ -159,7 +169,7 @@ function resetGame() {
 // }
 
 /**
- * Updates the score and combo count in the display.
+ * Updates the score, combo count, and high score in the display.
  */
 function updateScoreAndComboUI() {
   const scoreElem = document.getElementById('score');
@@ -167,6 +177,7 @@ function updateScoreAndComboUI() {
   if (scoreElem) scoreElem.textContent = GameState.score;
   if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;
   triggerComboEffect(GameState.combo);
+  updateHighScoreUI();
 }
 
 /**
@@ -234,10 +245,15 @@ function flipCard(index, cardElem) {
   return { deck: GameState.deck, flippedCards: GameState.flippedCards };
 }
 /*
- * function to check if all cards are matched and the game is over.
+ * function to check if all cards are matched and the game is over, and update high score if needed.
  */
 function allMatched() {
   const allMatched = GameState.deck.every((c) => c.isMatched);
+  let highScoreStorage = parseInt(localStorage.getItem('matchHighScore')) || 0;
+  if (GameState.score > highScoreStorage) {
+    localStorage.setItem('matchHighScore', GameState.score);
+    updateHighScoreUI();
+  }
   if (allMatched) {
     clearInterval(timerInterval);
     showEndScreen();
@@ -341,14 +357,39 @@ function updateTimerUI() {
 /**
  * Handles logic when the timer reaches 0.
  * Displays the end screen with a "TIME'S UP!" message
- * and shows the player's final score.
+ * and shows the player's final score and high score.
  *
  * @returns {void}
  */
 function handleTimeOut() {
+  let highScoreStorage = parseInt(localStorage.getItem('matchHighScore')) || 0;
+  if (GameState.score > highScoreStorage) {
+    localStorage.setItem('matchHighScore', GameState.score);
+  }
+  const highScoreElEnd = document.getElementById('highscore-end-val');
+  if (highScoreElEnd) {
+    const highScore2 = parseInt(localStorage.getItem('matchHighScore'));
+    highScoreElEnd.textContent = highScore2;
+  }
+
   endScreen.classList.remove('hidden');
   winnerMsg.textContent = `TIME'S UP!`;
   finalScoreText.textContent = `Your Score: ${GameState.score}`;
+}
+
+/**
+ * Updates the high score display in the UI.
+ * Retrieves the "matchHighScore" value from localStorage,
+ * safely defaults to 0 if the value is null or invalid.
+ *
+ * @returns {void}
+ */
+function updateHighScoreUI() {
+  const highScoreEl = document.getElementById('highscore');
+  if (highScoreEl) {
+    const highScore = parseInt(localStorage.getItem('matchHighScore')) || 0;
+    highScoreEl.textContent = highScore;
+  }
 }
 
 // Export this so it can be used when cards match
