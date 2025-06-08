@@ -20,6 +20,8 @@ function initGame(difficulty = 8) {
   GameState.score = 0;
   GameState.round = 1;
   GameState.timeLeft = 60;
+  GameState.difficulty = difficulty;
+
   //Return shuffled deck
   return shuffledDeck;
 }
@@ -125,14 +127,16 @@ const finalScoreText = document.getElementById('final-score');
 function showEndScreen() {
   if (winnerMsg) winnerMsg.textContent = `YOU WON!`;
   if (finalScoreText)
-    finalScoreText.textContent = `Final Score: ${GameState.score}`;
+    finalScoreText.textContent = `Time left: ${GameState.timeLeft}s`;
   if (endScreen) endScreen.classList.remove('hidden');
 
   const highScoreElEnd = document.getElementById('highscore-end-val');
   if (highScoreElEnd) {
-    const highScore2 = parseInt(localStorage.getItem('matchHighScore'));
+    const highScore2 = getHighScore(GameState.difficulty);
     highScoreElEnd.textContent = highScore2;
   }
+  const hsEnd = document.getElementById('highscore-end-val');
+  if (hsEnd) hsEnd.textContent = getHighScore(GameState.difficulty) ?? 0;
 }
 
 function resetGame() {
@@ -223,25 +227,22 @@ function flipCard(index, cardElem) {
       GameState.flippedCards = [];
       updateScoreAndComboUI();
 
-      const isAllMatched = GameState.deck.every((card) => card.isMatched);
-      if (isAllMatched) {
+      const allMatched = GameState.deck.every((c) => c.isMatched);
+      if (allMatched) {
         clearInterval(timerInterval);
+        checkAndUpdateHighScore(GameState.difficulty);
         showEndScreen();
       }
     } else {
+      // ----- NOT matched -----
       GameState.combo = 0;
       updateScoreAndComboUI();
 
       setTimeout(() => {
-        // Update memory state
         firstCard.isFlipped = false;
         secondCard.isFlipped = false;
-
-        // flip them back by removing the class instead of re-rendering
-        if (firstElem) firstElem.classList.remove('is-flipped');
-        if (secondElem) secondElem.classList.remove('is-flipped');
-
-        // Reset flipped cards list
+        firstElem.classList.remove('is-flipped');
+        secondElem.classList.remove('is-flipped');
         GameState.flippedCards = [];
       }, 1000);
     }
@@ -284,16 +285,19 @@ function matchEffect(card1, card2) {
  */
 function allMatched() {
   const allMatched = GameState.deck.every((c) => c.isMatched);
-  let highScoreStorage = parseInt(localStorage.getItem('matchHighScore')) || 0;
-  if (GameState.score > highScoreStorage) {
-    localStorage.setItem('matchHighScore', GameState.score);
-    updateHighScoreUI();
-  }
   if (allMatched) {
     clearInterval(timerInterval);
+    checkAndUpdateHighScore(GameState.difficulty);
     showEndScreen();
   }
 }
+
+function checkAndUpdateHighScore(diff) {
+  maybeSetHighScore(diff, GameState.timeLeft);
+  updateHighScoreUI();
+  renderStartScreenHighScores();
+}
+
 //  Score + Reset Button Logic
 
 let score = 0;
@@ -331,6 +335,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (gameContainer) gameContainer.style.display = 'none';
       if (startScreen) startScreen.style.display = 'flex';
       if (cardGrid) cardGrid.innerHTML = '';
+
+      renderStartScreenHighScores();
 
       resetTimer();
     });
@@ -389,6 +395,51 @@ function updateTimerUI() {
   if (timerEl) timerEl.textContent = `Time: ${GameState.timeLeft}s`;
 }
 
+/** Map Difficulty → Storage‑Key */
+function keyFor(diff) {
+  switch (diff) {
+    case 4:
+      return 'matchHighScore_easy';
+    case 6:
+      return 'matchHighScore_medium';
+    case 8: // fall-through
+    default:
+      return 'matchHighScore_hard';
+  }
+}
+
+/** Holt High‑Score (oder null) */
+function getHighScore(diff) {
+  const val = localStorage.getItem(keyFor(diff));
+  return val !== null ? parseInt(val) : null;
+}
+
+/** Speichert neuen High‑Score, wenn besser (größer) */
+function maybeSetHighScore(diff, timeLeft) {
+  const current = getHighScore(diff) ?? -1;
+  if (timeLeft > current) {
+    localStorage.setItem(keyFor(diff), timeLeft);
+  }
+}
+
+function renderStartScreenHighScores() {
+  const startScreen = document.getElementById('start-screen');
+  if (!startScreen || startScreen.style.display === 'none') return;
+  const map = [
+    { diff: 4, el: 'hs-easy' },
+    { diff: 6, el: 'hs-medium' },
+    { diff: 8, el: 'hs-hard' },
+  ];
+  map.forEach(({ diff, el }) => {
+    const span = document.getElementById(el);
+    if (!span) return;
+    const val = getHighScore(diff);
+    span.textContent = val !== null ? val : '–';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderStartScreenHighScores);
+
 /**
  * Handles logic when the timer reaches 0.
  * Displays the end screen with a "TIME'S UP!" message
@@ -397,19 +448,21 @@ function updateTimerUI() {
  * @returns {void}
  */
 function handleTimeOut() {
-  let highScoreStorage = parseInt(localStorage.getItem('matchHighScore')) || 0;
-  if (GameState.score > highScoreStorage) {
-    localStorage.setItem('matchHighScore', GameState.score);
-  }
+  checkAndUpdateHighScore(GameState.difficulty);
   const highScoreElEnd = document.getElementById('highscore-end-val');
   if (highScoreElEnd) {
-    const highScore2 = parseInt(localStorage.getItem('matchHighScore'));
+    const highScore2 = getHighScore(GameState.difficulty);
     highScoreElEnd.textContent = highScore2;
   }
 
-  endScreen.classList.remove('hidden');
-  winnerMsg.textContent = `TIME'S UP!`;
-  finalScoreText.textContent = `Your Score: ${GameState.score}`;
+  checkAndUpdateHighScore(GameState.difficulty);
+  const hsEnd = document.getElementById('highscore-end-val');
+  if (hsEnd) hsEnd.textContent = getHighScore(GameState.difficulty) ?? 0;
+
+  if (endScreen) endScreen.classList.remove('hidden');
+  if (winnerMsg) winnerMsg.textContent = `TIME'S UP!`;
+  if (finalScoreText)
+    finalScoreText.textContent = `Your Score: ${GameState.score}`;
 }
 
 /**
@@ -422,9 +475,13 @@ function handleTimeOut() {
 function updateHighScoreUI() {
   const highScoreEl = document.getElementById('highscore');
   if (highScoreEl) {
-    const highScore = parseInt(localStorage.getItem('matchHighScore')) || 0;
+    const highScore = getHighScore(GameState.difficulty) || 0;
     highScoreEl.textContent = highScore;
   }
+  const el = document.getElementById('highscore');
+  if (!el) return;
+  const best = getHighScore(GameState.difficulty) ?? 0;
+  el.textContent = best;
 }
 
 // Export this so it can be used when cards match
