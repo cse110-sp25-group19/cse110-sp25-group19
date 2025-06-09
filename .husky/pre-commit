@@ -1,1 +1,28 @@
-npx lint-staged
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🎯 Running lint-staged..."
+npx lint-staged || {
+  echo "❌ lint-staged failed."
+  exit 1
+}
+
+echo "🔍 Running Prettier check on entire project..."
+npx prettier --check . || {
+  echo "❌ Prettier check failed. Run 'npx prettier --write .' to fix formatting."
+  exit 1
+}
+
+echo "🧪 Running unit tests..."
+npm run test || {
+  echo "❌ Unit tests failed."
+  exit 1
+}
+
+echo "📝 Generating documentation..."
+npm run docs || {
+  echo "❌ Failed to generate docs."
+  exit 1
+}
+
+echo "✅ All pre-commit tasks passed!"
