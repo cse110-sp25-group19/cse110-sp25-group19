@@ -1,0 +1,22 @@
+{
+  "coverage": "100%",
+  "expectCount": 39,
+  "actualCount": 39,
+  "files": {
+    "src/js/game.js": {
+      "expectCount": 25,
+      "actualCount": 25,
+      "undocumentLines": []
+    },
+    "src/js/sum.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/js/utils.js": {
+      "expectCount": 13,
+      "actualCount": 13,
+      "undocumentLines": []
+    }
+  }
+}

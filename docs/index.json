@@ -1,0 +1,1792 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import { greet } from './sum.js';\nconsole.log(greet('World'));\n",
+    "static": true,
+    "longname": "/Users/krystalkwan/Documents/UC_San_Diego_Assignment_Archives/cse110-sp25-group19/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "file",
+    "name": "src/js/game.js",
+    "content": "import {\n  generateDeck,\n  shuffleDeck,\n  GameState,\n  triggerComboEffect,\n} from './utils.js';\n/**\n * Initializes a new game round.\n * @params {number} [difficulty=8] - The number of pairs to generate, the more pairs, the harder the game.\n * @returns {Card[]}\n */\nfunction initGame(difficulty = 8) {\n  //Make initial deck\n  const deck = generateDeck(difficulty);\n\n  //Shuffle deck\n  const shuffledDeck = shuffleDeck(deck);\n  GameState.deck = shuffledDeck;\n  GameState.flippedCards = [];\n  GameState.score = 0;\n  GameState.round = 1;\n  GameState.timeLeft = 60;\n  GameState.difficulty = difficulty;\n\n  //Return shuffled deck\n  return shuffledDeck;\n}\n/**\n * Renders the card grid into the supplied container.\n *\n * @param   {HTMLElement} container DOM node that will hold the cards\n * @param   {Array}       deck      Card array created by initGame()\n * @returns {void}\n */\nfunction renderBoard(container, deck) {\n  // TODO: inject placeholder elements\n  container.innerHTML = '';\n\n  deck.forEach((card, index) => {\n    let cardElem = document.createElement('div');\n    cardElem.classList.add('card');\n\n    if (card.isFlipped || card.isMatched) {\n      cardElem.classList.add('is-flipped');\n    } else {\n      cardElem.classList.remove('is-flipped');\n    }\n\n    cardElem.dataset.id = card.id;\n    cardElem.dataset.value = card.value;\n\n    const inner = document.createElement('div');\n    inner.classList.add('card-inner');\n\n    const front = document.createElement('div');\n    front.classList.add('card-front', `card-front-${card.value}`);\n\n    const back = document.createElement('div');\n    back.classList.add('card-back');\n\n    inner.appendChild(front);\n    inner.appendChild(back);\n    cardElem.appendChild(inner);\n\n    // Add card flip mechanics\n    cardElem.addEventListener('click', () => {\n      flipCard(index, cardElem);\n      allMatched();\n    });\n    container.appendChild(cardElem);\n  });\n  updateHighScoreUI();\n}\n\n/**\n * Initializes and sets up the start screen UI and logic.\n * \n * This function:\n * - Selects key DOM elements related to the start screen and game container.\n * - Attaches a click event listener to the start button to:\n *   - Hide the start screen and show the game container.\n *   - Initialize the game state and deck based on the selected difficulty.\n *   - Render the game board.\n *   - Reset and start the game timer.\n * - Updates the displayed high score on the start screen.\n * \n * If any required elements are missing, the function exits early.\n * \n * @returns {void}\n */\nfunction setupStartScreen() {\n  // Start Screen Logic\n  const startScreen = document.getElementById('start-screen');\n  const gameContainer = document.querySelector('.game-container');\n  const startBtn = document.getElementById('start-btn');\n  const cardGrid = document.querySelector('.card-grid');\n  //add the dificulty selector here after done with frontend\n  // ex: difficulty = document.getElementById('difficulty');\n  const difficultySelect = document.getElementById('difficulty-select');\n  if (\n    !startScreen ||\n    !gameContainer ||\n    !startBtn ||\n    !cardGrid ||\n    !difficultySelect\n  )\n    return;\n\n  /**\n   * Handles start button click:\n   * Hides start screen and shows the game container.\n   * Initializes the game by calling initGame() and renders the board.\n   */\n  startBtn.addEventListener('click', () => {\n    startScreen.style.display = 'none';\n    gameContainer.style.display = 'block';\n    let selectedDifficulty = parseInt(difficultySelect.value) || 8;\n    GameState.combo = 0;\n    GameState.score = 0;\n    updateScoreAndComboUI();\n\n    const deck = initGame(selectedDifficulty);\n    renderBoard(cardGrid, deck);\n\n    startTimer();\n  });\n\n  updateHighScoreUI();\n}\n\n//End Screen Logic\n/**\n * The container element for the end screen modal.\n * @type {HTMLElement | null}\n */\nconst endScreen = document.getElementById('end-screen');\n\n/**\n * The element that displays the winner message.\n * @type {HTMLElement | null}\n */\nconst winnerMsg = document.getElementById('winner-msg');\n\n/**\n * The element that displays the final score or time left.\n * @type {HTMLElement | null}\n */\nconst finalScoreText = document.getElementById('final-score');\n\n/**\n * Displays the end screen modal with the winner message, final time left, and the high score.\n * Updates relevant DOM elements to show game results and high score.\n *\n * - Sets the winner message text.\n * - Displays the remaining time left.\n * - Reveals the end screen modal.\n * - Retrieves and displays the high score for the current difficulty level.\n * - Ensures the high score display falls back to 0 if no high score is found.\n *\n * @returns {void}\n */\nfunction showEndScreen() {\n  if (winnerMsg) winnerMsg.textContent = `YOU WON!`;\n  if (finalScoreText)\n    finalScoreText.textContent = `Time left: ${GameState.timeLeft}s`;\n  if (endScreen) endScreen.classList.remove('hidden');\n\n  const highScoreElEnd = document.getElementById('highscore-end-val');\n  if (highScoreElEnd) {\n    const highScore2 = getHighScore(GameState.difficulty);\n    highScoreElEnd.textContent = highScore2;\n  }\n  const hsEnd = document.getElementById('highscore-end-val');\n  if (hsEnd) {\n    const score = getHighScore(GameState.difficulty);\n    hsEnd.textContent = (score !== null && score !== undefined) ? score : 0;\n  }\n}\n\n/**\n * Resets the game to its initial state.\n * - Hides the end screen.\n * - Retrieves the selected difficulty level.\n * - Reinitializes the game deck and state variables.\n * - Updates the UI for score, combo, and timer.\n * - Starts a new countdown timer.\n *\n * @returns {void}\n */\nfunction resetGame() {\n  const cardGrid = document.querySelector('.card-grid');\n  endScreen.classList.add('hidden');\n  const difficultySelect = document.getElementById('difficulty-select');\n  let selectedDifficulty = parseInt(difficultySelect.value) || 8;\n  const newDeck = initGame(selectedDifficulty);\n\n  GameState.combo = 0;\n  GameState.score = 0;\n  GameState.flippedCards = [];\n  GameState.round = 1;\n  GameState.timeLeft = 60;\n\n  updateScoreAndComboUI();\n  renderBoard(cardGrid, newDeck);\n  resetTimer();\n  startTimer();\n  updateHighScoreUI();\n}\n\n/**\n * Updates the score, combo count, and high score in the display.\n */\nfunction updateScoreAndComboUI() {\n  const scoreElem = document.getElementById('score');\n  const comboElem = document.getElementById('combo-count');\n  if (scoreElem) scoreElem.textContent = GameState.score;\n  if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;\n  triggerComboEffect(GameState.combo);\n  updateHighScoreUI();\n}\n\n/**\n * Flips a card and updates GameState.\n * Ignores if already flipped, matched, or 2 cards are face-up.\n *\n * @param {number} index - Index of the card in the deck\n * @param {HTMLElement} cardElem - The DOM element representing the card\n * @returns {{ deck: Card[], flippedCards: Card[] }}\n */\nfunction flipCard(index, cardElem) {\n  const card = GameState.deck[index];\n\n  if (card.isFlipped || card.isMatched || GameState.flippedCards.length >= 2) {\n    return { deck: GameState.deck, flippedCards: GameState.flippedCards };\n  }\n\n  card.isFlipped = true;\n  cardElem.classList.add('is-flipped');\n  GameState.flippedCards.push({ cardData: card, domElement: cardElem });\n\n  if (GameState.flippedCards.length === 2) {\n    // get the things we just pused ^^\n    const [\n      { cardData: firstCard, domElement: firstElem },\n      { cardData: secondCard, domElement: secondElem },\n    ] = GameState.flippedCards;\n\n    if (firstCard.value === secondCard.value) {\n      firstCard.isMatched = true;\n      secondCard.isMatched = true;\n      GameState.score += 1;\n      GameState.combo += 1;\n\n      //Card combo effect\n      triggerComboEffect(GameState.combo);\n\n      // Card match effect\n      setTimeout(() => {\n        matchEffect(firstCard, secondCard);\n      }, 300);\n\n      GameState.flippedCards = [];\n      updateScoreAndComboUI();\n\n      const allMatched = GameState.deck.every((c) => c.isMatched);\n      if (allMatched) {\n        clearInterval(timerInterval);\n        checkAndUpdateHighScore(GameState.difficulty);\n        showEndScreen();\n      }\n    } else {\n      // ----- NOT matched -----\n      GameState.combo = 0;\n      updateScoreAndComboUI();\n\n      setTimeout(() => {\n        firstCard.isFlipped = false;\n        secondCard.isFlipped = false;\n        firstElem.classList.remove('is-flipped');\n        secondElem.classList.remove('is-flipped');\n        GameState.flippedCards = [];\n      }, 1000);\n    }\n  } else {\n    const comboElem = document.getElementById('combo-count');\n    if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;\n  }\n\n  return { deck: GameState.deck, flippedCards: GameState.flippedCards };\n}\n\n/**\n * Triggers a visual flash effect on both matched cards.\n * Adds the 'card-flash' class to the .card-front of each matched card\n *\n * @param {Object} card1 - The first matched card object\n * @param {Object} card2 - The second matched card object\n * @returns {void}\n */\nfunction matchEffect(card1, card2) {\n  const card1Element = document.querySelector(\n    `[data-id=\"${card1.id}\"] .card-front`,\n  );\n  const card2Element = document.querySelector(\n    `[data-id=\"${card2.id}\"] .card-front`,\n  );\n\n  if (card1Element && card2Element) {\n    card1Element.classList.add('card-flash');\n    card2Element.classList.add('card-flash');\n\n    setTimeout(() => {\n      card1Element.classList.remove('card-flash');\n      card2Element.classList.remove('card-flash');\n    }, 1000);\n  }\n}\n\n/**\n * Checks if all cards in the current deck are matched.\n * If all cards are matched, stops the timer, updates the high score,\n * and shows the end screen.\n *\n * @returns {void}\n */\nfunction allMatched() {\n  const allMatched = GameState.deck.every((c) => c.isMatched);\n  if (allMatched) {\n    clearInterval(timerInterval);\n    checkAndUpdateHighScore(GameState.difficulty);\n    showEndScreen();\n  }\n}\n\n/**\n * Checks if the current time left is a new high score for the given difficulty,\n * updates the high score in storage if needed, refreshes the high score display\n * in the game UI and the start screen.\n * \n * @param {number} diff - The difficulty level to check the high score for.\n * @returns {void}\n */\nfunction checkAndUpdateHighScore(diff) {\n  maybeSetHighScore(diff, GameState.timeLeft);\n  updateHighScoreUI();\n  renderStartScreenHighScores();\n}\n\n//  Score + Reset Button Logic\n/**\n * Current player score.\n * @type {number}\n */\nlet score = 0;\n\n/**\n * Increases score and updates the UI\n */\nfunction updateScore() {\n  score += 1;\n  const scoreEl = document.getElementById('score');\n  if (scoreEl) scoreEl.textContent = score;\n}\n\n// Wait until DOM is ready to attach event listeners\ndocument.addEventListener('DOMContentLoaded', () => {\n  setupStartScreen();\n  const resetBtn = document.getElementById('reset-btn');\n  const homeBtn = document.getElementById('home-btn');\n  const playAgainBtn = document.getElementById('play-again-btn');\n  if (playAgainBtn) {\n    playAgainBtn.addEventListener('click', () => {\n      resetGame();\n    });\n  }\n  if (resetBtn) {\n    resetBtn.addEventListener('click', () => {\n      resetGame();\n    });\n  }\n  if (homeBtn) {\n    homeBtn.addEventListener('click', () => {\n      const gameContainer = document.querySelector('.game-container');\n      const startScreen = document.getElementById('start-screen');\n      const cardGrid = document.querySelector('.card-grid');\n      if (gameContainer) gameContainer.style.display = 'none';\n      if (startScreen) startScreen.style.display = 'flex';\n      if (cardGrid) cardGrid.innerHTML = '';\n\n      renderStartScreenHighScores();\n\n      resetTimer();\n    });\n  }\n});\n\n/**\n * Countdown timer\n * \n * @type {number | null}\n */\nlet timerInterval = null;\n\n/**\n * Starts the countdown timer for the game.\n * Initializes `GameState.timeLeft` to 60 seconds,\n * updates the UI, and begins ticking every second.\n * When the timer reaches 0, the interval is cleared\n * and the game-over screen is displayed via `handleTimeOut()`.\n *\n * @returns {void}\n */\nfunction startTimer() {\n  clearInterval(timerInterval); // Stop any existing timer\n  GameState.timeLeft = 60;\n  updateTimerUI();\n\n  timerInterval = setInterval(() => {\n    GameState.timeLeft--;\n    updateTimerUI();\n\n    // Check if time has run out\n    if (GameState.timeLeft <= 0) {\n      clearInterval(timerInterval);\n      handleTimeOut();\n    }\n  }, 1000);\n}\n\n/**\n * Resets the countdown timer to the default value (60 seconds)\n * and updates the UI. Any running timer is cleared.\n *\n * @returns {void}\n */\nfunction resetTimer() {\n  clearInterval(timerInterval); // Stop the timer\n  GameState.timeLeft = 60;\n  updateTimerUI();\n}\n\n/**\n * Updates the timer display in the UI to reflect\n * the current value of `GameState.timeLeft`.\n *\n * @returns {void}\n */\nfunction updateTimerUI() {\n  const timerEl = document.getElementById('timer-container');\n  if (timerEl) timerEl.textContent = `Time: ${GameState.timeLeft}s`;\n}\n\n/** Map Difficulty → Storage‑Key */\n/**\n * Returns the localStorage key for a given difficulty level.\n * \n * @param {number} diff - The difficulty level (e.g., 4, 6, or 8).\n * @returns {string} - The associated localStorage key.\n */\nfunction keyFor(diff) {\n  switch (diff) {\n    case 4:\n      return 'matchHighScore_easy';\n    case 6:\n      return 'matchHighScore_medium';\n    case 8: // fall-through\n    default:\n      return 'matchHighScore_hard';\n  }\n}\n\n/** Holt High‑Score (oder null) */\n/**\n * Retrieves the high score for a given difficulty from localStorage.\n * \n * @param {number} diff - The difficulty level.\n * @returns {number|null} - The high score or null if not set.\n */\nfunction getHighScore(diff) {\n  const val = localStorage.getItem(keyFor(diff));\n  return val !== null ? parseInt(val) : null;\n}\n\n/** Speichert neuen High‑Score, wenn besser (größer) */\n/**\n * Saves the current score to localStorage if it's higher than the existing one.\n * \n * @param {number} diff - The difficulty level.\n * @param {number} timeLeft - The remaining time when game ended.\n * @returns {void}\n */\nfunction maybeSetHighScore(diff, timeLeft) {\n  const score = getHighScore(diff);\n  const current = (score !== null && score !== undefined) ? score : -1;\n  if (timeLeft > current) {\n    localStorage.setItem(keyFor(diff), timeLeft);\n  }\n}\n\n\n/**\n * Updates the start screen UI with the high scores for each difficulty level.\n * \n * @returns {void}\n */\nfunction renderStartScreenHighScores() {\n  const startScreen = document.getElementById('start-screen');\n  if (!startScreen || startScreen.style.display === 'none') return;\n  const map = [\n    { diff: 4, el: 'hs-easy' },\n    { diff: 6, el: 'hs-medium' },\n    { diff: 8, el: 'hs-hard' },\n  ];\n  map.forEach(({ diff, el }) => {\n    const span = document.getElementById(el);\n    if (!span) return;\n    const val = getHighScore(diff);\n    span.textContent = val !== null ? val : '–';\n  });\n}\n\ndocument.addEventListener('DOMContentLoaded', renderStartScreenHighScores);\n\n/**\n * Handles logic when the timer reaches 0.\n * Displays the end screen with a \"TIME'S UP!\" message\n * and shows the player's final score and high score.\n *\n * @returns {void}\n */\nfunction handleTimeOut() {\n  checkAndUpdateHighScore(GameState.difficulty);\n  const highScoreElEnd = document.getElementById('highscore-end-val');\n  if (highScoreElEnd) {\n    const highScore2 = getHighScore(GameState.difficulty);\n    highScoreElEnd.textContent = highScore2;\n  }\n\n  checkAndUpdateHighScore(GameState.difficulty);\n  const hsEnd = document.getElementById('highscore-end-val');\n  if (hsEnd) {\n    const score = getHighScore(GameState.difficulty);\n    hsEnd.textContent = (score !== null && score !== undefined) ? score : 0;\n  }\n  if (endScreen) endScreen.classList.remove('hidden');\n  if (winnerMsg) winnerMsg.textContent = `TIME'S UP!`;\n  if (finalScoreText)\n    finalScoreText.textContent = `Your Score: ${GameState.score}`;\n}\n\n/**\n * Updates the high score display in the UI.\n * Retrieves the \"matchHighScore\" value from localStorage,\n * safely defaults to 0 if the value is null or invalid.\n *\n * @returns {void}\n */\nfunction updateHighScoreUI() {\n  const highScoreEl = document.getElementById('highscore');\n  if (highScoreEl) {\n    const highScore = getHighScore(GameState.difficulty) || 0;\n    highScoreEl.textContent = highScore;\n  }\n  const el = document.getElementById('highscore');\n  if (!el) return;\n  const best = getHighScore(GameState.difficulty);\n  el.textContent = (best !== null && best !== undefined) ? best : 0;\n}\n\nexport {\n  initGame,\n  renderBoard,\n  showEndScreen,\n  resetGame,\n  flipCard,\n  updateScore,\n};\n",
+    "static": true,
+    "longname": "/Users/krystalkwan/Documents/UC_San_Diego_Assignment_Archives/cse110-sp25-group19/src/js/game.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "setupStartScreen",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~setupStartScreen",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Initializes and sets up the start screen UI and logic.\n\nThis function:\n- Selects key DOM elements related to the start screen and game container.\n- Attaches a click event listener to the start button to:\n  - Hide the start screen and show the game container.\n  - Initialize the game state and deck based on the selected difficulty.\n  - Render the game board.\n  - Reset and start the game timer.\n- Updates the displayed high score on the start screen.\n\nIf any required elements are missing, the function exits early.",
+    "lineNumber": 91,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [],
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "endScreen",
+    "memberof": "src/js/game.js",
+    "static": true,
+    "longname": "src/js/game.js~endScreen",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "The container element for the end screen modal.",
+    "lineNumber": 136,
+    "type": {
+      "nullable": null,
+      "types": ["HTMLElement ", " null"],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "variable",
+    "name": "winnerMsg",
+    "memberof": "src/js/game.js",
+    "static": true,
+    "longname": "src/js/game.js~winnerMsg",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "The element that displays the winner message.",
+    "lineNumber": 142,
+    "type": {
+      "nullable": null,
+      "types": ["HTMLElement ", " null"],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "variable",
+    "name": "finalScoreText",
+    "memberof": "src/js/game.js",
+    "static": true,
+    "longname": "src/js/game.js~finalScoreText",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "The element that displays the final score or time left.",
+    "lineNumber": 148,
+    "type": {
+      "nullable": null,
+      "types": ["HTMLElement ", " null"],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "name": "updateScoreAndComboUI",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~updateScoreAndComboUI",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Updates the score, combo count, and high score in the display.",
+    "lineNumber": 213,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "function",
+    "name": "matchEffect",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~matchEffect",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Triggers a visual flash effect on both matched cards.\nAdds the 'card-flash' class to the .card-front of each matched card",
+    "lineNumber": 300,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["Object"],
+        "spread": false,
+        "optional": false,
+        "name": "card1",
+        "description": "The first matched card object"
+      },
+      {
+        "nullable": null,
+        "types": ["Object"],
+        "spread": false,
+        "optional": false,
+        "name": "card2",
+        "description": "The second matched card object"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "function",
+    "name": "allMatched",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~allMatched",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Checks if all cards in the current deck are matched.\nIf all cards are matched, stops the timer, updates the high score,\nand shows the end screen.",
+    "lineNumber": 326,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [],
+    "ignore": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "checkAndUpdateHighScore",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~checkAndUpdateHighScore",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Checks if the current time left is a new high score for the given difficulty,\nupdates the high score in storage if needed, refreshes the high score display\nin the game UI and the start screen.",
+    "lineNumber": 343,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": false,
+        "name": "diff",
+        "description": "The difficulty level to check the high score for."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "variable",
+    "name": "score",
+    "memberof": "src/js/game.js",
+    "static": true,
+    "longname": "src/js/game.js~score",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Current player score.",
+    "lineNumber": 354,
+    "type": {
+      "nullable": null,
+      "types": ["number"],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 59,
+    "kind": "variable",
+    "name": "timerInterval",
+    "memberof": "src/js/game.js",
+    "static": true,
+    "longname": "src/js/game.js~timerInterval",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Countdown timer",
+    "lineNumber": 402,
+    "type": {
+      "nullable": null,
+      "types": ["number ", " null"],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 60,
+    "kind": "function",
+    "name": "startTimer",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~startTimer",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Starts the countdown timer for the game.\nInitializes `GameState.timeLeft` to 60 seconds,\nupdates the UI, and begins ticking every second.\nWhen the timer reaches 0, the interval is cleared\nand the game-over screen is displayed via `handleTimeOut()`.",
+    "lineNumber": 413,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [],
+    "ignore": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "function",
+    "name": "resetTimer",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~resetTimer",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Resets the countdown timer to the default value (60 seconds)\nand updates the UI. Any running timer is cleared.",
+    "lineNumber": 436,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [],
+    "ignore": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "function",
+    "name": "updateTimerUI",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~updateTimerUI",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Updates the timer display in the UI to reflect\nthe current value of `GameState.timeLeft`.",
+    "lineNumber": 448,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [],
+    "ignore": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "function",
+    "name": "keyFor",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~keyFor",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Returns the localStorage key for a given difficulty level.",
+    "lineNumber": 460,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string} - The associated localStorage key."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": false,
+        "name": "diff",
+        "description": "The difficulty level (e.g., 4, 6, or 8)."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["string"],
+      "spread": false,
+      "description": "The associated localStorage key."
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "name": "getHighScore",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~getHighScore",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Retrieves the high score for a given difficulty from localStorage.",
+    "lineNumber": 479,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{number|null} - The high score or null if not set."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": false,
+        "name": "diff",
+        "description": "The difficulty level."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["number", "null"],
+      "spread": false,
+      "description": "The high score or null if not set."
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "name": "maybeSetHighScore",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~maybeSetHighScore",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Saves the current score to localStorage if it's higher than the existing one.",
+    "lineNumber": 492,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": false,
+        "name": "diff",
+        "description": "The difficulty level."
+      },
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": false,
+        "name": "timeLeft",
+        "description": "The remaining time when game ended."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "function",
+    "name": "renderStartScreenHighScores",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~renderStartScreenHighScores",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Updates the start screen UI with the high scores for each difficulty level.",
+    "lineNumber": 506,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [],
+    "ignore": true
+  },
+  {
+    "__docId__": 67,
+    "kind": "function",
+    "name": "handleTimeOut",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~handleTimeOut",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Handles logic when the timer reaches 0.\nDisplays the end screen with a \"TIME'S UP!\" message\nand shows the player's final score and high score.",
+    "lineNumber": 531,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [],
+    "ignore": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "function",
+    "name": "updateHighScoreUI",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~updateHighScoreUI",
+    "access": "public",
+    "export": false,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": null,
+    "description": "Updates the high score display in the UI.\nRetrieves the \"matchHighScore\" value from localStorage,\nsafely defaults to 0 if the value is null or invalid.",
+    "lineNumber": 558,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [],
+    "ignore": true
+  },
+  {
+    "__docId__": 69,
+    "kind": "function",
+    "name": "initGame",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~initGame",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": "{initGame}",
+    "description": "Initializes a new game round.",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@params",
+        "tagValue": "{number} [difficulty=8] - The number of pairs to generate, the more pairs, the harder the game."
+      },
+      {
+        "tagName": "@returns",
+        "tagValue": "{Card[]}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["Card[]"],
+      "spread": false,
+      "description": ""
+    },
+    "params": [
+      {
+        "name": "difficulty",
+        "optional": true,
+        "types": ["number"],
+        "defaultRaw": 8,
+        "defaultValue": "8"
+      }
+    ]
+  },
+  {
+    "__docId__": 70,
+    "kind": "function",
+    "name": "renderBoard",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~renderBoard",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": "{renderBoard}",
+    "description": "Renders the card grid into the supplied container.",
+    "lineNumber": 35,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["HTMLElement"],
+        "spread": false,
+        "optional": false,
+        "name": "container",
+        "description": "DOM node that will hold the cards"
+      },
+      {
+        "nullable": null,
+        "types": ["Array"],
+        "spread": false,
+        "optional": false,
+        "name": "deck",
+        "description": "Card array created by initGame()"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "function",
+    "name": "showEndScreen",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~showEndScreen",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": "{showEndScreen}",
+    "description": "Displays the end screen modal with the winner message, final time left, and the high score.\nUpdates relevant DOM elements to show game results and high score.\n\n- Sets the winner message text.\n- Displays the remaining time left.\n- Reveals the end screen modal.\n- Retrieves and displays the high score for the current difficulty level.\n- Ensures the high score display falls back to 0 if no high score is found.",
+    "lineNumber": 162,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 72,
+    "kind": "function",
+    "name": "resetGame",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~resetGame",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": "{resetGame}",
+    "description": "Resets the game to its initial state.\n- Hides the end screen.\n- Retrieves the selected difficulty level.\n- Reinitializes the game deck and state variables.\n- Updates the UI for score, combo, and timer.\n- Starts a new countdown timer.",
+    "lineNumber": 190,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{void}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["void"],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 73,
+    "kind": "function",
+    "name": "flipCard",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~flipCard",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": "{flipCard}",
+    "description": "Flips a card and updates GameState.\nIgnores if already flipped, matched, or 2 cards are face-up.",
+    "lineNumber": 230,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{ deck: Card[], flippedCards: Card[] }}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": false,
+        "name": "index",
+        "description": "Index of the card in the deck"
+      },
+      {
+        "nullable": null,
+        "types": ["HTMLElement"],
+        "spread": false,
+        "optional": false,
+        "name": "cardElem",
+        "description": "The DOM element representing the card"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["{ deck: Card[], flippedCards: Card[] }"],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "function",
+    "name": "updateScore",
+    "memberof": "src/js/game.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/game.js~updateScore",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/game.js",
+    "importStyle": "{updateScore}",
+    "description": "Increases score and updates the UI",
+    "lineNumber": 359,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 75,
+    "kind": "file",
+    "name": "src/js/sum.js",
+    "content": "/**\n * @param {number} a - first number input\n * @param {number} b - second number input\n * @return {number} result of the sum value\n */\nfunction sum(a, b) {\n  return a + b;\n}\nexport { sum };\n",
+    "static": true,
+    "longname": "/Users/krystalkwan/Documents/UC_San_Diego_Assignment_Archives/cse110-sp25-group19/src/js/sum.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 76,
+    "kind": "function",
+    "name": "sum",
+    "memberof": "src/js/sum.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/sum.js~sum",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/sum.js",
+    "importStyle": "{sum}",
+    "description": "",
+    "lineNumber": 6,
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": false,
+        "name": "a",
+        "description": "first number input"
+      },
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": false,
+        "name": "b",
+        "description": "second number input"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["number"],
+      "spread": false,
+      "description": "result of the sum value"
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "file",
+    "name": "src/js/utils.js",
+    "content": "/**\n * Represents a single card in the memory game.\n */\nclass Card {\n  /**\n   * Creates a new Card instance.\n   *\n   * @param {number|string} id - Unique identifier for the card.\n   * @param {*} value - Value used to determine matching pairs.\n   */\n  constructor(id, value) {\n    /**\n     * Unique identifier for the card.\n     * @type {number|string}\n     */\n    this.id = id;\n\n    /**\n     * Value used to determine matching pairs.\n     * @type {*}\n     */\n    this.value = value;\n\n    /**\n     * Whether the card is currently flipped face-up.\n     * @type {boolean}\n     */\n    this.isFlipped = false;\n\n    /**\n     * Whether the card has been matched with its pair.\n     * @type {boolean}\n     */\n    this.isMatched = false;\n  }\n}\n\n/**\n * Generates a deck of matching card pairs for the memory game.\n *\n * Each pair has the same ranger type as its value. The number of pairs\n * is determined by the `pairs` parameter, defaulting to 8.\n *\n * @param {number} [pairs=8] - The number of unique pairs to include in the deck (max 8).\n * @returns {Card[]} An array containing pairs of Card objects.\n */\nfunction generateDeck(pairs = 8) {\n  const rangerTypes = [\n    'black-ranger',\n    'blue-ranger',\n    'green-ranger',\n    'pink-ranger',\n    'red-ranger',\n    'yellow-ranger',\n    'white-ranger',\n    'purple-ranger',\n  ];\n  const deck = [];\n  let idCounter = 0;\n  for (let value = 0; value < pairs; value++) {\n    const ranger = rangerTypes[value];\n    deck.push(new Card(idCounter++, ranger));\n    deck.push(new Card(idCounter++, ranger));\n  }\n  return deck;\n}\n\n/**\n * Shuffles the deck using the Fisher–Yates algorithm.\n *\n * @param   {Array} deck  Array of Card objects\n * @returns {Array}       Same array reference, after shuffling\n */\n\nfunction shuffleDeck(deck) {\n  // TODO: Implement Fisher–Yates\n  const newDeck = [...deck];\n  for (let i = newDeck.length - 1; i > 0; i--) {\n    let j = Math.floor(Math.random() * (i + 1));\n    [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];\n  }\n  return newDeck;\n}\n\n/**\n * Deck: an array of 16 shuffled Card instances.\n */\n// export const Deck = shuffleDeck(generateDeck());\n\n/**\n * Tracks the full state of the game, including the deck, flipped cards, score, time, and current round.\n */\nconst GameState = {\n  deck: generateDeck(),\n  flippedCards: [],\n  score: 0,\n  round: 1,\n  combo: 0,\n  timeLeft: 60,\n};\n\n/**\n * Adds points to the player's score.\n *\n * @param   {number} [points=1]  How many points to add\n * @returns {number}             New total score\n */\nfunction addScore(points = 1) {\n  GameState.score += points;\n  return GameState.score;\n}\n\n/**\n * Retrieves the current score.\n *\n * @returns {number}  Current score value\n */\nfunction getScore() {\n  return GameState.score;\n}\n\n/**\n * Checks if the cards in flippedCards array matches.\n *\n * @returns {bool}       True if cards match, False if cards are mismatched.\n */\nfunction matchCheck() {\n  if (GameState.flippedCards.length !== 2) return;\n  let match = false;\n\n  const [card1, card2] = GameState.flippedCards;\n  if (card1.value == card2.value) {\n    match = true;\n    addScore();\n  } else {\n    setTimeout(() => {\n      card1.isFlipped = false;\n      card2.isFlipped = false;\n    }, 1000);\n  }\n\n  GameState.flippedCards = [];\n  return match;\n}\n\n/**\n * Based on the combo count, function triggers a visual effect.\n * @param {*} combo\n * @returns\n */\n\nexport function triggerComboEffect(combo) {\n  const gameContainer = document.querySelector('.game-container');\n  if (!gameContainer) {\n    return;\n  }\n\n  gameContainer.classList.remove('combo-2', 'combo-3', 'combo-4', 'combo-5');\n  if (combo <= 4 && combo >= 2) {\n    gameContainer.classList.add(`combo-${combo}`);\n  } else if (combo > 4) {\n    gameContainer.classList.add('combo-5');\n  }\n\n  if (combo >= 2) {\n    gameContainer.classList.add('shake');\n    setTimeout(() => {\n      gameContainer.classList.remove('shake');\n    }, 400);\n  }\n}\n\nexport {\n  Card,\n  generateDeck,\n  shuffleDeck,\n  GameState,\n  addScore,\n  getScore,\n  matchCheck,\n};\n",
+    "static": true,
+    "longname": "/Users/krystalkwan/Documents/UC_San_Diego_Assignment_Archives/cse110-sp25-group19/src/js/utils.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 78,
+    "kind": "function",
+    "name": "triggerComboEffect",
+    "memberof": "src/js/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/utils.js~triggerComboEffect",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/utils.js",
+    "importStyle": "{triggerComboEffect}",
+    "description": "Based on the combo count, function triggers a visual effect.",
+    "lineNumber": 152,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["*"],
+        "spread": false,
+        "optional": false,
+        "name": "combo",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "class",
+    "name": "Card",
+    "memberof": "src/js/utils.js",
+    "static": true,
+    "longname": "src/js/utils.js~Card",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/utils.js",
+    "importStyle": "{Card}",
+    "description": "Represents a single card in the memory game.",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 80,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/js/utils.js~Card",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/js/utils.js~Card#constructor",
+    "access": "public",
+    "description": "Creates a new Card instance.",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number", "string"],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": "Unique identifier for the card."
+      },
+      {
+        "nullable": null,
+        "types": ["*"],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "Value used to determine matching pairs."
+      }
+    ]
+  },
+  {
+    "__docId__": 81,
+    "kind": "member",
+    "name": "id",
+    "memberof": "src/js/utils.js~Card",
+    "static": false,
+    "longname": "src/js/utils.js~Card#id",
+    "access": "public",
+    "description": "Unique identifier for the card.",
+    "lineNumber": 16,
+    "type": {
+      "nullable": null,
+      "types": ["number", "string"],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "member",
+    "name": "value",
+    "memberof": "src/js/utils.js~Card",
+    "static": false,
+    "longname": "src/js/utils.js~Card#value",
+    "access": "public",
+    "description": "Value used to determine matching pairs.",
+    "lineNumber": 22,
+    "type": {
+      "nullable": null,
+      "types": ["*"],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "member",
+    "name": "isFlipped",
+    "memberof": "src/js/utils.js~Card",
+    "static": false,
+    "longname": "src/js/utils.js~Card#isFlipped",
+    "access": "public",
+    "description": "Whether the card is currently flipped face-up.",
+    "lineNumber": 28,
+    "type": {
+      "nullable": null,
+      "types": ["boolean"],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "member",
+    "name": "isMatched",
+    "memberof": "src/js/utils.js~Card",
+    "static": false,
+    "longname": "src/js/utils.js~Card#isMatched",
+    "access": "public",
+    "description": "Whether the card has been matched with its pair.",
+    "lineNumber": 34,
+    "type": {
+      "nullable": null,
+      "types": ["boolean"],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "function",
+    "name": "generateDeck",
+    "memberof": "src/js/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/utils.js~generateDeck",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/utils.js",
+    "importStyle": "{generateDeck}",
+    "description": "Generates a deck of matching card pairs for the memory game.\n\nEach pair has the same ranger type as its value. The number of pairs\nis determined by the `pairs` parameter, defaulting to 8.",
+    "lineNumber": 47,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Card[]} An array containing pairs of Card objects."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "8",
+        "defaultRaw": 8,
+        "name": "pairs",
+        "description": "The number of unique pairs to include in the deck (max 8)."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["Card[]"],
+      "spread": false,
+      "description": "An array containing pairs of Card objects."
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "function",
+    "name": "shuffleDeck",
+    "memberof": "src/js/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/utils.js~shuffleDeck",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/utils.js",
+    "importStyle": "{shuffleDeck}",
+    "description": "Shuffles the deck using the Fisher–Yates algorithm.",
+    "lineNumber": 75,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Array}       Same array reference, after shuffling"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["Array"],
+        "spread": false,
+        "optional": false,
+        "name": "deck",
+        "description": "Array of Card objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["Array"],
+      "spread": false,
+      "description": "Same array reference, after shuffling"
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "variable",
+    "name": "GameState",
+    "memberof": "src/js/utils.js",
+    "static": true,
+    "longname": "src/js/utils.js~GameState",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/utils.js",
+    "importStyle": "{GameState}",
+    "description": "Tracks the full state of the game, including the deck, flipped cards, score, time, and current round.",
+    "lineNumber": 93,
+    "type": {
+      "types": [
+        "{\"deck\": *, \"flippedCards\": *, \"score\": *, \"round\": number, \"combo\": *, \"timeLeft\": number}"
+      ]
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "function",
+    "name": "addScore",
+    "memberof": "src/js/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/utils.js~addScore",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/utils.js",
+    "importStyle": "{addScore}",
+    "description": "Adds points to the player's score.",
+    "lineNumber": 108,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{number}             New total score"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": ["number"],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "1",
+        "defaultRaw": 1,
+        "name": "points",
+        "description": "How many points to add"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["number"],
+      "spread": false,
+      "description": "New total score"
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "function",
+    "name": "getScore",
+    "memberof": "src/js/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/utils.js~getScore",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/utils.js",
+    "importStyle": "{getScore}",
+    "description": "Retrieves the current score.",
+    "lineNumber": 118,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{number}  Current score value"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["number"],
+      "spread": false,
+      "description": "Current score value"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 90,
+    "kind": "function",
+    "name": "matchCheck",
+    "memberof": "src/js/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/js/utils.js~matchCheck",
+    "access": "public",
+    "export": true,
+    "importPath": "memory_card_game/src/js/utils.js",
+    "importStyle": "{matchCheck}",
+    "description": "Checks if the cards in flippedCards array matches.",
+    "lineNumber": 127,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{bool}       True if cards match, False if cards are mismatched."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": ["bool"],
+      "spread": false,
+      "description": "True if cards match, False if cards are mismatched."
+    },
+    "params": []
+  },
+  {
+    "kind": "index",
+    "content": "# Memory_Card_Game_CICD_Pipeline\n\nThis is a simple JavaScript and HTML project with a basic file structure, including automated code quality checks, pre-commit hooks, and conventional commit message enforcement.\n\n## Developer Workflow\n\n### Running the Project\n\nTo run the project locally:\n\n1. Start the Development Server:\n   ```bash\n   npm start\n   ```\n   - Uses **`npx serve .`** to serve the project directory as a static site.\n   - Opens **`index.html`** as the entry point.\n\n### Code Quality Checks (Before Commit)\n\nDevelopers should ensure their code is clean and properly formatted before committing:\n\n1. Linting the Code:\n\n   ```bash\n   npm run lint\n   ```\n\n   - Runs **ESLint** on the **`src/`** directory to catch common JavaScript errors.\n\n2. Formatting the Code:\n   ```bash\n   npm run format\n   ```\n   - Runs **Prettier** to automatically format code in the directory.\n\n### Automated Code Quality Checks\n\n- **Pre-Commit Hook:** Runs ESLint and Prettier automatically via **lint-staged**.\n- **Commit Message Validation:** Enforces conventional commit messages via **commitlint**.\n- **Pre-Push Hook:** Runs **`npm run check`** to validate code before pushing.\n\n### Full Code Check Before Push\n\nTo run both linting and testing before pushing:\n\n```bash\nnpm run check\n```\n\n- Runs both **`lint`** and **`test`** scripts to ensure code quality before pushing.\n\n- **Start:** Open index.html in a browser.\n\n### Running Tests\n\nTo run the unit tests:\n\n```bash\nnpm test\n```\n\n- Runs all tests in the **`tests/`** directory using **Jest**.\n\n### Common Errors and How to Fix:\n\n'eslint' is not recognized as an internal or external command\n\n- run `npm install --save-dev eslint`<br />\n\n'prettier' is not recognized as an internal or external command\n\n- run `npm install --save-dev prettier`\n\n### Pull Request Errors:\n\nCI Pipeline / Lint & Prettier Check [FAILED]\n\n- run `npx prettier --check .` locally on your computer to check for files that are not correctly formatted\n- either manually fix formatting issues, or automatically fix by running `npx prettier --write .`\n\n---\n\n## Project Folder Purpose\n\nCSS - contains all stylesheets  \nHTML - contains all html pages and components  \nScripts - holds Javascript files  \nAssets - holds any media ranging from images to documantation  \n=======\n\n# cse110-sp25-group19\n\n[Team Page](admin/team.md)\n",
+    "longname": "/Users/krystalkwan/Documents/UC_San_Diego_Assignment_Archives/cse110-sp25-group19/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"memory_card_game\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"cross-env NODE_OPTIONS=--experimental-vm-modules jest\",\n    \"prepare\": \"husky init\",\n    \"lint\": \"eslint ./src\",\n    \"format\": \"prettier --write ./\",\n    \"start\": \"npx serve .\",\n    \"check\": \"npm run lint && npm test\",\n    \"docs\": \"./node_modules/.bin/esdoc -c .esdoc.json\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/cse110-sp25-group19/memory_card_game.git\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"type\": \"module\",\n  \"bugs\": {\n    \"url\": \"https://github.com/cse110-sp25-group19/memory_card_game/issues\"\n  },\n  \"homepage\": \"https://github.com/cse110-sp25-group19/memory_card_game#readme\",\n  \"overrides\": {\n    \"glob\": \"^11.0.1\"\n  },\n  \"devDependencies\": {\n    \"@commitlint/config-conventional\": \"^19.8.1\",\n    \"cross-env\": \"^7.0.3\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^9.27.0\",\n    \"husky\": \"^8.0.0\",\n    \"jest\": \"^29.7.0\",\n    \"jest-environment-jsdom\": \"^30.0.0-beta.3\",\n    \"jsdoc\": \"^4.0.4\",\n    \"lint-staged\": \"^16.0.0\",\n    \"prettier\": \"^3.5.3\"\n  },\n  \"husky\": {\n    \"hooks\": {\n      \"pre-commit\": \"lint-staged\"\n    }\n  },\n  \"lint-staged\": {\n    \"*.{js,jsx,ts,tsx,json,css,scss,md}\": [\n      \"prettier --check\",\n      \"eslint --max-warnings=0\"\n    ]\n  },\n  \"dependencies\": {\n    \"serve\": \"^14.2.4\"\n  }\n}\n",
+    "longname": "/Users/krystalkwan/Documents/UC_San_Diego_Assignment_Archives/cse110-sp25-group19/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

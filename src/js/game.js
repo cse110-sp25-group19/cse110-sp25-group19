@@ -72,6 +72,22 @@ function renderBoard(container, deck) {
   updateHighScoreUI();
 }
 
+/**
+ * Initializes and sets up the start screen UI and logic.
+ *
+ * This function:
+ * - Selects key DOM elements related to the start screen and game container.
+ * - Attaches a click event listener to the start button to:
+ *   - Hide the start screen and show the game container.
+ *   - Initialize the game state and deck based on the selected difficulty.
+ *   - Render the game board.
+ *   - Reset and start the game timer.
+ * - Updates the displayed high score on the start screen.
+ *
+ * If any required elements are missing, the function exits early.
+ *
+ * @returns {void}
+ */
 function setupStartScreen() {
   // Start Screen Logic
   const startScreen = document.getElementById('start-screen');
@@ -113,15 +129,34 @@ function setupStartScreen() {
 }
 
 //End Screen Logic
-
+/**
+ * The container element for the end screen modal.
+ * @type {HTMLElement | null}
+ */
 const endScreen = document.getElementById('end-screen');
+
+/**
+ * The element that displays the winner message.
+ * @type {HTMLElement | null}
+ */
 const winnerMsg = document.getElementById('winner-msg');
+
+/**
+ * The element that displays the final score or time left.
+ * @type {HTMLElement | null}
+ */
 const finalScoreText = document.getElementById('final-score');
 
 /**
- * Displays the end screen modal with the winner and final scores and high scores.
+ * Displays the end screen modal with the winner message, final time left, and the high score.
+ * Updates relevant DOM elements to show game results and high score.
  *
- * @param {number} winner - The winning player's number (e.g., 1 or 2)
+ * - Sets the winner message text.
+ * - Displays the remaining time left.
+ * - Reveals the end screen modal.
+ * - Retrieves and displays the high score for the current difficulty level.
+ * - Ensures the high score display falls back to 0 if no high score is found.
+ *
  * @returns {void}
  */
 function showEndScreen() {
@@ -136,9 +171,22 @@ function showEndScreen() {
     highScoreElEnd.textContent = highScore2;
   }
   const hsEnd = document.getElementById('highscore-end-val');
-  if (hsEnd) hsEnd.textContent = getHighScore(GameState.difficulty) ?? 0;
+  if (hsEnd) {
+    const score = getHighScore(GameState.difficulty);
+    hsEnd.textContent = score !== null && score !== undefined ? score : 0;
+  }
 }
 
+/**
+ * Resets the game to its initial state.
+ * - Hides the end screen.
+ * - Retrieves the selected difficulty level.
+ * - Reinitializes the game deck and state variables.
+ * - Updates the UI for score, combo, and timer.
+ * - Starts a new countdown timer.
+ *
+ * @returns {void}
+ */
 function resetGame() {
   const cardGrid = document.querySelector('.card-grid');
   endScreen.classList.add('hidden');
@@ -267,8 +315,13 @@ function matchEffect(card1, card2) {
     }, 1000);
   }
 }
-/*
- * function to check if all cards are matched and the game is over, and update high score if needed.
+
+/**
+ * Checks if all cards in the current deck are matched.
+ * If all cards are matched, stops the timer, updates the high score,
+ * and shows the end screen.
+ *
+ * @returns {void}
  */
 function allMatched() {
   const allMatched = GameState.deck.every((c) => c.isMatched);
@@ -279,6 +332,14 @@ function allMatched() {
   }
 }
 
+/**
+ * Checks if the current time left is a new high score for the given difficulty,
+ * updates the high score in storage if needed, refreshes the high score display
+ * in the game UI and the start screen.
+ *
+ * @param {number} diff - The difficulty level to check the high score for.
+ * @returns {void}
+ */
 function checkAndUpdateHighScore(diff) {
   maybeSetHighScore(diff, GameState.timeLeft);
   updateHighScoreUI();
@@ -286,7 +347,10 @@ function checkAndUpdateHighScore(diff) {
 }
 
 //  Score + Reset Button Logic
-
+/**
+ * Current player score.
+ * @type {number}
+ */
 let score = 0;
 
 /**
@@ -330,7 +394,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-//Countdown Timer :
+/**
+ * Countdown timer
+ *
+ * @type {number | null}
+ */
 let timerInterval = null;
 
 /**
@@ -383,6 +451,12 @@ function updateTimerUI() {
 }
 
 /** Map Difficulty → Storage‑Key */
+/**
+ * Returns the localStorage key for a given difficulty level.
+ *
+ * @param {number} diff - The difficulty level (e.g., 4, 6, or 8).
+ * @returns {string} - The associated localStorage key.
+ */
 function keyFor(diff) {
   switch (diff) {
     case 4:
@@ -396,19 +470,38 @@ function keyFor(diff) {
 }
 
 /** Holt High‑Score (oder null) */
+/**
+ * Retrieves the high score for a given difficulty from localStorage.
+ *
+ * @param {number} diff - The difficulty level.
+ * @returns {number|null} - The high score or null if not set.
+ */
 function getHighScore(diff) {
   const val = localStorage.getItem(keyFor(diff));
   return val !== null ? parseInt(val) : null;
 }
 
 /** Speichert neuen High‑Score, wenn besser (größer) */
+/**
+ * Saves the current score to localStorage if it's higher than the existing one.
+ *
+ * @param {number} diff - The difficulty level.
+ * @param {number} timeLeft - The remaining time when game ended.
+ * @returns {void}
+ */
 function maybeSetHighScore(diff, timeLeft) {
-  const current = getHighScore(diff) ?? -1;
+  const score = getHighScore(diff);
+  const current = score !== null && score !== undefined ? score : -1;
   if (timeLeft > current) {
     localStorage.setItem(keyFor(diff), timeLeft);
   }
 }
 
+/**
+ * Updates the start screen UI with the high scores for each difficulty level.
+ *
+ * @returns {void}
+ */
 function renderStartScreenHighScores() {
   const startScreen = document.getElementById('start-screen');
   if (!startScreen || startScreen.style.display === 'none') return;
@@ -444,8 +537,10 @@ function handleTimeOut() {
 
   checkAndUpdateHighScore(GameState.difficulty);
   const hsEnd = document.getElementById('highscore-end-val');
-  if (hsEnd) hsEnd.textContent = getHighScore(GameState.difficulty) ?? 0;
-
+  if (hsEnd) {
+    const score = getHighScore(GameState.difficulty);
+    hsEnd.textContent = score !== null && score !== undefined ? score : 0;
+  }
   if (endScreen) endScreen.classList.remove('hidden');
   if (winnerMsg) winnerMsg.textContent = `TIME'S UP!`;
   if (finalScoreText)
@@ -467,8 +562,8 @@ function updateHighScoreUI() {
   }
   const el = document.getElementById('highscore');
   if (!el) return;
-  const best = getHighScore(GameState.difficulty) ?? 0;
-  el.textContent = best;
+  const best = getHighScore(GameState.difficulty);
+  el.textContent = best !== null && best !== undefined ? best : 0;
 }
 
 export {

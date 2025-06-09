@@ -1,0 +1,793 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <base data-ice="baseUrl" href="../../../" />
+    <title data-ice="title">src/js/game.js | memory_card_game</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css" />
+    <script src="script/prettify/prettify.js"></script>
+    <script src="script/manual.js"></script>
+  </head>
+  <body class="layout-container" data-ice="rootContainer">
+    <header>
+      <a href="./">Home</a>
+
+      <a href="identifiers.html">Reference</a>
+      <a href="source.html">Source</a>
+
+      <div class="search-box">
+        <span>
+          <img src="./image/search.png" />
+          <span class="search-input-edge"></span
+          ><input class="search-input" /><span class="search-input-edge"></span>
+        </span>
+        <ul class="search-result"></ul>
+      </div>
+      <a
+        style="position: relative; top: 3px"
+        href="https://github.com/cse110-sp25-group19/memory_card_game"
+        ><img width="20px" src="./image/github.png"
+      /></a>
+    </header>
+
+    <nav class="navigation" data-ice="nav">
+      <div>
+        <ul>
+          <li data-ice="doc">
+            <a
+              data-ice="dirPath"
+              class="nav-dir-path"
+              href="identifiers.html#js"
+              >js</a
+            ><span data-ice="kind" class="kind-class">C</span
+            ><span data-ice="name"
+              ><span
+                ><a href="class/src/js/utils.js~Card.html">Card</a></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-flipCard"
+                  >flipCard</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-initGame"
+                  >initGame</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-renderBoard"
+                  >renderBoard</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-resetGame"
+                  >resetGame</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-showEndScreen"
+                  >showEndScreen</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-updateScore"
+                  >updateScore</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-sum">sum</a></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-addScore"
+                  >addScore</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-generateDeck"
+                  >generateDeck</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-getScore"
+                  >getScore</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-matchCheck"
+                  >matchCheck</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-shuffleDeck"
+                  >shuffleDeck</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a
+                  href="function/index.html#static-function-triggerComboEffect"
+                  >triggerComboEffect</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-variable">V</span
+            ><span data-ice="name"
+              ><span
+                ><a href="variable/index.html#static-variable-GameState"
+                  >GameState</a
+                ></span
+              ></span
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content" data-ice="content">
+      <h1 data-ice="title">src/js/game.js</h1>
+      <pre
+        class="source-code line-number raw-source-code"
+      ><code class="prettyprint linenums" data-ice="content">import {
+  generateDeck,
+  shuffleDeck,
+  GameState,
+  triggerComboEffect,
+} from &apos;./utils.js&apos;;
+/**
+ * Initializes a new game round.
+ * @params {number} [difficulty=8] - The number of pairs to generate, the more pairs, the harder the game.
+ * @returns {Card[]}
+ */
+function initGame(difficulty = 8) {
+  //Make initial deck
+  const deck = generateDeck(difficulty);
+
+  //Shuffle deck
+  const shuffledDeck = shuffleDeck(deck);
+  GameState.deck = shuffledDeck;
+  GameState.flippedCards = [];
+  GameState.score = 0;
+  GameState.round = 1;
+  GameState.timeLeft = 60;
+  GameState.difficulty = difficulty;
+
+  //Return shuffled deck
+  return shuffledDeck;
+}
+/**
+ * Renders the card grid into the supplied container.
+ *
+ * @param   {HTMLElement} container DOM node that will hold the cards
+ * @param   {Array}       deck      Card array created by initGame()
+ * @returns {void}
+ */
+function renderBoard(container, deck) {
+  // TODO: inject placeholder elements
+  container.innerHTML = &apos;&apos;;
+
+  deck.forEach((card, index) =&gt; {
+    let cardElem = document.createElement(&apos;div&apos;);
+    cardElem.classList.add(&apos;card&apos;);
+
+    if (card.isFlipped || card.isMatched) {
+      cardElem.classList.add(&apos;is-flipped&apos;);
+    } else {
+      cardElem.classList.remove(&apos;is-flipped&apos;);
+    }
+
+    cardElem.dataset.id = card.id;
+    cardElem.dataset.value = card.value;
+
+    const inner = document.createElement(&apos;div&apos;);
+    inner.classList.add(&apos;card-inner&apos;);
+
+    const front = document.createElement(&apos;div&apos;);
+    front.classList.add(&apos;card-front&apos;, `card-front-${card.value}`);
+
+    const back = document.createElement(&apos;div&apos;);
+    back.classList.add(&apos;card-back&apos;);
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    cardElem.appendChild(inner);
+
+    // Add card flip mechanics
+    cardElem.addEventListener(&apos;click&apos;, () =&gt; {
+      flipCard(index, cardElem);
+      allMatched();
+    });
+    container.appendChild(cardElem);
+  });
+  updateHighScoreUI();
+}
+
+/**
+ * Initializes and sets up the start screen UI and logic.
+ * 
+ * This function:
+ * - Selects key DOM elements related to the start screen and game container.
+ * - Attaches a click event listener to the start button to:
+ *   - Hide the start screen and show the game container.
+ *   - Initialize the game state and deck based on the selected difficulty.
+ *   - Render the game board.
+ *   - Reset and start the game timer.
+ * - Updates the displayed high score on the start screen.
+ * 
+ * If any required elements are missing, the function exits early.
+ * 
+ * @returns {void}
+ */
+function setupStartScreen() {
+  // Start Screen Logic
+  const startScreen = document.getElementById(&apos;start-screen&apos;);
+  const gameContainer = document.querySelector(&apos;.game-container&apos;);
+  const startBtn = document.getElementById(&apos;start-btn&apos;);
+  const cardGrid = document.querySelector(&apos;.card-grid&apos;);
+  //add the dificulty selector here after done with frontend
+  // ex: difficulty = document.getElementById(&apos;difficulty&apos;);
+  const difficultySelect = document.getElementById(&apos;difficulty-select&apos;);
+  if (
+    !startScreen ||
+    !gameContainer ||
+    !startBtn ||
+    !cardGrid ||
+    !difficultySelect
+  )
+    return;
+
+  /**
+   * Handles start button click:
+   * Hides start screen and shows the game container.
+   * Initializes the game by calling initGame() and renders the board.
+   */
+  startBtn.addEventListener(&apos;click&apos;, () =&gt; {
+    startScreen.style.display = &apos;none&apos;;
+    gameContainer.style.display = &apos;block&apos;;
+    let selectedDifficulty = parseInt(difficultySelect.value) || 8;
+    GameState.combo = 0;
+    GameState.score = 0;
+    updateScoreAndComboUI();
+
+    const deck = initGame(selectedDifficulty);
+    renderBoard(cardGrid, deck);
+
+    startTimer();
+  });
+
+  updateHighScoreUI();
+}
+
+//End Screen Logic
+/**
+ * The container element for the end screen modal.
+ * @type {HTMLElement | null}
+ */
+const endScreen = document.getElementById(&apos;end-screen&apos;);
+
+/**
+ * The element that displays the winner message.
+ * @type {HTMLElement | null}
+ */
+const winnerMsg = document.getElementById(&apos;winner-msg&apos;);
+
+/**
+ * The element that displays the final score or time left.
+ * @type {HTMLElement | null}
+ */
+const finalScoreText = document.getElementById(&apos;final-score&apos;);
+
+/**
+ * Displays the end screen modal with the winner message, final time left, and the high score.
+ * Updates relevant DOM elements to show game results and high score.
+ *
+ * - Sets the winner message text.
+ * - Displays the remaining time left.
+ * - Reveals the end screen modal.
+ * - Retrieves and displays the high score for the current difficulty level.
+ * - Ensures the high score display falls back to 0 if no high score is found.
+ *
+ * @returns {void}
+ */
+function showEndScreen() {
+  if (winnerMsg) winnerMsg.textContent = `YOU WON!`;
+  if (finalScoreText)
+    finalScoreText.textContent = `Time left: ${GameState.timeLeft}s`;
+  if (endScreen) endScreen.classList.remove(&apos;hidden&apos;);
+
+  const highScoreElEnd = document.getElementById(&apos;highscore-end-val&apos;);
+  if (highScoreElEnd) {
+    const highScore2 = getHighScore(GameState.difficulty);
+    highScoreElEnd.textContent = highScore2;
+  }
+  const hsEnd = document.getElementById(&apos;highscore-end-val&apos;);
+  if (hsEnd) {
+    const score = getHighScore(GameState.difficulty);
+    hsEnd.textContent = (score !== null &amp;&amp; score !== undefined) ? score : 0;
+  }
+}
+
+/**
+ * Resets the game to its initial state.
+ * - Hides the end screen.
+ * - Retrieves the selected difficulty level.
+ * - Reinitializes the game deck and state variables.
+ * - Updates the UI for score, combo, and timer.
+ * - Starts a new countdown timer.
+ *
+ * @returns {void}
+ */
+function resetGame() {
+  const cardGrid = document.querySelector(&apos;.card-grid&apos;);
+  endScreen.classList.add(&apos;hidden&apos;);
+  const difficultySelect = document.getElementById(&apos;difficulty-select&apos;);
+  let selectedDifficulty = parseInt(difficultySelect.value) || 8;
+  const newDeck = initGame(selectedDifficulty);
+
+  GameState.combo = 0;
+  GameState.score = 0;
+  GameState.flippedCards = [];
+  GameState.round = 1;
+  GameState.timeLeft = 60;
+
+  updateScoreAndComboUI();
+  renderBoard(cardGrid, newDeck);
+  resetTimer();
+  startTimer();
+  updateHighScoreUI();
+}
+
+/**
+ * Updates the score, combo count, and high score in the display.
+ */
+function updateScoreAndComboUI() {
+  const scoreElem = document.getElementById(&apos;score&apos;);
+  const comboElem = document.getElementById(&apos;combo-count&apos;);
+  if (scoreElem) scoreElem.textContent = GameState.score;
+  if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;
+  triggerComboEffect(GameState.combo);
+  updateHighScoreUI();
+}
+
+/**
+ * Flips a card and updates GameState.
+ * Ignores if already flipped, matched, or 2 cards are face-up.
+ *
+ * @param {number} index - Index of the card in the deck
+ * @param {HTMLElement} cardElem - The DOM element representing the card
+ * @returns {{ deck: Card[], flippedCards: Card[] }}
+ */
+function flipCard(index, cardElem) {
+  const card = GameState.deck[index];
+
+  if (card.isFlipped || card.isMatched || GameState.flippedCards.length &gt;= 2) {
+    return { deck: GameState.deck, flippedCards: GameState.flippedCards };
+  }
+
+  card.isFlipped = true;
+  cardElem.classList.add(&apos;is-flipped&apos;);
+  GameState.flippedCards.push({ cardData: card, domElement: cardElem });
+
+  if (GameState.flippedCards.length === 2) {
+    // get the things we just pused ^^
+    const [
+      { cardData: firstCard, domElement: firstElem },
+      { cardData: secondCard, domElement: secondElem },
+    ] = GameState.flippedCards;
+
+    if (firstCard.value === secondCard.value) {
+      firstCard.isMatched = true;
+      secondCard.isMatched = true;
+      GameState.score += 1;
+      GameState.combo += 1;
+
+      //Card combo effect
+      triggerComboEffect(GameState.combo);
+
+      // Card match effect
+      setTimeout(() =&gt; {
+        matchEffect(firstCard, secondCard);
+      }, 300);
+
+      GameState.flippedCards = [];
+      updateScoreAndComboUI();
+
+      const allMatched = GameState.deck.every((c) =&gt; c.isMatched);
+      if (allMatched) {
+        clearInterval(timerInterval);
+        checkAndUpdateHighScore(GameState.difficulty);
+        showEndScreen();
+      }
+    } else {
+      // ----- NOT matched -----
+      GameState.combo = 0;
+      updateScoreAndComboUI();
+
+      setTimeout(() =&gt; {
+        firstCard.isFlipped = false;
+        secondCard.isFlipped = false;
+        firstElem.classList.remove(&apos;is-flipped&apos;);
+        secondElem.classList.remove(&apos;is-flipped&apos;);
+        GameState.flippedCards = [];
+      }, 1000);
+    }
+  } else {
+    const comboElem = document.getElementById(&apos;combo-count&apos;);
+    if (comboElem) comboElem.textContent = `Combo: ${GameState.combo}`;
+  }
+
+  return { deck: GameState.deck, flippedCards: GameState.flippedCards };
+}
+
+/**
+ * Triggers a visual flash effect on both matched cards.
+ * Adds the &apos;card-flash&apos; class to the .card-front of each matched card
+ *
+ * @param {Object} card1 - The first matched card object
+ * @param {Object} card2 - The second matched card object
+ * @returns {void}
+ */
+function matchEffect(card1, card2) {
+  const card1Element = document.querySelector(
+    `[data-id=&quot;${card1.id}&quot;] .card-front`,
+  );
+  const card2Element = document.querySelector(
+    `[data-id=&quot;${card2.id}&quot;] .card-front`,
+  );
+
+  if (card1Element &amp;&amp; card2Element) {
+    card1Element.classList.add(&apos;card-flash&apos;);
+    card2Element.classList.add(&apos;card-flash&apos;);
+
+    setTimeout(() =&gt; {
+      card1Element.classList.remove(&apos;card-flash&apos;);
+      card2Element.classList.remove(&apos;card-flash&apos;);
+    }, 1000);
+  }
+}
+
+/**
+ * Checks if all cards in the current deck are matched.
+ * If all cards are matched, stops the timer, updates the high score,
+ * and shows the end screen.
+ *
+ * @returns {void}
+ */
+function allMatched() {
+  const allMatched = GameState.deck.every((c) =&gt; c.isMatched);
+  if (allMatched) {
+    clearInterval(timerInterval);
+    checkAndUpdateHighScore(GameState.difficulty);
+    showEndScreen();
+  }
+}
+
+/**
+ * Checks if the current time left is a new high score for the given difficulty,
+ * updates the high score in storage if needed, refreshes the high score display
+ * in the game UI and the start screen.
+ * 
+ * @param {number} diff - The difficulty level to check the high score for.
+ * @returns {void}
+ */
+function checkAndUpdateHighScore(diff) {
+  maybeSetHighScore(diff, GameState.timeLeft);
+  updateHighScoreUI();
+  renderStartScreenHighScores();
+}
+
+//  Score + Reset Button Logic
+/**
+ * Current player score.
+ * @type {number}
+ */
+let score = 0;
+
+/**
+ * Increases score and updates the UI
+ */
+function updateScore() {
+  score += 1;
+  const scoreEl = document.getElementById(&apos;score&apos;);
+  if (scoreEl) scoreEl.textContent = score;
+}
+
+// Wait until DOM is ready to attach event listeners
+document.addEventListener(&apos;DOMContentLoaded&apos;, () =&gt; {
+  setupStartScreen();
+  const resetBtn = document.getElementById(&apos;reset-btn&apos;);
+  const homeBtn = document.getElementById(&apos;home-btn&apos;);
+  const playAgainBtn = document.getElementById(&apos;play-again-btn&apos;);
+  if (playAgainBtn) {
+    playAgainBtn.addEventListener(&apos;click&apos;, () =&gt; {
+      resetGame();
+    });
+  }
+  if (resetBtn) {
+    resetBtn.addEventListener(&apos;click&apos;, () =&gt; {
+      resetGame();
+    });
+  }
+  if (homeBtn) {
+    homeBtn.addEventListener(&apos;click&apos;, () =&gt; {
+      const gameContainer = document.querySelector(&apos;.game-container&apos;);
+      const startScreen = document.getElementById(&apos;start-screen&apos;);
+      const cardGrid = document.querySelector(&apos;.card-grid&apos;);
+      if (gameContainer) gameContainer.style.display = &apos;none&apos;;
+      if (startScreen) startScreen.style.display = &apos;flex&apos;;
+      if (cardGrid) cardGrid.innerHTML = &apos;&apos;;
+
+      renderStartScreenHighScores();
+
+      resetTimer();
+    });
+  }
+});
+
+/**
+ * Countdown timer
+ * 
+ * @type {number | null}
+ */
+let timerInterval = null;
+
+/**
+ * Starts the countdown timer for the game.
+ * Initializes `GameState.timeLeft` to 60 seconds,
+ * updates the UI, and begins ticking every second.
+ * When the timer reaches 0, the interval is cleared
+ * and the game-over screen is displayed via `handleTimeOut()`.
+ *
+ * @returns {void}
+ */
+function startTimer() {
+  clearInterval(timerInterval); // Stop any existing timer
+  GameState.timeLeft = 60;
+  updateTimerUI();
+
+  timerInterval = setInterval(() =&gt; {
+    GameState.timeLeft--;
+    updateTimerUI();
+
+    // Check if time has run out
+    if (GameState.timeLeft &lt;= 0) {
+      clearInterval(timerInterval);
+      handleTimeOut();
+    }
+  }, 1000);
+}
+
+/**
+ * Resets the countdown timer to the default value (60 seconds)
+ * and updates the UI. Any running timer is cleared.
+ *
+ * @returns {void}
+ */
+function resetTimer() {
+  clearInterval(timerInterval); // Stop the timer
+  GameState.timeLeft = 60;
+  updateTimerUI();
+}
+
+/**
+ * Updates the timer display in the UI to reflect
+ * the current value of `GameState.timeLeft`.
+ *
+ * @returns {void}
+ */
+function updateTimerUI() {
+  const timerEl = document.getElementById(&apos;timer-container&apos;);
+  if (timerEl) timerEl.textContent = `Time: ${GameState.timeLeft}s`;
+}
+
+/** Map Difficulty &#x2192; Storage&#x2011;Key */
+/**
+ * Returns the localStorage key for a given difficulty level.
+ * 
+ * @param {number} diff - The difficulty level (e.g., 4, 6, or 8).
+ * @returns {string} - The associated localStorage key.
+ */
+function keyFor(diff) {
+  switch (diff) {
+    case 4:
+      return &apos;matchHighScore_easy&apos;;
+    case 6:
+      return &apos;matchHighScore_medium&apos;;
+    case 8: // fall-through
+    default:
+      return &apos;matchHighScore_hard&apos;;
+  }
+}
+
+/** Holt High&#x2011;Score (oder null) */
+/**
+ * Retrieves the high score for a given difficulty from localStorage.
+ * 
+ * @param {number} diff - The difficulty level.
+ * @returns {number|null} - The high score or null if not set.
+ */
+function getHighScore(diff) {
+  const val = localStorage.getItem(keyFor(diff));
+  return val !== null ? parseInt(val) : null;
+}
+
+/** Speichert neuen High&#x2011;Score, wenn besser (gr&#xF6;&#xDF;er) */
+/**
+ * Saves the current score to localStorage if it&apos;s higher than the existing one.
+ * 
+ * @param {number} diff - The difficulty level.
+ * @param {number} timeLeft - The remaining time when game ended.
+ * @returns {void}
+ */
+function maybeSetHighScore(diff, timeLeft) {
+  const score = getHighScore(diff);
+  const current = (score !== null &amp;&amp; score !== undefined) ? score : -1;
+  if (timeLeft &gt; current) {
+    localStorage.setItem(keyFor(diff), timeLeft);
+  }
+}
+
+
+/**
+ * Updates the start screen UI with the high scores for each difficulty level.
+ * 
+ * @returns {void}
+ */
+function renderStartScreenHighScores() {
+  const startScreen = document.getElementById(&apos;start-screen&apos;);
+  if (!startScreen || startScreen.style.display === &apos;none&apos;) return;
+  const map = [
+    { diff: 4, el: &apos;hs-easy&apos; },
+    { diff: 6, el: &apos;hs-medium&apos; },
+    { diff: 8, el: &apos;hs-hard&apos; },
+  ];
+  map.forEach(({ diff, el }) =&gt; {
+    const span = document.getElementById(el);
+    if (!span) return;
+    const val = getHighScore(diff);
+    span.textContent = val !== null ? val : &apos;&#x2013;&apos;;
+  });
+}
+
+document.addEventListener(&apos;DOMContentLoaded&apos;, renderStartScreenHighScores);
+
+/**
+ * Handles logic when the timer reaches 0.
+ * Displays the end screen with a &quot;TIME&apos;S UP!&quot; message
+ * and shows the player&apos;s final score and high score.
+ *
+ * @returns {void}
+ */
+function handleTimeOut() {
+  checkAndUpdateHighScore(GameState.difficulty);
+  const highScoreElEnd = document.getElementById(&apos;highscore-end-val&apos;);
+  if (highScoreElEnd) {
+    const highScore2 = getHighScore(GameState.difficulty);
+    highScoreElEnd.textContent = highScore2;
+  }
+
+  checkAndUpdateHighScore(GameState.difficulty);
+  const hsEnd = document.getElementById(&apos;highscore-end-val&apos;);
+  if (hsEnd) {
+    const score = getHighScore(GameState.difficulty);
+    hsEnd.textContent = (score !== null &amp;&amp; score !== undefined) ? score : 0;
+  }
+  if (endScreen) endScreen.classList.remove(&apos;hidden&apos;);
+  if (winnerMsg) winnerMsg.textContent = `TIME&apos;S UP!`;
+  if (finalScoreText)
+    finalScoreText.textContent = `Your Score: ${GameState.score}`;
+}
+
+/**
+ * Updates the high score display in the UI.
+ * Retrieves the &quot;matchHighScore&quot; value from localStorage,
+ * safely defaults to 0 if the value is null or invalid.
+ *
+ * @returns {void}
+ */
+function updateHighScoreUI() {
+  const highScoreEl = document.getElementById(&apos;highscore&apos;);
+  if (highScoreEl) {
+    const highScore = getHighScore(GameState.difficulty) || 0;
+    highScoreEl.textContent = highScore;
+  }
+  const el = document.getElementById(&apos;highscore&apos;);
+  if (!el) return;
+  const best = getHighScore(GameState.difficulty);
+  el.textContent = (best !== null &amp;&amp; best !== undefined) ? best : 0;
+}
+
+export {
+  initGame,
+  renderBoard,
+  showEndScreen,
+  resetGame,
+  flipCard,
+  updateScore,
+};
+</code></pre>
+    </div>
+
+    <footer class="footer">
+      Generated by
+      <a href="https://esdoc.org"
+        >ESDoc<span data-ice="esdocVersion">(1.1.0)</span
+        ><img src="./image/esdoc-logo-mini-black.png"
+      /></a>
+    </footer>
+
+    <script src="script/search_index.js"></script>
+    <script src="script/search.js"></script>
+    <script src="script/pretty-print.js"></script>
+    <script src="script/inherited-summary.js"></script>
+    <script src="script/test-summary.js"></script>
+    <script src="script/inner-link.js"></script>
+    <script src="script/patch-for-local.js"></script>
+  </body>
+</html>

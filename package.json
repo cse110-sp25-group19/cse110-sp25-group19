@@ -10,7 +10,7 @@
     "format": "prettier --write ./",
     "start": "npx serve .",
     "check": "npm run lint && npm test",
-    "docs": "jsdoc -c jsdoc.conf.json"
+    "docs": "./node_modules/.bin/esdoc -c .esdoc.json"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,8 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^19.8.1",
     "cross-env": "^7.0.3",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^9.27.0",
     "husky": "^8.0.0",
     "jest": "^29.7.0",

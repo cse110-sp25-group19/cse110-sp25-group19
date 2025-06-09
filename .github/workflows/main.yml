@@ -48,27 +48,3 @@ jobs:
 
       - name: Run tests
         run: npm test
-
-  docs:
-    name: Generate Documentation
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Generate Docs
-        run: npm run docs
-
-      - name: Upload Documentation Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: documentation
-          path: docs # or your JSDoc output folder

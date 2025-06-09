@@ -1,0 +1,1725 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <base data-ice="baseUrl" href="../" />
+    <title data-ice="title">Function | memory_card_game</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css" />
+    <script src="script/prettify/prettify.js"></script>
+    <script src="script/manual.js"></script>
+  </head>
+  <body class="layout-container" data-ice="rootContainer">
+    <header>
+      <a href="./">Home</a>
+
+      <a href="identifiers.html">Reference</a>
+      <a href="source.html">Source</a>
+
+      <div class="search-box">
+        <span>
+          <img src="./image/search.png" />
+          <span class="search-input-edge"></span
+          ><input class="search-input" /><span class="search-input-edge"></span>
+        </span>
+        <ul class="search-result"></ul>
+      </div>
+      <a
+        style="position: relative; top: 3px"
+        href="https://github.com/cse110-sp25-group19/memory_card_game"
+        ><img width="20px" src="./image/github.png"
+      /></a>
+    </header>
+
+    <nav class="navigation" data-ice="nav">
+      <div>
+        <ul>
+          <li data-ice="doc">
+            <a
+              data-ice="dirPath"
+              class="nav-dir-path"
+              href="identifiers.html#js"
+              >js</a
+            ><span data-ice="kind" class="kind-class">C</span
+            ><span data-ice="name"
+              ><span
+                ><a href="class/src/js/utils.js~Card.html">Card</a></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-flipCard"
+                  >flipCard</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-initGame"
+                  >initGame</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-renderBoard"
+                  >renderBoard</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-resetGame"
+                  >resetGame</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-showEndScreen"
+                  >showEndScreen</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-updateScore"
+                  >updateScore</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-sum">sum</a></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-addScore"
+                  >addScore</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-generateDeck"
+                  >generateDeck</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-getScore"
+                  >getScore</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-matchCheck"
+                  >matchCheck</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a href="function/index.html#static-function-shuffleDeck"
+                  >shuffleDeck</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-function">F</span
+            ><span data-ice="name"
+              ><span
+                ><a
+                  href="function/index.html#static-function-triggerComboEffect"
+                  >triggerComboEffect</a
+                ></span
+              ></span
+            >
+          </li>
+          <li data-ice="doc">
+            <span data-ice="kind" class="kind-variable">V</span
+            ><span data-ice="name"
+              ><span
+                ><a href="variable/index.html#static-variable-GameState"
+                  >GameState</a
+                ></span
+              ></span
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content" data-ice="content">
+      <h1 data-ice="title">Function</h1>
+      <div data-ice="summaries">
+        <table class="summary" data-ice="summary">
+          <thead>
+            <tr>
+              <td data-ice="title" colspan="3">Static Public Summary</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a href="function/index.html#static-function-addScore"
+                          >addScore</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(points:
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >):
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      ></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>Adds points to the player&apos;s score.</p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a href="function/index.html#static-function-flipCard"
+                          >flipCard</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(index:
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >, cardElem: <span>HTMLElement</span>): {deck:
+                      <span
+                        ><span
+                          ><a href="class/src/js/utils.js~Card.html"
+                            >Card</a
+                          ></span
+                        ><span>[]</span></span
+                      >, flippedCards:
+                      <span
+                        ><span
+                          ><a href="class/src/js/utils.js~Card.html"
+                            >Card</a
+                          ></span
+                        ><span>[]</span></span
+                      >}</span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>Flips a card and updates GameState.</p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a
+                          href="function/index.html#static-function-generateDeck"
+                          >generateDeck</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(pairs:
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >):
+                      <span
+                        ><span
+                          ><a href="class/src/js/utils.js~Card.html"
+                            >Card</a
+                          ></span
+                        ><span>[]</span></span
+                      ></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>
+                      Generates a deck of matching card pairs for the memory
+                      game.
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a href="function/index.html#static-function-getScore"
+                          >getScore</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >():
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      ></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>Retrieves the current score.</p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a href="function/index.html#static-function-initGame"
+                          >initGame</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(difficulty:
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >):
+                      <span
+                        ><span
+                          ><a href="class/src/js/utils.js~Card.html"
+                            >Card</a
+                          ></span
+                        ><span>[]</span></span
+                      ></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>Initializes a new game round.</p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a
+                          href="function/index.html#static-function-matchCheck"
+                          >matchCheck</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(): <span>bool</span></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>Checks if the cards in flippedCards array matches.</p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a
+                          href="function/index.html#static-function-renderBoard"
+                          >renderBoard</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(container: <span>HTMLElement</span>, deck:
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                          >Array</a
+                        ></span
+                      >): <span>void</span></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>Renders the card grid into the supplied container.</p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a href="function/index.html#static-function-resetGame"
+                          >resetGame</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(): <span>void</span></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>Resets the game to its initial state.</p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a
+                          href="function/index.html#static-function-showEndScreen"
+                          >showEndScreen</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(): <span>void</span></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>
+                      Displays the end screen modal with the winner message,
+                      final time left, and the high score.
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a
+                          href="function/index.html#static-function-shuffleDeck"
+                          >shuffleDeck</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(deck:
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                          >Array</a
+                        ></span
+                      >):
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                          >Array</a
+                        ></span
+                      ></span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>
+                      Shuffles the deck using the Fisher&#x2013;Yates algorithm.
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a href="function/index.html#static-function-sum"
+                          >sum</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(a:
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >, b:
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >):
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      ></span
+                    >
+                  </p>
+                </div>
+                <div></div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a
+                          href="function/index.html#static-function-triggerComboEffect"
+                          >triggerComboEffect</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature"
+                      >(combo: <span>*</span>)</span
+                    >
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>
+                      Based on the combo count, function triggers a visual
+                      effect.
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr data-ice="target">
+              <td>
+                <span class="access" data-ice="access">public</span>
+
+                <span class="override" data-ice="override"></span>
+              </td>
+              <td>
+                <div>
+                  <p>
+                    <span class="code" data-ice="name"
+                      ><span
+                        ><a
+                          href="function/index.html#static-function-updateScore"
+                          >updateScore</a
+                        ></span
+                      ></span
+                    ><span class="code" data-ice="signature">()</span>
+                  </p>
+                </div>
+                <div>
+                  <div data-ice="description">
+                    <p>Increases score and updates the UI</p>
+                  </div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div data-ice="details">
+        <h2 data-ice="title">Static Public</h2>
+
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-addScore">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">addScore</span
+            ><span class="code" data-ice="signature"
+              >(points:
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              >):
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              ></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/utils.js.html#lineNumber108"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {addScore} from &apos;<span><a href="file/src/js/utils.js.html#lineNumber108">memory_card_game/src/js/utils.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>Adds points to the player&apos;s score.</p>
+          </div>
+
+          <div data-ice="properties">
+            <div data-ice="properties">
+              <h4 data-ice="title">Params:</h4>
+              <table class="params">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Attribute</td>
+                    <td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">points</td>
+                    <td data-ice="type" class="code">
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >
+                    </td>
+                    <td data-ice="appendix">
+                      <ul>
+                        <li>optional</li>
+                        <li>default: 1</li>
+                      </ul>
+                    </td>
+                    <td data-ice="description">
+                      <p>How many points to add</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span
+                      ><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                        >number</a
+                      ></span
+                    >
+                  </td>
+                  <td class="return-desc" data-ice="returnDescription">
+                    <p>New total score</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-flipCard">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">flipCard</span
+            ><span class="code" data-ice="signature"
+              >(index:
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              >, cardElem: <span>HTMLElement</span>): {deck:
+              <span
+                ><span><a href="class/src/js/utils.js~Card.html">Card</a></span
+                ><span>[]</span></span
+              >, flippedCards:
+              <span
+                ><span><a href="class/src/js/utils.js~Card.html">Card</a></span
+                ><span>[]</span></span
+              >}</span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/game.js.html#lineNumber230"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {flipCard} from &apos;<span><a href="file/src/js/game.js.html#lineNumber230">memory_card_game/src/js/game.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>
+              Flips a card and updates GameState. Ignores if already flipped,
+              matched, or 2 cards are face-up.
+            </p>
+          </div>
+
+          <div data-ice="properties">
+            <div data-ice="properties">
+              <h4 data-ice="title">Params:</h4>
+              <table class="params">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Attribute</td>
+                    <td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">index</td>
+                    <td data-ice="type" class="code">
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >
+                    </td>
+                    <td data-ice="appendix"></td>
+                    <td data-ice="description">
+                      <p>Index of the card in the deck</p>
+                    </td>
+                  </tr>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">
+                      cardElem
+                    </td>
+                    <td data-ice="type" class="code">
+                      <span>HTMLElement</span>
+                    </td>
+                    <td data-ice="appendix"></td>
+                    <td data-ice="description">
+                      <p>The DOM element representing the card</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    {deck:
+                    <span
+                      ><span
+                        ><a href="class/src/js/utils.js~Card.html"
+                          >Card</a
+                        ></span
+                      ><span>[]</span></span
+                    >, flippedCards:
+                    <span
+                      ><span
+                        ><a href="class/src/js/utils.js~Card.html"
+                          >Card</a
+                        ></span
+                      ><span>[]</span></span
+                    >}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-generateDeck">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">generateDeck</span
+            ><span class="code" data-ice="signature"
+              >(pairs:
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              >):
+              <span
+                ><span><a href="class/src/js/utils.js~Card.html">Card</a></span
+                ><span>[]</span></span
+              ></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/utils.js.html#lineNumber47"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {generateDeck} from &apos;<span><a href="file/src/js/utils.js.html#lineNumber47">memory_card_game/src/js/utils.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>Generates a deck of matching card pairs for the memory game.</p>
+            <p>
+              Each pair has the same ranger type as its value. The number of
+              pairs is determined by the <code>pairs</code> parameter,
+              defaulting to 8.
+            </p>
+          </div>
+
+          <div data-ice="properties">
+            <div data-ice="properties">
+              <h4 data-ice="title">Params:</h4>
+              <table class="params">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Attribute</td>
+                    <td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">pairs</td>
+                    <td data-ice="type" class="code">
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >
+                    </td>
+                    <td data-ice="appendix">
+                      <ul>
+                        <li>optional</li>
+                        <li>default: 8</li>
+                      </ul>
+                    </td>
+                    <td data-ice="description">
+                      <p>
+                        The number of unique pairs to include in the deck (max
+                        8).
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span
+                      ><span
+                        ><a href="class/src/js/utils.js~Card.html"
+                          >Card</a
+                        ></span
+                      ><span>[]</span></span
+                    >
+                  </td>
+                  <td class="return-desc" data-ice="returnDescription">
+                    <p>An array containing pairs of Card objects.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-getScore">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">getScore</span
+            ><span class="code" data-ice="signature"
+              >():
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              ></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/utils.js.html#lineNumber118"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {getScore} from &apos;<span><a href="file/src/js/utils.js.html#lineNumber118">memory_card_game/src/js/utils.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description"><p>Retrieves the current score.</p></div>
+
+          <div data-ice="properties"></div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span
+                      ><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                        >number</a
+                      ></span
+                    >
+                  </td>
+                  <td class="return-desc" data-ice="returnDescription">
+                    <p>Current score value</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-initGame">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">initGame</span
+            ><span class="code" data-ice="signature"
+              >(difficulty:
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              >):
+              <span
+                ><span><a href="class/src/js/utils.js~Card.html">Card</a></span
+                ><span>[]</span></span
+              ></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/game.js.html#lineNumber12"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {initGame} from &apos;<span><a href="file/src/js/game.js.html#lineNumber12">memory_card_game/src/js/game.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description"><p>Initializes a new game round.</p></div>
+
+          <div data-ice="properties">
+            <div data-ice="properties">
+              <h4 data-ice="title">Params:</h4>
+              <table class="params">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Attribute</td>
+                    <td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">
+                      difficulty
+                    </td>
+                    <td data-ice="type" class="code">
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >
+                    </td>
+                    <td data-ice="appendix">
+                      <ul>
+                        <li>optional</li>
+                        <li>default: 8</li>
+                      </ul>
+                    </td>
+                    <td data-ice="description"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span
+                      ><span
+                        ><a href="class/src/js/utils.js~Card.html"
+                          >Card</a
+                        ></span
+                      ><span>[]</span></span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-matchCheck">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">matchCheck</span
+            ><span class="code" data-ice="signature"
+              >(): <span>bool</span></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/utils.js.html#lineNumber127"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {matchCheck} from &apos;<span><a href="file/src/js/utils.js.html#lineNumber127">memory_card_game/src/js/utils.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>Checks if the cards in flippedCards array matches.</p>
+          </div>
+
+          <div data-ice="properties"></div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span>bool</span>
+                  </td>
+                  <td class="return-desc" data-ice="returnDescription">
+                    <p>True if cards match, False if cards are mismatched.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-renderBoard">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">renderBoard</span
+            ><span class="code" data-ice="signature"
+              >(container: <span>HTMLElement</span>, deck:
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                  >Array</a
+                ></span
+              >): <span>void</span></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/game.js.html#lineNumber35"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {renderBoard} from &apos;<span><a href="file/src/js/game.js.html#lineNumber35">memory_card_game/src/js/game.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>Renders the card grid into the supplied container.</p>
+          </div>
+
+          <div data-ice="properties">
+            <div data-ice="properties">
+              <h4 data-ice="title">Params:</h4>
+              <table class="params">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Attribute</td>
+                    <td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">
+                      container
+                    </td>
+                    <td data-ice="type" class="code">
+                      <span>HTMLElement</span>
+                    </td>
+                    <td data-ice="appendix"></td>
+                    <td data-ice="description">
+                      <p>DOM node that will hold the cards</p>
+                    </td>
+                  </tr>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">deck</td>
+                    <td data-ice="type" class="code">
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                          >Array</a
+                        ></span
+                      >
+                    </td>
+                    <td data-ice="appendix"></td>
+                    <td data-ice="description">
+                      <p>Card array created by initGame()</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span>void</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-resetGame">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">resetGame</span
+            ><span class="code" data-ice="signature"
+              >(): <span>void</span></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/game.js.html#lineNumber190"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {resetGame} from &apos;<span><a href="file/src/js/game.js.html#lineNumber190">memory_card_game/src/js/game.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>Resets the game to its initial state.</p>
+            <ul>
+              <li>Hides the end screen.</li>
+              <li>Retrieves the selected difficulty level.</li>
+              <li>Reinitializes the game deck and state variables.</li>
+              <li>Updates the UI for score, combo, and timer.</li>
+              <li>Starts a new countdown timer.</li>
+            </ul>
+          </div>
+
+          <div data-ice="properties"></div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span>void</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-showEndScreen">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">showEndScreen</span
+            ><span class="code" data-ice="signature"
+              >(): <span>void</span></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/game.js.html#lineNumber162"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {showEndScreen} from &apos;<span><a href="file/src/js/game.js.html#lineNumber162">memory_card_game/src/js/game.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>
+              Displays the end screen modal with the winner message, final time
+              left, and the high score. Updates relevant DOM elements to show
+              game results and high score.
+            </p>
+            <ul>
+              <li>Sets the winner message text.</li>
+              <li>Displays the remaining time left.</li>
+              <li>Reveals the end screen modal.</li>
+              <li>
+                Retrieves and displays the high score for the current difficulty
+                level.
+              </li>
+              <li>
+                Ensures the high score display falls back to 0 if no high score
+                is found.
+              </li>
+            </ul>
+          </div>
+
+          <div data-ice="properties"></div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span>void</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-shuffleDeck">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">shuffleDeck</span
+            ><span class="code" data-ice="signature"
+              >(deck:
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                  >Array</a
+                ></span
+              >):
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                  >Array</a
+                ></span
+              ></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/utils.js.html#lineNumber75"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {shuffleDeck} from &apos;<span><a href="file/src/js/utils.js.html#lineNumber75">memory_card_game/src/js/utils.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>Shuffles the deck using the Fisher&#x2013;Yates algorithm.</p>
+          </div>
+
+          <div data-ice="properties">
+            <div data-ice="properties">
+              <h4 data-ice="title">Params:</h4>
+              <table class="params">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Attribute</td>
+                    <td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">deck</td>
+                    <td data-ice="type" class="code">
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                          >Array</a
+                        ></span
+                      >
+                    </td>
+                    <td data-ice="appendix"></td>
+                    <td data-ice="description"><p>Array of Card objects</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span
+                      ><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                        >Array</a
+                      ></span
+                    >
+                  </td>
+                  <td class="return-desc" data-ice="returnDescription">
+                    <p>Same array reference, after shuffling</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-sum">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">sum</span
+            ><span class="code" data-ice="signature"
+              >(a:
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              >, b:
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              >):
+              <span
+                ><a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                  >number</a
+                ></span
+              ></span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/sum.js.html#lineNumber6"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {sum} from &apos;<span><a href="file/src/js/sum.js.html#lineNumber6">memory_card_game/src/js/sum.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="properties">
+            <div data-ice="properties">
+              <h4 data-ice="title">Params:</h4>
+              <table class="params">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Attribute</td>
+                    <td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">a</td>
+                    <td data-ice="type" class="code">
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >
+                    </td>
+                    <td data-ice="appendix"></td>
+                    <td data-ice="description"><p>first number input</p></td>
+                  </tr>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">b</td>
+                    <td data-ice="type" class="code">
+                      <span
+                        ><a
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                          >number</a
+                        ></span
+                      >
+                    </td>
+                    <td data-ice="appendix"></td>
+                    <td data-ice="description"><p>second number input</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="return-params" data-ice="returnParams">
+            <h4>Return:</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="return-type code" data-ice="returnType">
+                    <span
+                      ><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+                        >number</a
+                      ></span
+                    >
+                  </td>
+                  <td class="return-desc" data-ice="returnDescription">
+                    <p>result of the sum value</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div data-ice="returnProperties"></div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-triggerComboEffect">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">triggerComboEffect</span
+            ><span class="code" data-ice="signature"
+              >(combo: <span>*</span>)</span
+            >
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/utils.js.html#lineNumber152"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {triggerComboEffect} from &apos;<span><a href="file/src/js/utils.js.html#lineNumber152">memory_card_game/src/js/utils.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>Based on the combo count, function triggers a visual effect.</p>
+          </div>
+
+          <div data-ice="properties">
+            <div data-ice="properties">
+              <h4 data-ice="title">Params:</h4>
+              <table class="params">
+                <thead>
+                  <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Attribute</td>
+                    <td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-ice="property" data-depth="0">
+                    <td data-ice="name" class="code" data-depth="0">combo</td>
+                    <td data-ice="type" class="code"><span>*</span></td>
+                    <td data-ice="appendix"></td>
+                    <td data-ice="description"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="detail" data-ice="detail">
+          <h3 data-ice="anchor" id="static-function-updateScore">
+            <span class="access" data-ice="access">public</span>
+
+            <span class="code" data-ice="name">updateScore</span
+            ><span class="code" data-ice="signature">()</span>
+            <span class="right-info">
+              <span data-ice="source"
+                ><span
+                  ><a href="file/src/js/game.js.html#lineNumber359"
+                    >source</a
+                  ></span
+                ></span
+              >
+            </span>
+          </h3>
+
+          <div data-ice="importPath" class="import-path">
+            <pre
+              class="prettyprint"
+            ><code data-ice="importPathCode">import {updateScore} from &apos;<span><a href="file/src/js/game.js.html#lineNumber359">memory_card_game/src/js/game.js</a></span>&apos;</code></pre>
+          </div>
+
+          <div data-ice="description">
+            <p>Increases score and updates the UI</p>
+          </div>
+
+          <div data-ice="properties"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Generated by
+      <a href="https://esdoc.org"
+        >ESDoc<span data-ice="esdocVersion">(1.1.0)</span
+        ><img src="./image/esdoc-logo-mini-black.png"
+      /></a>
+    </footer>
+
+    <script src="script/search_index.js"></script>
+    <script src="script/search.js"></script>
+    <script src="script/pretty-print.js"></script>
+    <script src="script/inherited-summary.js"></script>
+    <script src="script/test-summary.js"></script>
+    <script src="script/inner-link.js"></script>
+    <script src="script/patch-for-local.js"></script>
+  </body>
+</html>
