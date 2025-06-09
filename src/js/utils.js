@@ -1,20 +1,48 @@
 /**
- * @param {number|string} id - Unique identifier for the card
- * @param {*} value - Value used to determine matching pairs
+ * Represents a single card in the memory game.
  */
 class Card {
+  /**
+   * Creates a new Card instance.
+   *
+   * @param {number|string} id - Unique identifier for the card.
+   * @param {*} value - Value used to determine matching pairs.
+   */
   constructor(id, value) {
+    /**
+     * Unique identifier for the card.
+     * @type {number|string}
+     */
     this.id = id;
+
+    /**
+     * Value used to determine matching pairs.
+     * @type {*}
+     */
     this.value = value;
+
+    /**
+     * Whether the card is currently flipped face-up.
+     * @type {boolean}
+     */
     this.isFlipped = false;
+
+    /**
+     * Whether the card has been matched with its pair.
+     * @type {boolean}
+     */
     this.isMatched = false;
   }
 }
 
-/*
- * Generates a fresh deck of paired cards (16 cards by default).
- * @param {number} pairs - Number of matching pairs to include (default: 8)
- * @returns {Card[]} Array of Card instances
+/**
+ * Generates a deck of matching card pairs for the memory game.
+ *
+ * Each pair has the same ranger type as its value. The number of pairs
+ * is determined by the `pairs` parameter, defaulting to 8.
+ *
+ * @param {number} [pairs=8] - The number of unique pairs to include in the deck (max 8).
+ * @returns {Card[]} An array containing pairs of Card objects.
  */
 function generateDeck(pairs = 8) {
   const rangerTypes = [

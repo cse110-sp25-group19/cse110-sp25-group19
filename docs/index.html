@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | memory_card_game</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/cse110-sp25-group19/memory_card_game"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#js">js</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/js/utils.js~Card.html">Card</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-flipCard">flipCard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-initGame">initGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-renderBoard">renderBoard</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-resetGame">resetGame</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-showEndScreen">showEndScreen</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateScore">updateScore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sum">sum</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addScore">addScore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-generateDeck">generateDeck</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getScore">getScore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-matchCheck">matchCheck</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-shuffleDeck">shuffleDeck</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-triggerComboEffect">triggerComboEffect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GameState">GameState</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="memory-card-game-cicd-pipeline">Memory_Card_Game_CICD_Pipeline</h1><p>This is a simple JavaScript and HTML project with a basic file structure, including automated code quality checks, pre-commit hooks, and conventional commit message enforcement.</p>
+<h2 id="developer-workflow">Developer Workflow</h2><h3 id="running-the-project">Running the Project</h3><p>To run the project locally:</p>
+<ol>
+<li>Start the Development Server:<pre><code class="lang-bash"><code class="source-code prettyprint">npm start</code>
+</code></pre>
+<ul>
+<li>Uses <strong><code>npx serve .</code></strong> to serve the project directory as a static site.</li>
+<li>Opens <strong><code>index.html</code></strong> as the entry point.</li>
+</ul>
+</li>
+</ol>
+<h3 id="code-quality-checks--before-commit-">Code Quality Checks (Before Commit)</h3><p>Developers should ensure their code is clean and properly formatted before committing:</p>
+<ol>
+<li><p>Linting the Code:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run lint</code>
+</code></pre>
+<ul>
+<li>Runs <strong>ESLint</strong> on the <strong><code>src/</code></strong> directory to catch common JavaScript errors.</li>
+</ul>
+</li>
+<li><p>Formatting the Code:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run format</code>
+</code></pre>
+<ul>
+<li>Runs <strong>Prettier</strong> to automatically format code in the directory.</li>
+</ul>
+</li>
+</ol>
+<h3 id="automated-code-quality-checks">Automated Code Quality Checks</h3><ul>
+<li><strong>Pre-Commit Hook:</strong> Runs ESLint and Prettier automatically via <strong>lint-staged</strong>.</li>
+<li><strong>Commit Message Validation:</strong> Enforces conventional commit messages via <strong>commitlint</strong>.</li>
+<li><strong>Pre-Push Hook:</strong> Runs <strong><code>npm run check</code></strong> to validate code before pushing.</li>
+</ul>
+<h3 id="full-code-check-before-push">Full Code Check Before Push</h3><p>To run both linting and testing before pushing:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run check</code>
+</code></pre>
+<ul>
+<li><p>Runs both <strong><code>lint</code></strong> and <strong><code>test</code></strong> scripts to ensure code quality before pushing.</p>
+</li>
+<li><p><strong>Start:</strong> Open index.html in a browser.</p>
+</li>
+</ul>
+<h3 id="running-tests">Running Tests</h3><p>To run the unit tests:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm test</code>
+</code></pre>
+<ul>
+<li>Runs all tests in the <strong><code>tests/</code></strong> directory using <strong>Jest</strong>.</li>
+</ul>
+<h3 id="common-errors-and-how-to-fix-">Common Errors and How to Fix:</h3><p>&apos;eslint&apos; is not recognized as an internal or external command</p>
+<ul>
+<li>run <code>npm install --save-dev eslint</code><br></li>
+</ul>
+<p>&apos;prettier&apos; is not recognized as an internal or external command</p>
+<ul>
+<li>run <code>npm install --save-dev prettier</code></li>
+</ul>
+<h3 id="pull-request-errors-">Pull Request Errors:</h3><p>CI Pipeline / Lint &amp; Prettier Check [FAILED]</p>
+<ul>
+<li>run <code>npx prettier --check .</code> locally on your computer to check for files that are not correctly formatted</li>
+<li>either manually fix formatting issues, or automatically fix by running <code>npx prettier --write .</code></li>
+</ul>
+<hr>
+<h2 id="project-folder-purpose">Project Folder Purpose</h2><p>CSS - contains all stylesheets<br>HTML - contains all html pages and components<br>Scripts - holds Javascript files  </p>
+<h1 id="assets---holds-any-media-ranging-from-images-to-documantation--">Assets - holds any media ranging from images to documantation  </h1><h1 id="cse110-sp25-group19">cse110-sp25-group19</h1><p><a href="admin/team.md">Team Page</a></p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
