@@ -1,9 +1,13 @@
-(function(){
+(function () {
   function toggle(ev) {
     var button = ev.target;
     var parent = ev.target.parentElement;
-    while(parent) {
-      if (parent.tagName === 'TR' && parent.classList.contains('test-interface')) break;
+    while (parent) {
+      if (
+        parent.tagName === 'TR' &&
+        parent.classList.contains('test-interface')
+      )
+        break;
       parent = parent.parentElement;
     }
 
@@ -26,7 +30,7 @@
       var depth = parseInt(nextElement.dataset.testDepth, 10);
       if (depth >= targetDepth) {
         if (direction === 'opened') {
-          if (depth === targetDepth)  nextElement.style.display = '';
+          if (depth === targetDepth) nextElement.style.display = '';
         } else if (direction === 'closed') {
           nextElement.style.display = 'none';
           var innerButton = nextElement.querySelector('.toggle');
@@ -42,12 +46,16 @@
     }
   }
 
-  var buttons = document.querySelectorAll('.test-summary tr.test-interface .toggle');
+  var buttons = document.querySelectorAll(
+    '.test-summary tr.test-interface .toggle',
+  );
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', toggle);
   }
 
-  var topDescribes = document.querySelectorAll('.test-summary tr[data-test-depth="0"]');
+  var topDescribes = document.querySelectorAll(
+    '.test-summary tr[data-test-depth="0"]',
+  );
   for (var i = 0; i < topDescribes.length; i++) {
     topDescribes[i].style.display = '';
   }

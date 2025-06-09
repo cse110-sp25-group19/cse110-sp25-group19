@@ -608,9 +608,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -632,10 +630,7 @@
     "lineNumber": 136,
     "type": {
       "nullable": null,
-      "types": [
-        "HTMLElement ",
-        " null"
-      ],
+      "types": ["HTMLElement ", " null"],
       "spread": false,
       "description": null
     },
@@ -656,10 +651,7 @@
     "lineNumber": 142,
     "type": {
       "nullable": null,
-      "types": [
-        "HTMLElement ",
-        " null"
-      ],
+      "types": ["HTMLElement ", " null"],
       "spread": false,
       "description": null
     },
@@ -680,10 +672,7 @@
     "lineNumber": 148,
     "type": {
       "nullable": null,
-      "types": [
-        "HTMLElement ",
-        " null"
-      ],
+      "types": ["HTMLElement ", " null"],
       "spread": false,
       "description": null
     },
@@ -732,9 +721,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "Object"
-        ],
+        "types": ["Object"],
         "spread": false,
         "optional": false,
         "name": "card1",
@@ -742,9 +729,7 @@
       },
       {
         "nullable": null,
-        "types": [
-          "Object"
-        ],
+        "types": ["Object"],
         "spread": false,
         "optional": false,
         "name": "card2",
@@ -753,9 +738,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -784,9 +767,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -817,9 +798,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": false,
         "name": "diff",
@@ -828,9 +807,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -851,9 +828,7 @@
     "lineNumber": 354,
     "type": {
       "nullable": null,
-      "types": [
-        "number"
-      ],
+      "types": ["number"],
       "spread": false,
       "description": null
     },
@@ -874,10 +849,7 @@
     "lineNumber": 402,
     "type": {
       "nullable": null,
-      "types": [
-        "number ",
-        " null"
-      ],
+      "types": ["number ", " null"],
       "spread": false,
       "description": null
     },
@@ -906,9 +878,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -938,9 +908,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -970,9 +938,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -1003,9 +969,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": false,
         "name": "diff",
@@ -1014,9 +978,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "string"
-      ],
+      "types": ["string"],
       "spread": false,
       "description": "The associated localStorage key."
     },
@@ -1046,9 +1008,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": false,
         "name": "diff",
@@ -1057,10 +1017,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "number",
-        "null"
-      ],
+      "types": ["number", "null"],
       "spread": false,
       "description": "The high score or null if not set."
     },
@@ -1090,9 +1047,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": false,
         "name": "diff",
@@ -1100,9 +1055,7 @@
       },
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": false,
         "name": "timeLeft",
@@ -1111,9 +1064,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -1142,9 +1093,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -1174,9 +1123,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -1206,9 +1153,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -1242,9 +1187,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "Card[]"
-      ],
+      "types": ["Card[]"],
       "spread": false,
       "description": ""
     },
@@ -1252,9 +1195,7 @@
       {
         "name": "difficulty",
         "optional": true,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "defaultRaw": 8,
         "defaultValue": "8"
       }
@@ -1284,9 +1225,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "HTMLElement"
-        ],
+        "types": ["HTMLElement"],
         "spread": false,
         "optional": false,
         "name": "container",
@@ -1294,9 +1233,7 @@
       },
       {
         "nullable": null,
-        "types": [
-          "Array"
-        ],
+        "types": ["Array"],
         "spread": false,
         "optional": false,
         "name": "deck",
@@ -1305,9 +1242,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     }
@@ -1335,9 +1270,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -1366,9 +1299,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "void"
-      ],
+      "types": ["void"],
       "spread": false,
       "description": ""
     },
@@ -1398,9 +1329,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": false,
         "name": "index",
@@ -1408,9 +1337,7 @@
       },
       {
         "nullable": null,
-        "types": [
-          "HTMLElement"
-        ],
+        "types": ["HTMLElement"],
         "spread": false,
         "optional": false,
         "name": "cardElem",
@@ -1419,9 +1346,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "{ deck: Card[], flippedCards: Card[] }"
-      ],
+      "types": ["{ deck: Card[], flippedCards: Card[] }"],
       "spread": false,
       "description": ""
     }
@@ -1473,9 +1398,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": false,
         "name": "a",
@@ -1483,9 +1406,7 @@
       },
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": false,
         "name": "b",
@@ -1494,9 +1415,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "number"
-      ],
+      "types": ["number"],
       "spread": false,
       "description": "result of the sum value"
     }
@@ -1536,9 +1455,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "*"
-        ],
+        "types": ["*"],
         "spread": false,
         "optional": false,
         "name": "combo",
@@ -1577,10 +1494,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number",
-          "string"
-        ],
+        "types": ["number", "string"],
         "spread": false,
         "optional": false,
         "name": "id",
@@ -1588,9 +1502,7 @@
       },
       {
         "nullable": null,
-        "types": [
-          "*"
-        ],
+        "types": ["*"],
         "spread": false,
         "optional": false,
         "name": "value",
@@ -1610,10 +1522,7 @@
     "lineNumber": 16,
     "type": {
       "nullable": null,
-      "types": [
-        "number",
-        "string"
-      ],
+      "types": ["number", "string"],
       "spread": false,
       "description": null
     }
@@ -1630,9 +1539,7 @@
     "lineNumber": 22,
     "type": {
       "nullable": null,
-      "types": [
-        "*"
-      ],
+      "types": ["*"],
       "spread": false,
       "description": null
     }
@@ -1649,9 +1556,7 @@
     "lineNumber": 28,
     "type": {
       "nullable": null,
-      "types": [
-        "boolean"
-      ],
+      "types": ["boolean"],
       "spread": false,
       "description": null
     }
@@ -1668,9 +1573,7 @@
     "lineNumber": 34,
     "type": {
       "nullable": null,
-      "types": [
-        "boolean"
-      ],
+      "types": ["boolean"],
       "spread": false,
       "description": null
     }
@@ -1699,9 +1602,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": true,
         "defaultValue": "8",
@@ -1712,9 +1613,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "Card[]"
-      ],
+      "types": ["Card[]"],
       "spread": false,
       "description": "An array containing pairs of Card objects."
     }
@@ -1743,9 +1642,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "Array"
-        ],
+        "types": ["Array"],
         "spread": false,
         "optional": false,
         "name": "deck",
@@ -1754,9 +1651,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "Array"
-      ],
+      "types": ["Array"],
       "spread": false,
       "description": "Same array reference, after shuffling"
     }
@@ -1804,9 +1699,7 @@
     "params": [
       {
         "nullable": null,
-        "types": [
-          "number"
-        ],
+        "types": ["number"],
         "spread": false,
         "optional": true,
         "defaultValue": "1",
@@ -1817,9 +1710,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "number"
-      ],
+      "types": ["number"],
       "spread": false,
       "description": "New total score"
     }
@@ -1847,9 +1738,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "number"
-      ],
+      "types": ["number"],
       "spread": false,
       "description": "Current score value"
     },
@@ -1878,9 +1767,7 @@
     ],
     "return": {
       "nullable": null,
-      "types": [
-        "bool"
-      ],
+      "types": ["bool"],
       "spread": false,
       "description": "True if cards match, False if cards are mismatched."
     },
