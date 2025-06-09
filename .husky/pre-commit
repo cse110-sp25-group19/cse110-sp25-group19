@@ -19,10 +19,4 @@ npm run test || {
   exit 1
 }
 
-echo "📝 Generating documentation..."
-npm run docs || {
-  echo "❌ Failed to generate docs."
-  exit 1
-}
-
 echo "✅ All pre-commit tasks passed!"
