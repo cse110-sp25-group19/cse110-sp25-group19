@@ -1,3 +1,7 @@
+# Public Video: https://youtu.be/LP6G_2ZhnUI
+
+# Private Video: https://youtu.be/Y6LNI1QCWsE
+
 # Memory_Card_Game_CICD_Pipeline
 
 This is a simple JavaScript and HTML project with a basic file structure, including automated code quality checks, pre-commit hooks, and conventional commit message enforcement.
