@@ -1,93 +1,25 @@
-# Memory_Card_Game_CICD_Pipeline
+# Flip & Match
 
-This is a simple JavaScript and HTML project with a basic file structure, including automated code quality checks, pre-commit hooks, and conventional commit message enforcement.
+🕹️ Link to Project: [https://cse110-sp25-group19.github.io/cse110-sp25-group19/](https://cse110-sp25-group19.github.io/cse110-sp25-group19/)<br /><br />
+🎥 Link to Public Video: [https://www.youtube.com/watch?v=LP6G_2ZhnUI] (https://www.youtube.com/watch?v=LP6G_2ZhnUI)<br /><br />
+🎬 Link to Private Video: [https://www.youtube.com/watch?v=Y6LNI1QCWsE] (https://www.youtube.com/watch?v=Y6LNI1QCWsE)
 
-## Developer Workflow
+## 🖼️ Preview
 
-### Running the Project
+<!-- Replace with actual screenshot -->
 
-To run the project locally:
+![Home Screen Screenshot](homescreen.png)
 
-1. Start the Development Server:
-   ```bash
-   npm start
-   ```
-   - Uses **`npx serve .`** to serve the project directory as a static site.
-   - Opens **`index.html`** as the entry point.
+## 🎮 How to Play
 
-### Code Quality Checks (Before Commit)
+1. **Choose Difficulty**
+   Use the dropdown menu to select a difficulty level.
 
-Developers should ensure their code is clean and properly formatted before committing:
+   <!-- ![Dropdown Menu Screenshot](difficulty_dropdown.png) -->
+   <img src="difficulty_dropdown.png" alt="difficulty dropdown" width="200"/>
 
-1. Linting the Code:
+2. **Click "Start"**  
+   Begin the game by pressing the **Start** button.
 
-   ```bash
-   npm run lint
-   ```
-
-   - Runs **ESLint** on the **`src/`** directory to catch common JavaScript errors.
-
-2. Formatting the Code:
-   ```bash
-   npm run format
-   ```
-   - Runs **Prettier** to automatically format code in the directory.
-
-### Automated Code Quality Checks
-
-- **Pre-Commit Hook:** Runs ESLint and Prettier automatically via **lint-staged**.
-- **Commit Message Validation:** Enforces conventional commit messages via **commitlint**.
-- **Pre-Push Hook:** Runs **`npm run check`** to validate code before pushing.
-
-### Full Code Check Before Push
-
-To run both linting and testing before pushing:
-
-```bash
-npm run check
-```
-
-- Runs both **`lint`** and **`test`** scripts to ensure code quality before pushing.
-
-- **Start:** Open index.html in a browser.
-
-### Running Tests
-
-To run the unit tests:
-
-```bash
-npm test
-```
-
-- Runs all tests in the **`tests/`** directory using **Jest**.
-
-### Common Errors and How to Fix:
-
-'eslint' is not recognized as an internal or external command
-
-- run `npm install --save-dev eslint`<br />
-
-'prettier' is not recognized as an internal or external command
-
-- run `npm install --save-dev prettier`
-
-### Pull Request Errors:
-
-CI Pipeline / Lint & Prettier Check [FAILED]
-
-- run `npx prettier --check .` locally on your computer to check for files that are not correctly formatted
-- either manually fix formatting issues, or automatically fix by running `npx prettier --write .`
-
----
-
-## Project Folder Purpose
-
-CSS - contains all stylesheets  
-HTML - contains all html pages and components  
-Scripts - holds Javascript files  
-Assets - holds any media ranging from images to documantation  
-=======
-
-# cse110-sp25-group19
-
-[Team Page](admin/team.md)
+3. **Start Matching Cards**
+   Flip cards and try to match all pairs. Test your memory and beat your own time!
