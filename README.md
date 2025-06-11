@@ -1,7 +1,8 @@
 # Flip & Match
 
 🕹️ Link to Project: [https://cse110-sp25-group19.github.io/cse110-sp25-group19/](https://cse110-sp25-group19.github.io/cse110-sp25-group19/)<br /><br />
-🎬 Link to Private Video: [https://www.youtube.com/watch?v=Y6LNI1QCWsE] (https://www.youtube.com/watch?v=Y6LNI1QCWsE)
+🎥 Link to Public Video: [https://www.youtube.com/watch?v=Y6LNI1QCWsE] (https://www.youtube.com/watch?v=Y6LNI1QCWsE)<br /><br />
+🎬 Link to Private Video: [https://www.youtube.com/watch?v=LP6G_2ZhnUI] (https://www.youtube.com/watch?v=LP6G_2ZhnUI)
 
 ## 🖼️ Preview
 
